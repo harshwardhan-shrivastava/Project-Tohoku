@@ -3,11 +3,11 @@ from flask import Flask, render_template, jsonify, request, redirect, session, u
 
 import sqlite3
 import random
-import smtplib
+import resend
 import os
 
 from datetime import datetime, timedelta
-from email.message import EmailMessage
+
 
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -21,23 +21,23 @@ app.secret_key = os.environ.get("SECRET_KEY")
 app.permanent_session_lifetime = timedelta(days=365)
 
 
+
+
+
 # ==========================================================
 # EMAIL VERIFICATION
 # ==========================================================
 
-GMAIL_ADDRESS = os.environ.get("TOHOKU_GMAIL")
-GMAIL_APP_PASSWORD = os.environ.get("TOHOKU_GMAIL_APP_PASSWORD")
+resend.api_key = os.environ.get("RESEND_API_KEY")
 
 
 def send_verification_email(email, code):
 
-    message = EmailMessage()
-
-    message["Subject"] = "Project Tōhoku - Verification Code"
-    message["From"] = GMAIL_ADDRESS
-    message["To"] = email
-
-    message.set_content(f"""
+    resend.Emails.send({
+        "from": "Project Tohoku <onboarding@resend.dev>",
+        "to": [email],
+        "subject": "Project Tōhoku - Verification Code",
+        "text": f"""
 Welcome to Project Tōhoku.
 
 Your verification code is:
@@ -50,20 +50,8 @@ If you did not request this code, you can ignore this email.
 
 Project Tōhoku
 Explore Northern Japan.
-""")
-
-    with smtplib.SMTP_SSL(
-        "smtp.gmail.com",
-        465,
-        timeout=10
-    ) as smtp:
-
-        smtp.login(
-            GMAIL_ADDRESS,
-            GMAIL_APP_PASSWORD
-        )
-
-        smtp.send_message(message)
+"""
+    })
 
 # ==========================================================
 # DATABASE
