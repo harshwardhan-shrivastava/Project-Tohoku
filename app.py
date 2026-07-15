@@ -1021,8 +1021,7 @@ def event_planner_api(event_type, budget):
 def history():
 
     if "user_id" not in session:
-        return redirect(url_for("login_page"))
-
+        return redirect(url_for("login"))
     connection = get_db_connection()
 
     history_rows = connection.execute(
