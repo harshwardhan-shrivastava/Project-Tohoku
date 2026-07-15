@@ -2170,15 +2170,6 @@ body {
 }
 
 /* ==========================================
-   LANDMARK DROPDOWN HEIGHT FIX
+   LANDMARK INFO SELECT BAR SIZE FIX
 ========================================== */
 
-#landmarkSelect,
-#landmarkSelect::picker(select) {
-    appearance: base-select;
-}
-
-#landmarkSelect::picker(select) {
-    max-height: 260px;
-    overflow-y: auto;
-}
