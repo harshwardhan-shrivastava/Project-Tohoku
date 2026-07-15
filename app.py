@@ -3,8 +3,8 @@ from flask import Flask, render_template, jsonify, request, redirect, session, u
 import sqlite3
 import random
 import os
-import json
-import urllib.request
+import smtplib
+from email.message import EmailMessage
 
 from datetime import datetime, timedelta
 
@@ -23,35 +23,29 @@ app.permanent_session_lifetime = timedelta(days=365)
 
 
 
-
 # ==========================================================
 # EMAIL VERIFICATION
 # ==========================================================
 
-BREVO_API_KEY = os.environ.get("BREVO_API_KEY")
-BREVO_SENDER_EMAIL = os.environ.get("MAIL_USERNAME")
+MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 
 def send_verification_email(email, code):
 
-    if not BREVO_API_KEY:
-        raise RuntimeError("BREVO_API_KEY is not configured")
-
-    if not BREVO_SENDER_EMAIL:
+    if not MAIL_USERNAME:
         raise RuntimeError("MAIL_USERNAME is not configured")
 
-    payload = {
-        "sender": {
-            "name": "Project Tohoku",
-            "email": BREVO_SENDER_EMAIL
-        },
-        "to": [
-            {
-                "email": email
-            }
-        ],
-        "subject": "Project Tōhoku - Verification Code",
-        "textContent": f"""Welcome to Project Tōhoku.
+    if not MAIL_PASSWORD:
+        raise RuntimeError("MAIL_PASSWORD is not configured")
+
+    message = EmailMessage()
+
+    message["Subject"] = "Project Tōhoku - Verification Code"
+    message["From"] = f"Project Tōhoku <{MAIL_USERNAME}>"
+    message["To"] = email
+
+    message.set_content(f"""Welcome to Project Tōhoku.
 
 Your verification code is:
 
@@ -63,27 +57,11 @@ If you did not request this code, you can ignore this email.
 
 Project Tōhoku
 Explore Northern Japan.
-"""
-    }
+""")
 
-    request_data = urllib.request.Request(
-        "https://api.brevo.com/v3/smtp/email",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={
-            "accept": "application/json",
-            "api-key": BREVO_API_KEY,
-            "content-type": "application/json"
-        },
-        method="POST"
-    )
-
-    with urllib.request.urlopen(request_data, timeout=15) as response:
-        if response.status not in (200, 201, 202):
-            raise RuntimeError(
-                f"Brevo email failed with status {response.status}"
-            )
-
-
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+        smtp.login(MAIL_USERNAME, MAIL_PASSWORD)
+        smtp.send_message(message)
 # ==========================================================
 # DATABASE
 # ========================================================
