@@ -54,7 +54,7 @@ body {
     height: 48px;
 
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
 
     border: 2px solid #d9b44a;
 }
@@ -401,4 +401,32 @@ body {
         width: auto;
     }
 
+}
+
+/* =========================================================
+   HISTORY AVATAR FRAMING
+========================================================= */
+
+.history-user img[src*="profile"]{
+    transform: scale(1);
+}
+
+.history-user img[src*="profile2"],
+.history-user img[src*="profile3"],
+.history-user img[src*="profile6"],
+.history-user img[src*="profile7"],
+.history-user img[src*="profile8"]{
+    transform: scale(1.5);
+}
+
+.history-user img[src*="profile4"]{
+    transform: scale(1.5) translateX(-2%);
+}
+
+.history-user img[src*="chibi"]{
+    transform: scale(1.5);
+}
+
+.history-user img[src*="fantasy"]{
+    transform: scale(1) translateY(0%);
 }
