@@ -1287,3 +1287,41 @@ html{
     box-shadow:0 12px 30px rgba(0,0,0,.18);
 
 }
+
+/* =========================
+   LIVE DESKTOP WIDTH FIX
+========================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.home-navbar {
+    max-width: 100%;
+}
+
+.nav-left {
+    gap: clamp(40px, 7vw, 120px);
+}
+
+.nav-links {
+    gap: clamp(50px, 10vw, 160px);
+}
+
+.nav-right {
+    margin-right: 0;
+}
+
+.hero-image,
+.feature,
+.shrine-options {
+    width: min(1200px, 90%);
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 680px;
+}
