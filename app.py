@@ -59,7 +59,8 @@ Project Tōhoku
 Explore Northern Japan.
 """)
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+    with smtplib.SMTP("smtp.gmail.com", 587, timeout=15) as smtp:
+        smtp.starttls()
         smtp.login(MAIL_USERNAME, MAIL_PASSWORD)
         smtp.send_message(message)
 # ==========================================================
