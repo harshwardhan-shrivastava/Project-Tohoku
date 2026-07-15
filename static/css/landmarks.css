@@ -2155,3 +2155,16 @@ body {
 .nav-dropdown-menu a:hover {
     padding-left: 20px;
 }
+/* COMPACT LANDMARK SERVICE SELECT */
+
+.service-popup select,
+.popup select {
+    font-size: 14px;
+    padding: 10px 16px;
+}
+
+.service-popup select option,
+.popup select option {
+    font-size: 14px;
+    padding: 4px 8px;
+}
