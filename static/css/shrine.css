@@ -1651,3 +1651,35 @@ button:hover {
 
     transform: translate(-50%, -50%) !important;
 }
+
+/* =========================
+   LIVE SHRINE NAVBAR FIX
+========================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.topbar {
+    width: 100%;
+}
+
+.nav-left {
+    width: 30%;
+    padding-left: 60px;
+}
+
+.navbar {
+    width: 55%;
+    margin: 0;
+    gap: clamp(30px, 4vw, 70px);
+    justify-content: center;
+}
+
+.nav-right {
+    width: 15%;
+    padding-right: 35px;
+}
