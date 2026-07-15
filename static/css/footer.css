@@ -165,3 +165,12 @@
     gap:25px;
 
 }
+
+/* ==========================================
+   RESTORE ORIGINAL FOOTER HEIGHT
+========================================== */
+
+.tohoku-footer {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
