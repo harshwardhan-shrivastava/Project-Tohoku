@@ -1662,12 +1662,16 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
 .topbar {
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
+}
+
+.shrine-page {
+    padding-top: 100px;
 }
 
 .nav-left {
