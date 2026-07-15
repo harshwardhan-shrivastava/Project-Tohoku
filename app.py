@@ -1,10 +1,10 @@
-
 from flask import Flask, render_template, jsonify, request, redirect, session, url_for
 
 import sqlite3
 import random
-import resend
 import os
+import json
+import urllib.request
 
 from datetime import datetime, timedelta
 
@@ -28,17 +28,30 @@ app.permanent_session_lifetime = timedelta(days=365)
 # EMAIL VERIFICATION
 # ==========================================================
 
-resend.api_key = os.environ.get("RESEND_API_KEY")
+BREVO_API_KEY = os.environ.get("BREVO_API_KEY")
+BREVO_SENDER_EMAIL = os.environ.get("MAIL_USERNAME")
 
 
 def send_verification_email(email, code):
 
-    resend.Emails.send({
-        "from": "Project Tohoku <onboarding@resend.dev>",
-        "to": [email],
+    if not BREVO_API_KEY:
+        raise RuntimeError("BREVO_API_KEY is not configured")
+
+    if not BREVO_SENDER_EMAIL:
+        raise RuntimeError("MAIL_USERNAME is not configured")
+
+    payload = {
+        "sender": {
+            "name": "Project Tohoku",
+            "email": BREVO_SENDER_EMAIL
+        },
+        "to": [
+            {
+                "email": email
+            }
+        ],
         "subject": "Project Tōhoku - Verification Code",
-        "text": f"""
-Welcome to Project Tōhoku.
+        "textContent": f"""Welcome to Project Tōhoku.
 
 Your verification code is:
 
@@ -51,7 +64,25 @@ If you did not request this code, you can ignore this email.
 Project Tōhoku
 Explore Northern Japan.
 """
-    })
+    }
+
+    request_data = urllib.request.Request(
+        "https://api.brevo.com/v3/smtp/email",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "accept": "application/json",
+            "api-key": BREVO_API_KEY,
+            "content-type": "application/json"
+        },
+        method="POST"
+    )
+
+    with urllib.request.urlopen(request_data, timeout=15) as response:
+        if response.status not in (200, 201, 202):
+            raise RuntimeError(
+                f"Brevo email failed with status {response.status}"
+            )
+
 
 # ==========================================================
 # DATABASE
@@ -75,6 +106,7 @@ def create_database():
             avatar TEXT NOT NULL
         )
     """)
+
     connection.execute("""
     CREATE TABLE IF NOT EXISTS history (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -91,7 +123,9 @@ def create_database():
     connection.commit()
     connection.close()
 
-create_database()    
+
+create_database()
+
 
 def save_user_history(category, service, title, details=None):
 
@@ -123,6 +157,7 @@ def save_user_history(category, service, title, details=None):
     connection.close()
 
     print("DEBUG HISTORY: SAVED SUCCESSFULLY")
+
 
 # ==========================================================
 # REGISTER
@@ -374,6 +409,7 @@ def login():
         return "Invalid email or password"
 
     return render_template("login.html")
+
 
 # ==========================================================
 # FORGOT PASSWORD
@@ -663,6 +699,7 @@ def profile():
         next_page=next_page
     )
 
+
 # ==========================================================
 # HOME PAGE
 # ==========================================================
@@ -680,6 +717,7 @@ def home():
 def shrines():
     return render_template("shrines.html")
 
+
 # ==========================================================
 # LNADMARK PAGE
 # ==========================================================
@@ -688,18 +726,14 @@ def shrines():
 def landmarks_page():
     return render_template("landmarks.html")
 
+
 # ==========================================================
 # THEATER SERVICES PAGE
 # ==========================================================
 
-
 @app.route("/theater-services")
 def theater_services():
     return render_template("theater.html")
-
-
-
-
 
 # ==========================================================
 # VIEW SHRINE INFO
@@ -733,11 +767,11 @@ def shrine_info(shrine):
     info = view_shrine_info(shrine_map[shrine])
 
     save_user_history(
-    category="shrine",
-    service="View Shrine Info",
-    title=shrine_map[shrine],
-    details=f"Viewed information for {shrine_map[shrine]}"
-)
+        category="shrine",
+        service="View Shrine Info",
+        title=shrine_map[shrine],
+        details=f"Viewed information for {shrine_map[shrine]}"
+    )
 
     return jsonify({
         "name": info["name"],
@@ -753,6 +787,7 @@ def shrine_info(shrine):
         "private_max": info["private_max"],
         "image": image_map[shrine]
     })
+
 
 # ==========================================================
 # CROWD PREDICTOR
@@ -780,14 +815,15 @@ def crowd(shrine, day, weather):
     )
 
     save_user_history(
-    category="shrine",
-    service="Crowd Predictor",
-    title=shrine_map[shrine],
-    details=f"{day} - {weather}"
-)
+        category="shrine",
+        service="Crowd Predictor",
+        title=shrine_map[shrine],
+        details=f"{day} - {weather}"
+    )
 
     # If shrine_crowd_predictor already returns a dict
     return jsonify(result)
+
 
 # ==========================================================
 # OPTION 3 - LIST SHRINES (just return top shrine for demo)
@@ -800,11 +836,11 @@ def list_all_shrines_api():
     shrines = list_shrines()
 
     save_user_history(
-    category="shrine",
-    service="List All Shrines",
-    title="Shrine List",
-    details="Viewed all available shrines"
-)
+        category="shrine",
+        service="List All Shrines",
+        title="Shrine List",
+        details="Viewed all available shrines"
+    )
 
     image_map = {
         "Aoba Shrine": "shrine1.jpg",
@@ -814,6 +850,7 @@ def list_all_shrines_api():
     }
 
     result = []
+
     for s in shrines:
         result.append({
             "name": s["name"],
@@ -1003,6 +1040,7 @@ def event_planner_api(event_type, budget):
         for s in result
     ])
 
+
 # ==========================================================
 # HISTORY
 # ==========================================================
@@ -1012,11 +1050,12 @@ def history():
 
     if "user_id" not in session:
         return redirect(url_for("login"))
+
     connection = get_db_connection()
 
     history_rows = connection.execute(
         """
-       SELECT category, service, title, details, created_at
+        SELECT category, service, title, details, created_at
         FROM history
         WHERE user_id = ?
         ORDER BY id DESC
@@ -1027,13 +1066,13 @@ def history():
     connection.close()
 
     history_data = [
-       {
-    "category": row["category"],
-    "service": row["service"],
-    "title": row["title"],
-    "details": row["details"],
-    "created_at": row["created_at"]
-}
+        {
+            "category": row["category"],
+            "service": row["service"],
+            "title": row["title"],
+            "details": row["details"],
+            "created_at": row["created_at"]
+        }
         for row in history_rows
     ]
 
@@ -1064,9 +1103,6 @@ def history():
         landmark_count=landmark_count,
         theater_count=theater_count
     )
-
-
-
 
 
 # ==========================================================
@@ -1116,7 +1152,9 @@ def landmark_info(landmark_id):
     if landmark_id not in landmark_map:
         return jsonify({"error": "Landmark not found"}), 404
 
-    info = view_landmark_info(landmark_map[landmark_id])
+    info = view_landmark_info(
+        landmark_map[landmark_id]
+    )
 
     save_user_history(
         category="landmark",
@@ -1253,7 +1291,6 @@ def list_all_landmarks_api():
         }
         for l in landmarks
     ])
-
 
 # ==========================================================
 # LANDMARK OPTION 4 - RECOMMENDATION
@@ -1490,6 +1527,3 @@ def imax_theaters_api():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
