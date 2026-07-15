@@ -2168,3 +2168,13 @@ body {
     font-size: 14px;
     padding: 4px 8px;
 }
+
+/* ==========================================
+   LANDMARK INFO SELECT BAR SIZE FIX
+========================================== */
+
+#landmarkPopup #landmarkSelect {
+    flex: 0 0 410px;
+    width: 410px;
+    max-width: 410px;
+}
