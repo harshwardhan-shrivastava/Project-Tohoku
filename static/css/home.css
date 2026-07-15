@@ -1344,3 +1344,19 @@ body {
 .theater-card img {
     width: 90%;
 }
+
+/* =========================
+   FIXED HOMEPAGE NAVBAR
+========================= */
+
+.home-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.home-page {
+    padding-top: 120px;
+}
