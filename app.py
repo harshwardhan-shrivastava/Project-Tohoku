@@ -3,7 +3,11 @@ from flask import Flask, render_template, jsonify, request, redirect, session, u
 import sqlite3
 import random
 import os
-import smtplib
+import base64
+import json
+
+from google.oauth2.credentials import Credentials
+from googleapiclient.discovery import build
 from email.message import EmailMessage
 
 from datetime import datetime, timedelta
@@ -24,13 +28,16 @@ if not app.secret_key:
 
 
 
-
 # ==========================================================
-# EMAIL VERIFICATION
+# EMAIL VERIFICATION - GMAIL API
 # ==========================================================
 
 MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+GMAIL_TOKEN_JSON = os.environ.get("GMAIL_TOKEN_JSON")
+
+GMAIL_SCOPES = [
+    "https://www.googleapis.com/auth/gmail.send"
+]
 
 
 def send_verification_email(email, code):
@@ -38,8 +45,21 @@ def send_verification_email(email, code):
     if not MAIL_USERNAME:
         raise RuntimeError("MAIL_USERNAME is not configured")
 
-    if not MAIL_PASSWORD:
-        raise RuntimeError("MAIL_PASSWORD is not configured")
+    if not GMAIL_TOKEN_JSON:
+        raise RuntimeError("GMAIL_TOKEN_JSON is not configured")
+
+    token_info = json.loads(GMAIL_TOKEN_JSON)
+
+    credentials = Credentials.from_authorized_user_info(
+        token_info,
+        GMAIL_SCOPES
+    )
+
+    service = build(
+        "gmail",
+        "v1",
+        credentials=credentials
+    )
 
     message = EmailMessage()
 
@@ -61,10 +81,18 @@ Project Tōhoku
 Explore Northern Japan.
 """)
 
-    with smtplib.SMTP("smtp.gmail.com", 587, timeout=15) as smtp:
-        smtp.starttls()
-        smtp.login(MAIL_USERNAME, MAIL_PASSWORD)
-        smtp.send_message(message)
+    encoded_message = base64.urlsafe_b64encode(
+        message.as_bytes()
+    ).decode()
+
+    service.users().messages().send(
+        userId="me",
+        body={
+            "raw": encoded_message
+        }
+    ).execute()
+
+    print("EMAIL SENT THROUGH GMAIL API")
 # ==========================================================
 # DATABASE
 # ========================================================
