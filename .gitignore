@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+.env.*
+
+# Project database
+tohoku.db
+
+# Flask
+instance/
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Old development files
+.ladnamrk option 4.txt
+ladnmark js.txt
+PROJECT TOHOKU.PY
+history.txt

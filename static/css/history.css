@@ -1,0 +1,404 @@
+/* =========================================================
+   PROJECT TOHOKU - JOURNEY ARCHIVE
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    background: #081512;
+    color: #f7f3ea;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.history-navbar {
+    height: 88px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(7, 20, 17, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.history-logo {
+    color: #f7f3ea;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.history-user {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.history-user img {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #d9b44a;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.history-page {
+    width: min(1180px, 88%);
+    margin: 0 auto;
+
+    padding: 90px 0 120px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.history-hero {
+    max-width: 760px;
+    margin-bottom: 55px;
+}
+
+.history-eyebrow {
+    margin: 0 0 18px;
+
+    color: #d9b44a;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.history-hero h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.history-subtitle {
+    margin: 25px 0 0;
+
+    color: rgba(247, 243, 234, 0.58);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.history-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+.history-stat {
+    min-height: 130px;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: #10231e;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+}
+
+.history-stat span {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.history-stat p {
+    margin: 7px 0 0;
+
+    color: rgba(247, 243, 234, 0.5);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shrine-stat {
+    border-bottom: 3px solid #ef83ae;
+}
+
+.landmark-stat {
+    border-bottom: 3px solid #568bb4;
+}
+
+.theater-stat {
+    border-bottom: 3px solid #a72e43;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.history-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+.history-filter {
+    padding: 12px 21px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+
+    background: transparent;
+    color: rgba(247, 243, 234, 0.55);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.history-filter:hover {
+    color: #f7f3ea;
+    transform: translateY(-2px);
+}
+
+.history-filter.active {
+    background: #d9b44a;
+    color: #081512;
+    border-color: #d9b44a;
+}
+
+
+/* =========================================================
+   HISTORY LIST
+========================================================= */
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history-card {
+    min-height: 150px;
+    padding: 28px 32px;
+
+    display: flex;
+    align-items: center;
+    gap: 42px;
+
+    background: #0e211c;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.history-card:hover {
+    transform: translateX(7px);
+    background: #122a23;
+}
+
+.history-card.shrine:hover {
+    border-color: rgba(239, 131, 174, 0.55);
+}
+
+.history-card.landmark:hover {
+    border-color: rgba(86, 139, 180, 0.55);
+}
+
+.history-card.theater:hover {
+    border-color: rgba(167, 46, 67, 0.65);
+}
+
+
+/* =========================================================
+   CARD CATEGORY
+========================================================= */
+
+.history-card-category {
+    width: 150px;
+    flex-shrink: 0;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.history-card.shrine .history-card-category {
+    color: #ef83ae;
+}
+
+.history-card.landmark .history-card-category {
+    color: #70a9d5;
+}
+
+.history-card.theater .history-card-category {
+    color: #d45b70;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.history-card-content h2 {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.history-service {
+    margin: 8px 0 0;
+
+    color: #d9b44a;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.history-details {
+    margin: 13px 0 0;
+
+    color: rgba(247, 243, 234, 0.52);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   EMPTY ARCHIVE
+========================================================= */
+
+.history-empty {
+    padding: 80px 40px;
+
+    text-align: center;
+
+    background: #0e211c;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+}
+
+.history-empty h2 {
+    margin: 0;
+
+    font-size: 32px;
+}
+
+.history-empty p {
+    max-width: 500px;
+    margin: 18px auto 30px;
+
+    color: rgba(247, 243, 234, 0.5);
+
+    line-height: 1.7;
+}
+
+.history-empty a {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #d9b44a;
+    color: #081512;
+
+    border-radius: 100px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .history-navbar {
+        padding: 0 5%;
+    }
+
+    .history-logo {
+        font-size: 18px;
+    }
+
+    .history-page {
+        width: 90%;
+        padding-top: 60px;
+    }
+
+    .history-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .history-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .history-filters {
+        overflow-x: auto;
+    }
+
+    .history-card {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .history-card-category {
+        width: auto;
+    }
+
+}

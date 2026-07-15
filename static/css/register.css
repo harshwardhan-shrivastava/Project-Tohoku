@@ -1,0 +1,1066 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #183632;
+    color: #ffffff;
+}
+
+.register-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+}
+
+
+/* =========================================================
+   LEFT VISUAL
+========================================================= */
+
+.register-visual {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.register-visual > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10, 28, 25, 0.25),
+            rgba(10, 28, 25, 0.9)
+        );
+}
+
+.visual-brand {
+    position: absolute;
+    top: 45px;
+    left: 55px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.brand-icon {
+    font-size: 25px;
+}
+
+.visual-content {
+    position: absolute;
+    left: 55px;
+    bottom: 70px;
+
+    max-width: 610px;
+}
+
+.visual-label {
+    color: #f5d90a;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.visual-content h1 {
+    font-size: clamp(50px, 5vw, 82px);
+    line-height: 0.98;
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.visual-content h1 span {
+    color: #f5d90a;
+}
+
+.visual-description {
+    max-width: 530px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    margin-bottom: 30px;
+}
+
+.visual-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.visual-tags span {
+    padding: 9px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   REGISTER PANEL
+========================================================= */
+
+.register-panel {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 55px 70px;
+
+    background: #183632;
+}
+
+.register-form-container {
+    width: 100%;
+    max-width: 570px;
+}
+
+.small-heading {
+    color: #f5d90a;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.register-heading h2 {
+    font-size: 42px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.register-heading > p:last-child {
+    color: #aebfbb;
+    line-height: 1.6;
+
+    margin-bottom: 32px;
+}
+
+
+/* =========================================================
+   AVATARS
+========================================================= */
+
+.avatar-section {
+    margin-bottom: 27px;
+}
+
+.form-label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 14px;
+}
+
+.avatar-grid {
+    display: grid;
+     grid-template-columns: repeat(4, 130px);
+    gap: 35px;
+}
+
+.avatar-option {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+border-radius: 50%;
+}
+
+.avatar-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.avatar-option img {
+    width: 100%;
+    aspect-ratio: 1;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    border: 3px solid transparent;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.avatar-option:nth-child(2) img {
+    transform: scale(3.6)translateY(26.8%)translateX(2.25%);
+    
+}
+.avatar-option:nth-child(3) img {
+    transform: scale(4.5) translateY(27%);
+}
+.avatar-option:nth-child(4) img {
+    transform: scale(4) translateY(20%);
+}
+.avatar-option:nth-child(5) img {
+    transform: scale(4) translateY(27%);
+}
+.avatar-option:nth-child(6) img {
+    transform: scale(4.8) translateY(27.60%);
+}
+.avatar-option:nth-child(7) img {
+    transform: scale(4.8) translateY(27.70%);
+}
+.avatar-option:nth-child(8) img {
+    transform: scale(4.8) translateY(27.70%);
+}
+
+
+
+.avatar-option input:checked + img {
+    border-color: #f5d90a;
+
+    box-shadow:
+        0 0 0 4px rgba(245, 217, 10, 0.15),
+        0 0 25px rgba(245, 217, 10, 0.35);
+
+    
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.register-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 53px;
+
+    padding: 0 17px;
+
+    border: 1px solid #47605b;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #213f3a;
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: #82938f;
+}
+
+.input-group input:focus {
+    border-color: #f5d90a;
+
+    box-shadow:
+        0 0 0 3px rgba(245, 217, 10, 0.1);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.register-btn {
+    width: 100%;
+    height: 55px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f5d90a;
+    color: #173530;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(245, 217, 10, 0.25);
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.login-link {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #9fb1ad;
+    font-size: 20px;
+}
+
+.login-link a {
+    margin-left: 5px;
+
+    color: #f5d90a;
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .register-page {
+        grid-template-columns: 1fr;
+    }
+
+    .register-visual {
+        min-height: 500px;
+    }
+
+    .register-panel {
+        min-height: auto;
+        padding: 70px 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .visual-brand,
+    .visual-content {
+        left: 25px;
+    }
+
+    .visual-content {
+        right: 25px;
+        bottom: 40px;
+    }
+
+    .visual-content h1 {
+        font-size: 48px;
+    }
+
+    .avatar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .register-heading h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================================================
+   AVATAR PICKER
+========================================================= */
+
+.avatar-picker-preview {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.selected-avatar-box {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #f5d90a;
+    background: #213f3a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.choose-avatar-btn {
+    padding: 14px 24px;
+
+    border: 1px solid #f5d90a;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #f5d90a;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.choose-avatar-btn:hover {
+    background: #f5d90a;
+    color: #183632;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CRUNCHYROLL STYLE AVATAR SELECTOR
+========================================================= */
+
+.avatar-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(4px);
+
+    z-index: 9999;
+}
+
+.avatar-popup.active {
+    display: flex;
+}
+
+
+/* MAIN MODAL */
+
+.avatar-popup-content {
+    width: 900px;
+    max-width: 94%;
+
+    height: 700px;
+    max-height: 88vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #252525;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.65);
+}
+
+
+/* HEADER */
+
+.avatar-popup-header {
+    position: relative;
+
+    flex-shrink: 0;
+
+    padding: 32px 55px 28px;
+
+    background: #303030;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatar-popup-header h2 {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.avatar-popup-header p {
+    color: #a8a8a8;
+
+    font-size: 15px;
+}
+
+.close-avatar-popup {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    border: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+
+/* SCROLLING AVATAR AREA */
+
+.avatar-scroll {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 32px 55px 50px;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(255, 255, 255, 0.55)
+        transparent;
+}
+
+.avatar-scroll::-webkit-scrollbar {
+    width: 7px;
+}
+
+.avatar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.avatar-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+
+    border-radius: 20px;
+}
+
+
+/* CATEGORY */
+
+.avatar-category {
+    margin-bottom: 42px;
+}
+
+.avatar-category:last-child {
+    margin-bottom: 0;
+}
+
+.avatar-category h3 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+/* AVATAR ROW */
+
+.avatar-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(5, 110px);
+
+    justify-content: space-between;
+
+    gap: 30px 22px;
+}
+
+
+/* AVATAR */
+
+.avatar-option {
+    position: relative;
+
+    width: 110px;
+    height: 110px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.avatar-option img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    border: 3px solid transparent;
+
+    transform: scale(3.6) translateY(26%);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.25s ease;
+}
+
+.avatar-option:hover {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   GYARU AVATARS — SAME AS PROFILE UPDATE
+===================================================== */
+
+.avatar-option[data-avatar^="gyaru"] img {
+    transform: scale(3.6) translateY(26%);
+}
+
+.avatar-option[data-avatar^="gyaru"]:hover img {
+    transform: scale(1) translateY(0%);
+}
+
+#selectedAvatarPreview[src*="gyaru"],
+.confirm-avatar-preview img[src*="gyaru"] {
+    transform: scale(3.6) translateY(26%);
+}
+
+
+/* =====================================================
+   CHIBI AVATARS — STATIC 1.5
+===================================================== */
+
+.avatar-option[data-avatar^="chibi"] img,
+.avatar-option[data-avatar^="chibi"]:hover img {
+    transform: scale(1.5) !important;
+}
+
+#selectedAvatarPreview[src*="chibi"],
+.confirm-avatar-preview img[src*="chibi"] {
+    transform: scale(1.5) !important;
+}
+
+
+/* =====================================================
+   FANTASY AVATARS — INDIVIDUAL FRAMING
+===================================================== */
+
+.avatar-option[data-avatar="fantasy1.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.avatar-option[data-avatar="fantasy2.png"] img {
+    transform: scale(4) translateY(27%) !important;
+}
+
+.avatar-option[data-avatar="fantasy3.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.avatar-option[data-avatar="fantasy4.png"] img {
+    transform: scale(4) translateY(20%) !important;
+}
+
+.avatar-option[data-avatar="fantasy5.png"] img {
+    transform: scale(4) translateY(27%) !important;
+}
+
+.avatar-option[data-avatar="fantasy6.png"] img {
+    transform: scale(4) translateY(20%) !important;
+}
+
+.avatar-option[data-avatar="fantasy7.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.avatar-option[data-avatar="fantasy8.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.avatar-option[data-avatar^="fantasy"]:hover img {
+    transform: scale(1) translateY(0%) !important;
+}
+
+#selectedAvatarPreview[src*="fantasy"],
+.confirm-avatar-preview img[src*="fantasy"] {
+    transform: scale(4) translateY(25%) !important;
+}
+
+
+/* =====================================================
+   CLOSE-UP — SAME AS PROFILE UPDATE
+===================================================== */
+
+.avatar-option[data-avatar^="profile"] img,
+.avatar-option[data-avatar^="profile"]:hover img,
+#selectedAvatarPreview[src*="profile"],
+.confirm-avatar-preview img[src*="profile"] {
+    transform: scale(1) !important;
+}
+
+
+/* PROFILE 2 + 3 — STATIC 1.5 */
+
+.avatar-option[data-avatar="profile2.png"] img,
+.avatar-option[data-avatar="profile3.png"] img,
+.avatar-option[data-avatar="profile2.png"]:hover img,
+.avatar-option[data-avatar="profile3.png"]:hover img,
+#selectedAvatarPreview[src*="profile2"],
+#selectedAvatarPreview[src*="profile3"],
+.confirm-avatar-preview img[src*="profile2"],
+.confirm-avatar-preview img[src*="profile3"] {
+    transform: scale(1.5) !important;
+}
+
+
+/* PROFILE 6–8 — STATIC 1.5 */
+
+.avatar-option[data-avatar="profile6.png"] img,
+.avatar-option[data-avatar="profile7.png"] img,
+.avatar-option[data-avatar="profile8.png"] img,
+
+.avatar-option[data-avatar="profile6.png"]:hover img,
+.avatar-option[data-avatar="profile7.png"]:hover img,
+.avatar-option[data-avatar="profile8.png"]:hover img,
+
+#selectedAvatarPreview[src*="profile6"],
+#selectedAvatarPreview[src*="profile7"],
+#selectedAvatarPreview[src*="profile8"],
+
+.confirm-avatar-preview img[src*="profile6"],
+.confirm-avatar-preview img[src*="profile7"],
+.confirm-avatar-preview img[src*="profile8"] {
+    transform: scale(1.5) !important;
+}
+
+
+/* =========================================================
+   AVATAR CONFIRMATION
+========================================================= */
+
+.avatar-confirm-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(5, 15, 13, 0.9);
+
+    z-index: 10000;
+}
+
+.avatar-confirm-popup.active {
+    display: flex;
+}
+
+.avatar-confirm-box {
+    width: 420px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #183632;
+
+    border: 1px solid #47605b;
+    border-radius: 18px;
+}
+
+.avatar-confirm-box h3 {
+    margin-bottom: 12px;
+
+    font-size: 25px;
+}
+
+.avatar-confirm-box p {
+    margin-bottom: 25px;
+
+    color: #aebfbb;
+}
+
+.confirm-avatar-preview {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 30px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 3px solid #f5d90a;
+}
+
+.confirm-avatar-preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.avatar-confirm-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.avatar-confirm-buttons button {
+    flex: 1;
+
+    height: 48px;
+
+    border-radius: 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.confirm-avatar-btn {
+    border: none;
+
+    background: #f5d90a;
+    color: #183632;
+}
+
+.cancel-avatar-btn {
+    border: 1px solid #47605b;
+
+    background: transparent;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   AVATAR SELECTOR RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .avatar-gallery {
+        grid-template-columns: repeat(2, 130px);
+    }
+
+}
+
+/* =========================================================
+   LOGIN POPUP
+========================================================= */
+
+.login-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: rgba(5, 15, 13, 0.88);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 11000;
+}
+
+.login-popup.active {
+    display: flex;
+}
+
+.login-popup-box {
+    position: relative;
+
+    width: 480px;
+    max-width: 100%;
+
+    padding: 50px;
+
+    background: #183632;
+
+    border: 1px solid #47605b;
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.close-login-popup {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    border: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.login-small-heading {
+    margin-bottom: 12px;
+
+    color: #f5d90a;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.login-popup-box h2 {
+    margin-bottom: 12px;
+
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.login-description {
+    margin-bottom: 30px;
+
+    color: #aebfbb;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.login-submit-btn {
+    width: 100%;
+    height: 55px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f5d90a;
+    color: #173530;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.login-submit-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(245, 217, 10, 0.25);
+}
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.forgot-password-btn {
+    display: block;
+
+    margin: 18px auto 0;
+
+    border: none;
+
+    background: transparent;
+    color: #d96b6b;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.forgot-password-btn:hover {
+    color: #ff8b8b;
+
+    transform: translateY(-1px);
+}

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Your Explorer | Project Tōhoku</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/register.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     AVATAR GALLERY POPUP
+======================================================= -->
+
+<div class="avatar-popup" id="avatarPopup">
+
+    <div class="avatar-popup-content">
+
+        <div class="avatar-popup-header">
+
+            <div>
+
+                <h2 data-i18n="register_avatar_title">
+                    Avatar Selection
+                </h2>
+
+                <p data-i18n="register_avatar_description">
+                    Choose your explorer! You can change it at any time.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="close-avatar-popup"
+                id="closeAvatarPicker"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="avatar-scroll">
+
+
+            <!-- ================= CLOSE-UP ================= -->
+
+            <section class="avatar-category">
+
+                <h3 data-i18n="register_avatar_closeup">
+                    Close-up
+                </h3>
+
+                <div class="avatar-gallery">
+
+                    {% for i in range(1, 9) %}
+
+                    <div
+                        class="avatar-option"
+                        data-avatar="profile{{ i }}.png"
+                        data-avatar-frame="profile-{{ i }}"
+                    >
+
+                        <img
+                            src="{{ url_for(
+                                'static',
+                                filename='images/avatars/profile' ~ i ~ '.png'
+                            ) }}"
+                            alt="Close-up Explorer {{ i }}"
+                        >
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= GYARU ================= -->
+
+            <section class="avatar-category">
+
+                <h3 data-i18n="register_avatar_gyaru">
+                    Gyaru
+                </h3>
+
+                <div class="avatar-gallery">
+
+                    {% for i in range(1, 9) %}
+
+                    <div
+                        class="avatar-option"
+                        data-avatar="gyaru{{ i }}.png"
+                        data-avatar-frame="gyaru-{{ i }}"
+                    >
+
+                        <img
+                            src="{{ url_for(
+                                'static',
+                                filename='images/avatars/gyaru' ~ i ~ '.png'
+                            ) }}"
+                            alt="Gyaru Explorer {{ i }}"
+                        >
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CHIBI ================= -->
+
+            <section class="avatar-category">
+
+                <h3 data-i18n="register_avatar_chibi">
+                    Chibi
+                </h3>
+
+                <div class="avatar-gallery">
+
+                    {% for i in range(1, 9) %}
+
+                    <div
+                        class="avatar-option"
+                        data-avatar="chibi{{ i }}.png"
+                        data-avatar-frame="chibi-{{ i }}"
+                    >
+
+                        <img
+                            src="{{ url_for(
+                                'static',
+                                filename='images/avatars/chibi' ~ i ~ '.png'
+                            ) }}"
+                            alt="Chibi Explorer {{ i }}"
+                        >
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FANTASY ================= -->
+
+            <section class="avatar-category">
+
+                <h3 data-i18n="register_avatar_fantasy">
+                    Fantasy
+                </h3>
+
+                <div class="avatar-gallery">
+
+                    {% for i in range(1, 9) %}
+
+                    <div
+                        class="avatar-option"
+                        data-avatar="fantasy{{ i }}.png"
+                        data-avatar-frame="fantasy-{{ i }}"
+                    >
+
+                        <img
+                            src="{{ url_for(
+                                'static',
+                                filename='images/avatars/fantasy' ~ i ~ '.png'
+                            ) }}"
+                            alt="Fantasy Explorer {{ i }}"
+                        >
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     AVATAR CONFIRMATION POPUP
+======================================================= -->
+
+<div class="avatar-confirm-popup" id="avatarConfirmPopup">
+
+    <div class="avatar-confirm-box">
+
+        <h3 data-i18n="register_avatar_confirm_title">
+            Choose this explorer?
+        </h3>
+
+        <p data-i18n="register_avatar_confirm_description">
+            This avatar will represent your Project Tōhoku profile.
+        </p>
+
+        <div class="confirm-avatar-preview">
+
+            <img
+                id="confirmAvatarImage"
+                src=""
+                alt="Avatar Preview"
+            >
+
+        </div>
+
+        <div class="avatar-confirm-buttons">
+
+            <button
+                type="button"
+                class="cancel-avatar-btn"
+                id="cancelAvatar"
+                data-i18n="register_avatar_cancel"
+            >
+                NO
+            </button>
+
+            <button
+                type="button"
+                class="confirm-avatar-btn"
+                id="confirmAvatar"
+                data-i18n="register_avatar_confirm"
+            >
+                YES, USE AVATAR
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     LOGIN POPUP
+======================================================= -->
+
+<div class="login-popup" id="loginPopup">
+
+    <div class="login-popup-box">
+
+        <button
+            type="button"
+            class="close-login-popup"
+            id="closeLoginPopup"
+        >
+            ×
+        </button>
+
+        <p
+            class="login-small-heading"
+            data-i18n="login_small_heading"
+        >
+            RETURNING EXPLORER
+        </p>
+
+        <h2 data-i18n="login_title">
+            Welcome back.
+        </h2>
+
+        <p
+            class="login-description"
+            data-i18n="login_description"
+        >
+            Continue your journey through Tōhoku.
+        </p>
+
+
+        <form
+            action="{{ url_for('login') }}"
+            method="POST"
+        >
+
+            <div class="input-group">
+
+                <label data-i18n="account_email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    data-i18n-placeholder="login_email_placeholder"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label data-i18n="account_password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    data-i18n-placeholder="login_password_placeholder"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-submit-btn"
+                data-i18n="login_continue"
+            >
+                CONTINUE JOURNEY
+            </button>
+
+
+            <button
+                type="button"
+                class="forgot-password-btn"
+                id="openForgotPassword"
+                data-i18n="login_forgot_password"
+            >
+                Forgot your password?
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     FORGOT PASSWORD POPUP
+======================================================= -->
+
+<div class="login-popup" id="forgotPasswordPopup">
+
+    <div class="login-popup-box">
+
+        <button
+            type="button"
+            class="close-login-popup"
+            id="closeForgotPassword"
+        >
+            ×
+        </button>
+
+        <p
+            class="login-small-heading"
+            data-i18n="forgot_small_heading"
+        >
+            ACCOUNT RECOVERY
+        </p>
+
+        <h2 data-i18n="forgot_title">
+            Reset your password.
+        </h2>
+
+        <p
+            class="login-description"
+            data-i18n="forgot_description"
+        >
+            Enter your registered email and we'll send you a 6-digit code.
+        </p>
+
+
+        <form
+            action="{{ url_for('forgot_password') }}"
+            method="POST"
+        >
+
+            <div class="input-group">
+
+                <label data-i18n="account_email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your registered email"
+                    data-i18n-placeholder="forgot_email_placeholder"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-submit-btn"
+                data-i18n="forgot_send_code"
+            >
+                SEND VERIFICATION CODE
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     REGISTER PAGE
+======================================================= -->
+
+<main class="register-page">
+
+
+    <!-- ==================================================
+         LEFT IMAGE
+    =================================================== -->
+
+    <section class="register-visual">
+
+        <img
+            src="{{ url_for(
+                'static',
+                filename='images/large_tohoku.jpg'
+            ) }}"
+            alt="Tohoku"
+        >
+
+        <div class="visual-overlay"></div>
+
+
+        <div class="visual-brand">
+
+            <span class="brand-icon">
+                🏯
+            </span>
+
+            PROJECT TŌHOKU
+
+        </div>
+
+
+        <div class="visual-content">
+
+            <p
+                class="visual-label"
+                data-i18n="register_visual_label"
+            >
+                EXPLORE NORTHERN JAPAN
+            </p>
+
+
+            <h1>
+
+                <span data-i18n="register_visual_title">
+                    Find your next
+                </span>
+
+                <span data-i18n="register_visual_title_highlight">
+                    journey.
+                </span>
+
+            </h1>
+
+
+            <p
+                class="visual-description"
+                data-i18n="register_visual_description"
+            >
+                Discover sacred shrines, unforgettable landscapes
+                and cultural experiences across Tōhoku.
+            </p>
+
+
+            <div class="visual-tags">
+
+                <span data-i18n="register_tag_shrines">
+                    Shrines
+                </span>
+
+                <span data-i18n="register_tag_landmarks">
+                    Landmarks
+                </span>
+
+                <span data-i18n="register_tag_culture">
+                    Culture
+                </span>
+
+                <span data-i18n="register_tag_cinema">
+                    Cinema
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         RIGHT REGISTER FORM
+    =================================================== -->
+
+    <section class="register-panel">
+
+        <div class="register-form-container">
+
+
+            <div class="register-heading">
+
+                <p
+                    class="small-heading"
+                    data-i18n="register_small_heading"
+                >
+                    JOIN PROJECT TŌHOKU
+                </p>
+
+                <h2 data-i18n="register_title">
+                    Create your explorer.
+                </h2>
+
+                <p data-i18n="register_description">
+                    Build your profile and begin exploring Northern Japan.
+                </p>
+
+            </div>
+
+
+            <form
+                method="POST"
+                class="register-form"
+            >
+
+
+                <!-- ================= AVATAR PICKER ================= -->
+
+                <div class="avatar-section">
+
+                    <label
+                        class="form-label"
+                        data-i18n="register_choose_avatar"
+                    >
+                        Choose your avatar
+                    </label>
+
+
+                    <div class="avatar-picker-preview">
+
+                        <div class="selected-avatar-box">
+
+                            <img
+                                id="selectedAvatarPreview"
+                                src="{{ url_for(
+                                    'static',
+                                    filename='images/avatars/profile1.png'
+                                ) }}"
+                                alt="Selected Avatar"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="choose-avatar-btn"
+                            id="openAvatarPicker"
+                            data-i18n="register_choose_avatar_button"
+                        >
+                            CHOOSE AVATAR
+                        </button>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        name="avatar"
+                        id="selectedAvatarInput"
+                        value="profile1.png"
+                    >
+
+                </div>
+
+
+                <!-- ================= USERNAME ================= -->
+
+                <div class="input-group">
+
+                    <label
+                        for="username"
+                        data-i18n="register_name_label"
+                    >
+                        Enter your name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose your explorer name"
+                        data-i18n-placeholder="register_name_placeholder"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ================= EMAIL ================= -->
+
+                <div class="input-group">
+
+                    <label
+                        for="email"
+                        data-i18n="register_email_label"
+                    >
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        data-i18n-placeholder="register_email_placeholder"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ================= PASSWORD ================= -->
+
+                <div class="input-group">
+
+                    <label
+                        for="password"
+                        data-i18n="account_password"
+                    >
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create your password"
+                        data-i18n-placeholder="register_password_placeholder"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                    data-i18n="register_begin_journey"
+                >
+                    BEGIN YOUR JOURNEY
+                </button>
+
+            </form>
+
+
+            <div class="login-link">
+
+                <span data-i18n="register_existing_explorer">
+                    Already an explorer?
+                </span>
+
+                <a
+                    href="#"
+                    id="openLoginPopup"
+                    data-i18n="register_login"
+                >
+                    LOGIN
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script
+    src="{{ url_for('static', filename='jss/language.js') }}"
+></script>
+
+<script
+    src="{{ url_for('static', filename='jss/register.js') }}"
+></script>
+
+
+</body>
+
+</html>

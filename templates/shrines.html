@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tōhoku | Shrine</title>
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shrine.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/profile-component.css') }}">
+</head>
+
+
+
+
+
+
+<body class="shrine-page">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="topbar">
+
+    <div class="nav-left">
+        <a href="/" class="logo">
+            PROJECT TŌHOKU
+        </a>
+    </div>
+
+    <nav class="navbar">
+        <a href="#aoba" data-i18n="shrine_nav_aoba">Aoba</a>
+        <a href="#osaki" data-i18n="shrine_nav_osaki">Osaki</a>
+        <a href="#kabushima" data-i18n="shrine_nav_kabushima">Kabushima</a>
+        <a href="#towada" data-i18n="shrine_nav_towada">Towada</a>
+        <a href="#services-section" data-i18n="shrine_nav_services">Shrine Services</a>
+    </nav>
+
+    <div class="nav-right">
+    {% include "profile_button.html" %}
+</div>
+
+</header>
+
+    <!-- ================= HERO / OVERVIEW ================= -->
+
+    <!-- ================= OVERVIEW ================= -->
+
+<!-- ================= AOBA SHRINE ================= -->
+
+<section id="aoba">
+
+    <div class="overview-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="overview-text">
+
+            <h2 data-i18n="shrine_aoba_name">Aoba Shrine</h2>
+
+            <p data-i18n="shrine_aoba_description">
+                Aoba Shrine is one of the most famous shrines in Sendai,
+                dedicated to Date Masamune. Surrounded by peaceful forests,
+                it is known for its beautiful architecture and rich history.
+            </p>
+
+            <div class="info-list">
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_prefecture">📍 Prefecture</strong>
+                    <span>Miyagi</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_founded">🗓 Founded</strong>
+                    <span>1874</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_best_season">🌸 Best Season</strong>
+                    <span data-i18n="shrine_season_spring_autumn">Spring & Autumn</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_rating">⭐ Rating</strong>
+                    <span>4.8 / 5</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="overview-image">
+
+            <img src="{{ url_for('static', filename='images/shrine1.jpg') }}" alt="Aoba Shrine">
+
+        </div>
+
+    </div>
+
+    <!-- GOOGLE MAPS -->
+
+    <div class="maps-section">
+
+        <h2 data-i18n="shrine_maps_aoba">📍 Explore Aoba Shrine</h2>
+
+        <p>
+            <span data-i18n="shrine_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</span>
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Aoba+Shrine+Sendai"
+           target="_blank"
+           class="maps-btn">
+
+            <span data-i18n="shrine_maps_button">Open in Google Maps</span>
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= OSAKI HACHIMANGU ================= -->
+
+<section id="osaki">
+
+    <div class="overview-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="overview-text">
+
+            <h2 data-i18n="shrine_osaki_name">Osaki Hachimangu</h2>
+
+            <p data-i18n="shrine_osaki_description">
+                Osaki Hachimangu is a magnificent shrine in Sendai,
+                famous for its ornate black and gold architecture.
+                Designated as a National Treasure, it has welcomed
+                visitors for centuries and remains one of Miyagi's
+                most celebrated cultural landmarks.
+            </p>
+
+            <div class="info-list">
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_prefecture">📍 Prefecture</strong>
+                    <span>Miyagi</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_founded">🗓 Founded</strong>
+                    <span>1607</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_best_season">🌸 Best Season</strong>
+                    <span data-i18n="shrine_season_spring_autumn">Spring & Autumn</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_rating">⭐ Rating</strong>
+                    <span>4.8 / 5</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="overview-image">
+
+            <img src="{{ url_for('static', filename='images/shrine2.jpg') }}" alt="Osaki Hachimangu">
+
+        </div>
+
+    </div>
+
+    <!-- GOOGLE MAPS -->
+
+    <div class="maps-section">
+
+        <h2 data-i18n="shrine_maps_osaki">📍 Explore Osaki Hachimangu</h2>
+
+        <p>
+            <span data-i18n="shrine_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</span>
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Osaki+Hachimangu+Sendai"
+           target="_blank"
+           class="maps-btn">
+
+            <span data-i18n="shrine_maps_button">Open in Google Maps</span>
+
+        </a>
+
+    </div>
+
+</section>
+   
+<!-- ================= KABUSHIMA SHRINE ================= -->
+
+<section id="kabushima">
+
+    <div class="overview-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="overview-text">
+
+            <h2 data-i18n="shrine_kabushima_name">Kabushima Shrine</h2>
+
+            <p data-i18n="shrine_kabushima_description">
+                Kabushima Shrine overlooks the Pacific Ocean and is
+                famous for its breathtaking coastal scenery and the
+                thousands of black-tailed gulls that gather every year,
+                making it one of Japan's most unique spiritual
+                destinations.
+            </p>
+
+            <div class="info-list">
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_prefecture">📍 Prefecture</strong>
+                    <span>Aomori</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_founded">🗓 Founded</strong>
+                    <span>1269</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_best_season">🌸 Best Season</strong>
+                    <span data-i18n="shrine_season_summer">Summer</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_rating">⭐ Rating</strong>
+                    <span>4.7 / 5</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="overview-image">
+
+            <img src="{{ url_for('static', filename='images/shrine3.jpg') }}" alt="Kabushima Shrine">
+
+        </div>
+
+    </div>
+
+    <!-- GOOGLE MAPS -->
+
+    <div class="maps-section">
+
+        <h2 data-i18n="shrine_maps_kabushima">📍 Explore Kabushima Shrine</h2>
+
+        <p>
+            <span data-i18n="shrine_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</span>
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Kabushima+Shrine"
+           target="_blank"
+           class="maps-btn">
+
+            <span data-i18n="shrine_maps_button">Open in Google Maps</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TOWADA SHRINE ================= -->
+
+<section id="towada">
+
+    <div class="overview-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="overview-text">
+
+            <h2 data-i18n="shrine_towada_name">Towada Shrine</h2>
+
+            <p data-i18n="shrine_towada_description">
+                Located beside the beautiful Lake Towada,
+                Towada Shrine is surrounded by ancient cedar
+                forests and peaceful walking trails. It offers
+                visitors a tranquil escape into nature and
+                traditional Japanese spirituality.
+            </p>
+
+            <div class="info-list">
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_prefecture">📍 Prefecture</strong>
+                    <span>Aomori</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_founded">🗓 Founded</strong>
+                    <span>807</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_best_season">🌸 Best Season</strong>
+                    <span data-i18n="shrine_season_autumn">Autumn</span>
+                </div>
+
+                <div class="info-item">
+                    <strong data-i18n="shrine_label_rating">⭐ Rating</strong>
+                    <span>4.8 / 5</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="overview-image">
+
+            <img src="{{ url_for('static', filename='images/shrine4.jpg') }}" alt="Towada Shrine">
+
+        </div>
+
+    </div>
+
+    <!-- GOOGLE MAPS -->
+
+    <div class="maps-section">
+
+        <h2 data-i18n="shrine_maps_towada">📍 Explore Towada Shrine</h2>
+
+        <p>
+            <span data-i18n="shrine_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</span>
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Towada+Shrine"
+           target="_blank"
+           class="maps-btn">
+
+            <span data-i18n="shrine_maps_button">Open in Google Maps</span>
+
+        </a>
+
+    </div>
+
+</section>
+    
+  <section id="services-section" class="services-section">
+    <h2 class="services-title" data-i18n="shrine_services_title">Shrine Services</h2>
+
+    <div class="services-grid">
+
+        <div class="service-card" onclick="openShrinePopup()">
+    <img src="{{ url_for('static', filename='images/card1.jpg') }}" alt="Card 1">
+    <h3 data-i18n="shrine_service_info">⛩️ View Shrine Info</h3>
+</div>
+
+        <div class="service-card" onclick="openCrowdPopup()">
+    <img src="{{ url_for('static', filename='images/card2.jpg') }}" alt="Card 2">
+    <h3 data-i18n="shrine_service_crowd">👥 Crowd Predictor</h3>
+</div>
+
+        <div class="service-card" onclick="openListPopup()">
+  <img src="{{ url_for('static', filename='images/card3.jpg') }}" alt="Card 3">
+  <h3 data-i18n="shrine_service_available">🗺️ Available Shrines</h3>
+</div>
+<div class="service-card" onclick="openRecommendPopup()">
+  <img src="{{ url_for('static', filename='images/card4.jpg') }}" alt="Card 4">
+  <h3 data-i18n="shrine_service_recommend">🗺️ Get Recommendation</h3>
+</div>
+
+<div class="service-card" onclick="openPopularityPopup()">
+  <img src="{{ url_for('static', filename='images/card5.jpg') }}" alt="Card 5">
+  <h3 data-i18n="shrine_service_popularity">Shrine Popularity</h3>
+</div>
+
+<div class="service-card" onclick="openRankingPopup()">
+  <img src="{{ url_for('static', filename='images/card6.png') }}" alt="Card 6">
+  <h3 data-i18n="shrine_service_ranking">🏆 Advanced Shrine Ranking</h3>
+</div>
+
+        <div class="service-card" onclick="openEventPlannerPopup()">
+  <img src="{{ url_for('static', filename='images/card7.png') }}" alt="Card 7">
+  <h3 data-i18n="shrine_service_event">🎉 Event Planner</h3>
+</div>
+
+        
+
+    </div>
+</section>
+
+<!-- ================= SHRINE POPUP ================= -->
+
+<div id="shrinePopup" class="popup">
+    <div class="popup-content">
+        <h2 data-i18n="shrine_popup_select">Select a Shrine</h2>
+        <select id="shrineSelect">
+            <option value="aoba">Aoba Shrine</option>
+            <option value="osaki">Osaki Hachimangu Shrine</option>
+            <option value="kabushima">Kabushima Shrine</option>
+            <option value="towada">Towada Shrine</option>
+        </select>
+        <div class="popup-buttons">
+            <button id="viewShrineBtn" onclick="viewShrine()" data-i18n="shrine_button_view_info">View Information</button>
+            <button onclick="closeShrinePopup()" data-i18n="shrine_button_cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CROWD POPUP ================= -->
+
+<div id="crowdPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2 data-i18n="shrine_popup_crowd">Crowd Predictor</h2>
+
+        <select id="crowdShrine">
+
+            <option value="aoba">Aoba Shrine</option>
+            <option value="osaki">Osaki Hachimangu Shrine</option>
+            <option value="kabushima">Kabushima Shrine</option>
+            <option value="towada">Towada Shrine</option>
+
+        </select>
+
+        <br><br>
+
+        <select id="crowdDay">
+
+            <option value="weekday" data-i18n="shrine_option_weekday">Weekday</option>
+            <option value="weekend" data-i18n="shrine_option_weekend">Weekend</option>
+
+        </select>
+
+        <br><br>
+
+        <select id="crowdWeather">
+
+            <option value="sunny" data-i18n="shrine_option_sunny">Sunny</option>
+            <option value="cloudy" data-i18n="shrine_option_cloudy">Cloudy</option>
+            <option value="rainy" data-i18n="shrine_option_rainy">Rainy</option>
+
+        </select>
+
+        <br><br>
+
+        <div class="popup-buttons">
+
+            <button onclick="predictCrowd()">
+
+                <span data-i18n="shrine_button_predict">Predict Crowd</span>
+
+            </button>
+
+            <button onclick="closeCrowdPopup()">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= AVAILABLE SHRINES POPUP ================= -->
+<div id="listPopup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <h2 data-i18n="shrine_popup_available">Available Shrines</h2>
+    <p data-i18n="shrine_available_description">Click to view the full list of shrines in Tōhoku.</p>
+    <div class="popup-buttons">
+      <button onclick="showShrineList()" data-i18n="shrine_button_show_list">Show List</button>
+      <button onclick="closeListPopup()" data-i18n="shrine_button_cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= RECOMMENDATION POPUP ================= -->
+<div id="recommendPopup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <h2 data-i18n="shrine_popup_recommend">Recommended by Popularity or Quietness</h2>
+
+    <select id="recDay">
+      <option value="weekday" data-i18n="shrine_option_weekday">Weekday</option>
+      <option value="weekend" data-i18n="shrine_option_weekend">Weekend</option>
+    </select>
+    <br><br>
+
+    <select id="recWeather">
+      <option value="sunny" data-i18n="shrine_option_sunny">Sunny</option>
+      <option value="cloudy" data-i18n="shrine_option_cloudy">Cloudy</option>
+      <option value="rainy" data-i18n="shrine_option_rainy">Rainy</option>
+    </select>
+    <br><br>
+
+    <select id="recOrder">
+      <option value="quiet" data-i18n="shrine_option_quietness">By Quietness (Most Quiet First)</option>
+      <option value="popular" data-i18n="shrine_option_popularity">By Popularity (Most Popular First)</option>
+    </select>
+    <br><br>
+
+    <div class="popup-buttons">
+      <button onclick="getRecommendation()" data-i18n="shrine_button_recommend">Get Recommendations</button>
+      <button onclick="closeRecommendPopup()" data-i18n="shrine_button_cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= POPULARITY POPUP ================= -->
+<div id="popularityPopup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <h2 data-i18n="shrine_popup_popularity">Shrine Popularity</h2>
+
+    <select id="popDay">
+      <option value="weekday" data-i18n="shrine_option_weekday">Weekday</option>
+      <option value="weekend" data-i18n="shrine_option_weekend">Weekend</option>
+    </select>
+    <br><br>
+
+    <div class="popup-buttons">
+      <button onclick="showPopularity()" data-i18n="shrine_button_popularity">Show Popularity</button>
+      <button onclick="closePopularityPopup()" data-i18n="shrine_button_cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= RANKING POPUP ================= -->
+<div id="rankingPopup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <h2 data-i18n="shrine_popup_ranking">Advanced Shrine Ranking</h2>
+
+    <select id="rankDay">
+      <option value="weekday" data-i18n="shrine_option_weekday">Weekday</option>
+      <option value="weekend" data-i18n="shrine_option_weekend">Weekend</option>
+    </select>
+    <br><br>
+
+    <select id="rankWeather">
+      <option value="sunny" data-i18n="shrine_option_sunny">Sunny</option>
+      <option value="cloudy" data-i18n="shrine_option_cloudy">Cloudy</option>
+      <option value="rainy" data-i18n="shrine_option_rainy">Rainy</option>
+    </select>
+    <br><br>
+
+    <select id="rankOrder">
+      <option value="quiet" data-i18n="shrine_option_quiet_first">Most Quiet First</option>
+      <option value="popular" data-i18n="shrine_option_popular_first">Most Popular First</option>
+    </select>
+    <br><br>
+
+    <div class="popup-buttons">
+      <button onclick="showRanking()" data-i18n="shrine_button_ranking">Show Ranking</button>
+
+<button onclick="closeRankingPopup()" data-i18n="shrine_button_cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= EVENT PLANNER POPUP ================= -->
+<div id="eventPlannerPopup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <h2 data-i18n="shrine_popup_event">Event Planner</h2>
+
+    <p style="margin: 0 0 10px 0; font-size: 13px;">
+      <span data-i18n="shrine_event_cost_ranges">Event cost ranges (per shrine):</span>
+    </p>
+
+    <div style="font-size: 12px; margin-bottom: 12px; color: #444;">
+      • Wedding: ¥50,000 - ¥100,000<br>
+      • Blessing: ¥5,000 - ¥10,000<br>
+      • Festival: ¥20,000 - ¥50,000<br>
+      • Private Event: ¥30,000 - ¥70,000
+    </div>
+
+    <select id="eventType" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+      <option value="Wedding">Wedding (¥50,000 - ¥100,000)</option>
+      <option value="Blessing">Blessing (¥5,000 - ¥10,000)</option>
+      <option value="Festival">Festival (¥20,000 - ¥50,000)</option>
+      <option value="Private Event">Private Event (¥30,000 - ¥70,000)</option>
+    </select>
+    <br><br>
+
+    <input
+      type="number"
+      id="eventBudget"
+      placeholder="Enter your budget (¥)" data-i18n-placeholder="shrine_event_budget_placeholder"
+      style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;"
+    />
+    <br><br>
+
+    <div class="popup-buttons">
+      <button onclick="showEventPlanner()" data-i18n="shrine_button_find">Find Shrines</button>
+      <button onclick="closeEventPlannerPopup()" data-i18n="shrine_button_cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= Result Box  ================= -->
+
+<section id="result-box" class="result-box" style="display:none;">
+
+    <button class="close-btn" onclick="closeShrineResult()">
+        ✕
+    </button>
+
+    <div class="result-left">
+
+        <img id="shrineImage" src="" alt="Shrine Image">
+
+    </div>
+
+    <div class="result-right">
+
+        <h2 id="shrineTitle"></h2>
+
+        <p>
+            <strong data-i18n="shrine_label_prefecture">📍 Prefecture</strong><br>
+            <span id="shrinePrefecture"></span>
+        </p>
+
+        <p>
+            <strong data-i18n="shrine_result_best_time">🕒 Best Time</strong><br>
+            <span id="shrineBestTime"></span>
+        </p>
+
+        <p>
+            <strong data-i18n="shrine_result_wedding">💒 Wedding Fees</strong><br>
+            <span id="shrineWedding"></span>
+        </p>
+
+        <p>
+            <strong data-i18n="shrine_result_blessing">🙏 Blessing Fees</strong><br>
+            <span id="shrineBlessing"></span>
+        </p>
+
+        <p>
+            <strong data-i18n="shrine_result_festival">🎊 Festival Fees</strong><br>
+            <span id="shrineFestival"></span>
+        </p>
+
+        <p>
+            <strong data-i18n="shrine_result_private">🏮 Private Events</strong><br>
+            <span id="shrinePrivate"></span>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CROWD RESULT ================= -->
+
+<section id="crowdResult" class="result-box" style="display:none;">
+
+    <button class="close-btn" onclick="closeCrowdResult()">
+        ✕
+    </button>
+
+    <div class="result-left">
+
+        <img id="crowdImage" src="" alt="Shrine Image">
+
+    </div>
+
+    <div class="result-right">
+
+        <h2 id="crowdTitle"></h2>
+
+        <p><strong data-i18n="shrine_result_crowd_status">📊 Crowd Status</strong><br>
+            <span id="crowdStatus"></span>
+        </p>
+
+        <p><strong data-i18n="shrine_result_crowd_percentage">👥 Crowd Percentage</strong><br>
+            <span id="crowdScore"></span>
+        </p>
+
+        <p><strong data-i18n="shrine_result_recommendation">💬 Recommendation</strong><br>
+            <span id="crowdMessage"></span>
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OPTIONS 3–7 RESULT CONTAINER ================= -->
+<section id="optionsResult" class="options-result" style="display:none;">
+    <button class="close-btn" onclick="closeOptionsResult()">✕</button>
+
+    <h2 id="optionsTitle"></h2>
+
+    <div class="options-list">
+        <!-- Each shrine will be added here by JS -->
+    </div>
+</section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        {% include 'footer.html' %}
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='jss/language.js') }}"></script>
+    <script src="{{ url_for('static', filename='jss/shrines.js') }}"></script>
+    <script src="{{ url_for('static', filename='jss/profile_button.js') }}"></script>
+<script>
+  document.getElementById("viewShrineBtn").addEventListener("click", viewShrine);
+</script>
+
+</body>
+
+</html>

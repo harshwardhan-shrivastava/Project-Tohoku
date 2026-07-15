@@ -1,0 +1,1142 @@
+/* =========================================================
+   PROJECT TOHOKU - SHARED PROFILE COMPONENT
+========================================================= */
+
+.navbar-avatar-box {
+    width: 100px;
+    height: 100px;
+
+    min-width: 100px;
+    min-height: 100px;
+    flex-shrink: 0;
+
+    position: relative;
+    top: 1px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #f5d90a;
+    background: #213f3a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.navbar-avatar-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(245, 217, 10, 0.35);
+}
+
+.navbar-user-avatar {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* PROFILE FRAMING */
+
+.navbar-user-avatar.avatar-1 {
+    transform: scale(1);
+}
+
+.navbar-user-avatar.avatar-2 {
+    transform: scale(3.6) translateY(26.8%) translateX(2.25%);
+}
+
+.navbar-user-avatar.avatar-3 {
+    transform: scale(4.5) translateY(27%);
+}
+
+.navbar-user-avatar.avatar-4 {
+    transform: scale(4) translateY(27%);
+}
+
+.navbar-user-avatar.avatar-5 {
+    transform: scale(4) translateY(27%);
+}
+
+.navbar-user-avatar.avatar-6 {
+    transform: scale(4.8) translateY(27.60%);
+}
+
+.navbar-user-avatar.avatar-7 {
+    transform: scale(4.8) translateY(27.70%);
+}
+
+.navbar-user-avatar.avatar-8 {
+    transform: scale(4.8) translateY(27.70%);
+}
+
+/* =========================================================
+   NEW CATEGORY AVATAR FRAMING
+========================================================= */
+
+/* NAVBAR AVATARS */
+
+.navbar-user-avatar[class*="avatar-gyaru"],
+.navbar-user-avatar[class*="avatar-street"],
+.navbar-user-avatar[class*="avatar-fantasy"] {
+    transform: scale(3.6) translateY(26%);
+}
+
+
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+/* =========================================================
+   GUEST PROFILE ICON
+========================================================= */
+
+.guest-profile {
+    width: 100px;
+    height: 100px;
+}
+
+.guest-profile-icon {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+}
+
+.profile-link {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-right,
+.profile-link {
+    overflow: visible !important;
+}
+/* =========================================================
+   FIX PROFILE AVATAR CHROME RENDERING
+========================================================= */
+
+.navbar-avatar-box {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.navbar-user-avatar {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    filter: none;
+    opacity: 1;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    will-change: transform;
+}
+
+/* FORCE CHROME TO RASTERIZE AVATAR CORRECTLY */
+
+.navbar-user-avatar.avatar-1 {
+    transform: translateZ(0) scale(1);
+}
+
+.navbar-user-avatar.avatar-2 {
+    transform: translateZ(0) scale(3.6) translateY(26.8%) translateX(2.25%);
+}
+
+.navbar-user-avatar.avatar-3 {
+    transform: translateZ(0) scale(4.5) translateY(27%);
+}
+
+.navbar-user-avatar.avatar-4 {
+    transform: translateZ(0) scale(4) translateY(27%);
+}
+
+.navbar-user-avatar.avatar-5 {
+    transform: translateZ(0) scale(4) translateY(27%);
+}
+
+.navbar-user-avatar.avatar-6 {
+    transform: translateZ(0) scale(4.8) translateY(27.60%);
+}
+
+.navbar-user-avatar.avatar-7 {
+    transform: translateZ(0) scale(4.8) translateY(27.70%);
+}
+
+.navbar-user-avatar.avatar-8 {
+    transform: translateZ(0) scale(4.8) translateY(27.70%);
+}
+
+/* =========================================================
+   PROFILE COMPONENT WRAPPER
+========================================================= */
+
+.profile-component {
+    position: relative;
+}
+
+.profile-link {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PROFILE PANEL OVERLAY
+========================================================= */
+
+.profile-panel-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.58);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 8000;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.profile-panel-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================================
+   PROFILE PANEL
+========================================================= */
+
+.profile-panel {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 390px;
+    max-width: 92%;
+
+    height: 100vh;
+
+    background: #87566D;
+
+    transform: translateX(100%);
+
+    z-index: 9000;
+
+    box-shadow:
+        -20px 0 60px rgba(0, 0, 0, 0.45);
+
+    transition: transform 0.35s ease;
+}
+
+.profile-panel.active {
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
+
+.profile-panel-header {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 45px 30px 35px;
+
+    border-bottom: 1px solid #36504b;
+}
+
+.panel-avatar-box {
+    width: 85px;
+    height: 85px;
+
+    min-width: 85px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 2px solid #f5d90a;
+
+    background: #213f3a;
+}
+
+.panel-user-avatar {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.profile-welcome {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #f5d90a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.profile-user-info h3 {
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+}
+
+.profile-user-info p {
+    color: #9fb1ad;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PROFILE MENU
+========================================================= */
+
+.profile-panel-menu {
+    padding: 20px 0;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 30px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.profile-menu-item:hover {
+    background: #1d3732;
+
+    padding-left: 36px;
+}
+
+.menu-icon {
+    width: 30px;
+
+    color: #f5d90a;
+
+    font-size: 22px;
+}
+
+.profile-menu-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+}
+
+.profile-menu-item small {
+    color: #8fa39f;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.profile-panel-footer {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px 30px;
+
+    border-top: 1px solid #36504b;
+}
+
+.logout-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.logout-menu-item:hover {
+    color: #f5d90a;
+}
+
+
+/* =========================================================
+   GUEST PROFILE MESSAGE
+========================================================= */
+
+.guest-profile-message {
+    position: absolute;
+
+    top: 115px;
+    right: 0;
+
+    width: 300px;
+
+    padding: 22px;
+
+    background: #213f3a;
+
+    border: 1px solid #49625d;
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+
+    z-index: 7000;
+
+    animation: guestMessageIn 0.5s ease;
+}
+
+.guest-profile-message.hidden {
+    display: none;
+}
+
+.guest-profile-message strong {
+    display: block;
+
+    margin: 8px 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+.guest-profile-message p {
+    color: #aebfbb;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.guest-message-label {
+    color: #f5d90a;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.guest-message-arrow {
+    position: absolute;
+
+    top: -9px;
+    right: 35px;
+
+    width: 18px;
+    height: 18px;
+
+    background: #213f3a;
+
+    border-left: 1px solid #49625d;
+    border-top: 1px solid #49625d;
+
+    transform: rotate(45deg);
+}
+
+@keyframes guestMessageIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   GUEST PANEL
+========================================================= */
+
+.guest-panel-content {
+    padding: 70px 35px;
+}
+
+.guest-panel-content h3 {
+    margin: 12px 0;
+
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.guest-panel-content p {
+    margin-bottom: 35px;
+
+    color: #aebfbb;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.guest-login-btn,
+.guest-register-btn {
+    display: block;
+
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+}
+
+.guest-login-btn {
+    background: #f5d90a;
+    color: #173530;
+}
+
+.guest-register-btn {
+    border: 1px solid #f5d90a;
+
+    color: #f5d90a;
+}
+
+/* =========================================================
+   PROFILE UPDATE TOAST
+========================================================= */
+
+.profile-update-toast {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px 70px;
+
+    background: #8edb9f;
+    color: #10251f;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    z-index: 12000;
+
+    animation: profileToastIn 0.35s ease;
+}
+
+.profile-update-toast button {
+    position: absolute;
+
+    right: 25px;
+
+    border: none;
+
+    background: transparent;
+    color: #10251f;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+@keyframes profileToastIn {
+
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+/* =====================================================
+   CHIBI AVATAR DISPLAY SIZE
+===================================================== */
+
+.navbar-user-avatar[src*="chibi"],
+.panel-user-avatar[src*="chibi"] {
+    transform: scale(1.5) !important;
+}
+
+/* =====================================================
+   FANTASY AVATAR DISPLAY SIZE
+===================================================== */
+
+.navbar-user-avatar[src*="fantasy"],
+.panel-user-avatar[src*="fantasy"] {
+    transform: scale(0.55) translateY(-2%) !important;
+}
+
+/* =====================================================
+   FANTASY AVATAR DISPLAY
+===================================================== */
+
+/* NAVBAR — UPPER BODY */
+
+.navbar-user-avatar[src*="fantasy"] {
+    transform: scale(4) translateY(25%) !important;
+}
+
+
+/* RIGHT PROFILE PANEL — FULL BODY + WINGS */
+
+.panel-user-avatar[src*="fantasy"] {
+    transform: scale(1) translateY(0%) !important;
+}
+
+/* =====================================================
+   PROFILE PICTURE PFP — SAME SIZE AS PROFILE PAGE
+===================================================== */
+
+.navbar-user-avatar[src*="profile"],
+.panel-user-avatar[src*="profile"] {
+    transform: scale(1.5) !important;
+}
+
+.navbar-user-avatar[src*="profile4"],
+.panel-user-avatar[src*="profile4"] {
+    transform: scale(1.5) translateX(-2%) !important;
+}
+
+.navbar-user-avatar[src*="profile"],
+.panel-user-avatar[src*="profile"] {
+    transform: scale(1) !important;
+}
+/* PROFILE 2 + 3 — EXTRA ZOOM */
+
+.navbar-user-avatar[src*="profile2"],
+.navbar-user-avatar[src*="profile3"],
+.panel-user-avatar[src*="profile2"],
+.panel-user-avatar[src*="profile3"] {
+    transform: scale(1.5) !important;
+}
+
+/* PROFILE 6–8 — 1.5 ZOOM */
+
+.navbar-user-avatar[src*="profile6"],
+.navbar-user-avatar[src*="profile7"],
+.navbar-user-avatar[src*="profile8"],
+.panel-user-avatar[src*="profile6"],
+.panel-user-avatar[src*="profile7"],
+.panel-user-avatar[src*="profile8"] {
+    transform: scale(1.5) !important;
+}
+
+/* =========================================
+   LANGUAGE MENU BUTTON
+========================================= */
+
+.language-menu-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.language-menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   LANGUAGE POPUP
+========================================= */
+
+.language-popup {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.92);
+
+    width: 420px;
+    max-width: 90%;
+
+    padding: 30px;
+
+    background: #9b627d;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+    z-index: 3000;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* OPEN STATE */
+
+.language-popup.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* =========================================
+   POPUP HEADER
+========================================= */
+
+.language-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.language-popup-header span {
+    color: #f5e900;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.language-popup-header button {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.language-popup-header button:hover {
+    background: rgba(255, 255, 255, 0.22);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   POPUP TITLE
+========================================= */
+
+.language-popup h3 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   LANGUAGE OPTIONS
+========================================= */
+
+.language-popup-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.language-popup-option {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.language-popup-option:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border-color: #f5e900;
+}
+
+
+/* LANGUAGE ICON */
+
+.language-popup-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    font-size: 24px;
+}
+
+
+/* LANGUAGE TEXT */
+
+.language-popup-option div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.language-popup-option strong {
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.language-popup-option small {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .language-popup {
+        width: calc(100% - 40px);
+
+        padding: 24px;
+    }
+
+    .language-popup h3 {
+        font-size: 21px;
+    }
+
+}
+
+/* KEEP LANGUAGE POPUP ABOVE PROFILE OVERLAY */
+
+.language-popup {
+    z-index: 10001;
+}
+
+.profile-panel-overlay {
+    z-index: 9998;
+}
+
+.profile-panel {
+    z-index: 9999;
+}
+
+/* =========================================
+   SELECTED LANGUAGE
+========================================= */
+
+.language-popup-option {
+    position: relative;
+}
+
+.language-popup-option.selected {
+    border-color: #f5e900;
+
+    background: rgba(245, 233, 0, 0.08);
+
+    box-shadow:
+        0 0 18px rgba(245, 233, 0, 0.12);
+}
+
+.language-selected-check {
+    position: absolute;
+
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #f5e900;
+
+    color: #243833;
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+/* =========================================
+   GUEST AVATAR LOGIN POPUP
+========================================= */
+
+.guest-avatar-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(2, 18, 16, 0.78);
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+.guest-avatar-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.guest-avatar-popup-card {
+    position: relative;
+
+    width: 420px;
+    max-width: calc(100% - 40px);
+
+    padding: 42px 38px;
+
+    background: #173f39;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+
+    text-align: left;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+.guest-avatar-popup-card h3 {
+    margin: 12px 0 12px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+.guest-avatar-popup-card p {
+    margin: 0 0 28px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.guest-avatar-popup-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.guest-avatar-popup-card .guest-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 48px;
+
+    text-decoration: none;
+}
+
+/* =========================================
+   GUEST PROFILE MENU ITEM
+========================================= */
+
+.guest-profile-panel .profile-menu-item {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+}
+
+.guest-profile-panel .profile-menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.guest-profile-panel .profile-menu-item strong {
+    color: #ffffff;
+}
+
+.guest-profile-panel .profile-menu-item small {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================
+   GUEST AVATAR POPUP LAYER FIX
+========================================= */
+
+.guest-avatar-popup {
+    z-index: 10000;
+}
+
+.guest-avatar-popup-content {
+    position: relative;
+    z-index: 10001;
+}
+
+/* =========================================
+   GUEST AVATAR POPUP BUTTON SIZE
+========================================= */
+
+.guest-avatar-popup-content .guest-login-btn {
+    height: 44px;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* =========================================
+   GUEST POPUP LOGIN BUTTON ALIGNMENT
+========================================= */
+
+.guest-avatar-popup-card .guest-login-btn {
+    width: calc(100% - 40px);
+    margin-left: 0;
+    margin-right: 40px;
+}

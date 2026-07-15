@@ -1,0 +1,2136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+    
+    margin:0;
+    padding:0;
+    background:#143B35;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* ==========================================
+  Landmark css
+========================================== */
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    
+    background: #143B35;
+    color: white;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.topbar {
+    width: 100%;
+    height: 100px;
+    background: #1F3130;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.nav-left {
+    width: 25%;
+    padding-left: 60px;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}
+
+.nav-right {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+.profile-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+/* ==========================================
+   OVERVIEW / LANDMARK SECTIONS
+========================================== */
+
+#overview {
+    width: 100%;
+    padding: 90px 0;
+    background: #143B35;
+}
+
+.overview-container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+.overview-text {
+    flex: 1;
+}
+
+.overview-text h2 {
+    font-size: 52px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.overview-text p {
+    color: #D8D8D8;
+    font-size: 22px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* ==========================================
+   INDIVIDUAL LANDMARK SECTIONS (14 DIFFERENT DARK BACKGROUNDS)
+========================================== */
+
+#hirosaki {
+    background: #0F2A24;
+    padding: 90px 0;
+}
+
+#matsushima {
+    background: #122F2A;
+    padding: 90px 0;
+}
+
+#towada {
+    background: #0B1F3A;
+    padding: 90px 0;
+}
+
+#oirase {
+    background: #0A1A2F;
+    padding: 90px 0;
+}
+
+#yamadera {
+    background: #1A1F2F;
+    padding: 90px 0;
+}
+
+#ginzan {
+    background: #2A1F2F;
+    padding: 90px 0;
+}
+
+#kakunodate {
+    background: #1F2A24;
+    padding: 90px 0;
+}
+
+#dewasan {
+    background: #1F2F3A;
+    padding: 90px 0;
+}
+
+#nebuta {
+    background: #1A2A2F;
+    padding: 90px 0;
+}
+
+#shirakami {
+    background: #0F3A2A;
+    padding: 90px 0;
+}
+
+#hakkoda {
+    background: #1A3A2F;
+    padding: 90px 0;
+}
+
+#chusonji {
+    background: #2F3A3A;
+    padding: 90px 0;
+}
+
+#naruko {
+    background: #2A2F3A;
+    padding: 90px 0;
+}
+
+#osore {
+    background: #1A2F2A;
+    padding: 90px 0;
+}
+
+/* ==========================================
+   INFO LIST
+========================================== */
+
+.info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-item {
+    background: #27403C;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.info-item strong {
+    display: block;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.info-item span {
+    color: white;
+}
+
+/* ==========================================
+   OVERVIEW IMAGE
+========================================== */
+
+.overview-image {
+    flex: 1;
+}
+
+.overview-image img {
+    width: 680px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 98px;
+    display: block;
+}
+
+/* ==========================================
+   GOOGLE MAPS SECTION
+========================================== */
+
+.maps-section {
+    width: 900px;
+    margin: 50px auto 0;
+    padding: 50px;
+    background: #27403C;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.maps-section h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.maps-section p {
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.maps-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #143B35;
+    text-decoration: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.maps-btn:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   SERVICES / MENU CARDS SECTION
+========================================== */
+
+.services-section {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.services-title {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.services-grid {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.service-card {
+    background: #143d7a;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h3 {
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 28px;
+}
+
+/* ==========================================
+   RESULT BOX (for popup results)
+========================================== */
+
+.result-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 950px;
+    max-width: 92%;
+    margin: 50px auto;
+    padding: 25px;
+    background: #203A43;
+    border-radius: 28px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.35);
+    position: relative;
+}
+
+.result-box.hidden {
+    display: none;
+}
+
+.result-box.show {
+    display: flex;
+}
+
+
+
+.result-left {
+    flex: 0 0 280px;
+}
+
+.result-left img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+
+.result-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-right h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.result-right p {
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: 19px;
+    color: #F2F2F2;
+}
+
+.result-right strong {
+    color: #FFD54A;
+}
+
+.result-right p {
+    color: #F2F2F2;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: #fff;
+    width: 500px;
+    max-width: 90%;
+    padding: 24px;
+    font-size: 15px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.popup-content select,
+.popup-content input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.popup-buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #f6c000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #d9534f;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: #b52b27;
+}
+
+/* ==========================================
+   LANDMARK LIST (for popup list)
+========================================== */
+
+.landmark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.landmark-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: #f3f3f3;
+    color: #111;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.landmark-item-left img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.landmark-item-right h3 {
+    margin: 0 0 6px 0;
+    color: #111;
+}
+
+.landmark-item-right p {
+    margin: 4px 0;
+    color: #222;
+}
+
+
+/* ==========================================
+   NAVBAR DROPDOWN (BIG, MODERN STYLE)
+========================================== */
+
+.navbar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    align-items: center;
+}
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    transition: .3s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle.active {
+    color: #FFD700;
+}
+
+/* Arrow */
+.nav-dropdown-toggle::after {
+    content: "▼";
+    font-size: 14px;
+}
+
+/* Dropdown menu */
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%;          /* a bit below the navbar */
+    left: 0;
+    background: #1F3130;
+    border-radius: 12px;
+    padding: 12px 0;
+    min-width: 260px;
+    max-width: 320px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.45);
+    z-index: 1001;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 24px;
+    transition: .2s;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.nav-dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown-menu a:hover {
+    background: #27403C;
+    color: #FFD700;
+    padding-left: 30px;   /* small slide effect */
+}
+
+/* Show dropdown on hover */
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+/* ================= RESULT BOX (big, dark, readable) ================= */
+
+.popup-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    width: 820px;
+    max-width: 90%;
+
+    background: #1F3130;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.5);
+    padding: 25px;
+
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+
+    position: relative;
+}
+.popup-content.popup-result {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    text-align: left;
+
+    background: #1F3130;
+}
+
+
+.popup-result .popup-result-left {
+    flex: 0 0 240px;              /* bigger image area */
+    margin-right: 24px;
+}
+
+.popup-result .popup-result-left img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.35);
+}
+
+.popup-result .popup-result-right {
+    flex: 1;
+}
+
+.popup-result h3 {
+    font-size: 23px;              /* bigger title */
+    margin-bottom: 12px;
+    color: #FFD700;
+}
+
+.popup-result p {
+    font-size: 18px;              /* larger text line */
+    margin: 8px 0;
+}
+
+.popup-result strong {
+    font-size: 19px;              /* slightly bigger labels */
+    color: #FFD700;
+}
+
+.popup-result span {
+    font-size: 18px;
+}
+
+/* Close button slightly bigger */
+.popup-result .close-btn {
+    font-size: 24px;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   OPTIONS 3–6 RESULT CONTAINER
+========================================== */
+
+.options-result {
+    width: 900px;
+    max-width: 90%;
+    margin: 50px auto;
+    position: relative;
+    background: #203A43;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.35);
+
+    max-height: 85vh;
+    overflow-y: auto;
+}
+.options-result::-webkit-scrollbar {
+    width: 10px;
+}
+
+.options-result::-webkit-scrollbar-track {
+    background: #203A43;
+    border-radius: 10px;
+}
+
+.options-result::-webkit-scrollbar-thumb {
+    background: #4d6a72;
+    border-radius: 10px;
+}
+
+.options-result::-webkit-scrollbar-thumb:hover {
+    background: #6d8a92;
+}
+
+.options-result .close-btn {
+    position: sticky;
+    top: 15px;
+    float: right;
+    z-index: 100;
+    margin-left: auto;
+}
+
+.options-result #optionsTitle {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.options-result .options-list {
+    width: 92%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Individual landmark card */
+
+.options-result .options-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #27403C;
+    border-radius: 15px;
+    padding: 18px;
+    transition: .3s;
+}
+
+.options-result .options-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+.options-result .options-item-left {
+    flex: 0 0 150px;
+}
+
+.options-result .options-item-left img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.options-result .options-item-right {
+    flex: 1;
+}
+
+.options-result .options-item-right h4 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.options-result .options-item-right p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #E6E6E6;
+    margin-bottom: 8px;
+}
+
+.options-result .options-item-right strong {
+    color: #FFD700;
+}
+
+/* =========================================================
+   PROJECT TŌHOKU — LANDMARK TRAVEL EXPLORER POPUPS
+   ========================================================= */
+
+/* Popup overlay */
+
+#landmarkPopup,
+#crowdPopup,
+#listPopup,
+#recommendPopup,
+#popularityPopup,
+#rankingPopup {
+    background: rgba(4, 12, 24, 0.82);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+
+/* Main popup card */
+
+#landmarkPopup .popup-content,
+#crowdPopup .popup-content,
+#listPopup .popup-content,
+#recommendPopup .popup-content,
+#popularityPopup .popup-content,
+#rankingPopup .popup-content {
+    width: 620px;
+    max-width: 88%;
+    padding: 48px 50px 44px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 61, 122, 0.18),
+            transparent 48%
+        ),
+        #081b35;
+
+    border: 1px solid rgba(114, 180, 255, 0.22);
+    border-radius: 26px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.55),
+        0 0 35px rgba(40, 128, 255, 0.08);
+
+    color: white;
+    text-align: left;
+    position: relative;
+
+    animation: landmarkPopupOpen 0.32s ease;
+}
+
+
+/* Opening animation */
+
+@keyframes landmarkPopupOpen {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Small Project Tōhoku service label */
+
+#landmarkPopup .popup-content::before,
+#crowdPopup .popup-content::before,
+#listPopup .popup-content::before,
+#recommendPopup .popup-content::before,
+#popularityPopup .popup-content::before,
+#rankingPopup .popup-content::before {
+    content: "PROJECT TŌHOKU · LANDMARK SERVICES";
+
+    display: block;
+    margin-bottom: 13px;
+
+    color: #65b7ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+}
+
+
+/* Popup titles */
+
+#landmarkPopup h3,
+#crowdPopup h3,
+#listPopup h3,
+#recommendPopup h3,
+#popularityPopup h3,
+#rankingPopup h3 {
+    margin: 0 0 32px;
+
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+
+/* Remove emoji visually from original headings */
+
+#landmarkPopup h3,
+#crowdPopup h3,
+#listPopup h3,
+#recommendPopup h3,
+#rankingPopup h3 {
+    font-size: 0;
+}
+
+#landmarkPopup h3::after {
+    content: "Explore a Landmark";
+}
+
+#crowdPopup h3::after {
+    content: "Landmark Predictor";
+}
+
+#listPopup h3::after {
+    content: "Landmark Directory";
+}
+
+#recommendPopup h3::after {
+    content: "Find Your Destination";
+}
+
+#rankingPopup h3::after {
+    content: "Advanced Ranking";
+}
+
+#landmarkPopup h3::after,
+#crowdPopup h3::after,
+#listPopup h3::after,
+#recommendPopup h3::after,
+#rankingPopup h3::after {
+    font-size: 30px;
+}
+
+
+/* Popularity already has no emoji */
+
+#popularityPopup h3 {
+    font-size: 0;
+}
+
+#popularityPopup h3::after {
+    content: "Popularity Explorer";
+    font-size: 30px;
+}
+
+
+/* Popup rows */
+
+#landmarkPopup .popup-row,
+#crowdPopup .popup-row,
+#recommendPopup .popup-row,
+#popularityPopup .popup-row,
+#rankingPopup .popup-row {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 16px;
+}
+
+
+/* Explorer inputs */
+
+#landmarkPopup select,
+#crowdPopup select,
+#recommendPopup select,
+#popularityPopup select,
+#rankingPopup select {
+    flex: 1;
+    width: 100%;
+    height: 54px;
+
+    margin: 0;
+    padding: 0 18px;
+
+    background: rgba(255, 255, 255, 0.055);
+    color: #ffffff;
+
+    border: 1px solid rgba(132, 188, 255, 0.22);
+    border-radius: 12px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    outline: none;
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Select hover / focus */
+
+#landmarkPopup select:hover,
+#crowdPopup select:hover,
+#recommendPopup select:hover,
+#popularityPopup select:hover,
+#rankingPopup select:hover {
+    border-color: rgba(101, 183, 255, 0.55);
+    background: rgba(255, 255, 255, 0.075);
+}
+
+#landmarkPopup select:focus,
+#crowdPopup select:focus,
+#recommendPopup select:focus,
+#popularityPopup select:focus,
+#rankingPopup select:focus {
+    border-color: #65b7ff;
+
+    box-shadow:
+        0 0 0 3px rgba(101, 183, 255, 0.12),
+        0 0 22px rgba(44, 139, 255, 0.10);
+}
+
+
+/* Dropdown option colours */
+
+#landmarkPopup option,
+#crowdPopup option,
+#recommendPopup option,
+#popularityPopup option,
+#rankingPopup option {
+    background: #0b213f;
+    color: white;
+}
+
+
+/* Main action buttons */
+
+#landmarkPopup .popup-row button,
+#crowdPopup .popup-row button,
+#recommendPopup .popup-btn,
+#popularityPopup .popup-btn,
+#rankingPopup .popup-btn,
+#listPopup .popup-btn {
+    min-height: 54px;
+    padding: 0 25px;
+
+    border: 1px solid rgba(120, 195, 255, 0.42);
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #2186d9,
+        #1763b4
+    );
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 24px rgba(24, 115, 210, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Action hover */
+
+#landmarkPopup .popup-row button:hover,
+#crowdPopup .popup-row button:hover,
+#recommendPopup .popup-btn:hover,
+#popularityPopup .popup-btn:hover,
+#rankingPopup .popup-btn:hover,
+#listPopup .popup-btn:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(155, 215, 255, 0.75);
+
+    box-shadow:
+        0 12px 30px rgba(24, 115, 210, 0.34),
+        0 0 24px rgba(56, 157, 255, 0.18);
+}
+
+
+/* Close button */
+
+#landmarkPopup .close-popup,
+#crowdPopup .close-popup,
+#listPopup .close-popup,
+#recommendPopup .close-popup,
+#popularityPopup .close-popup,
+#rankingPopup .close-popup {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.055);
+    color: #a9bfd8;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Close hover */
+
+#landmarkPopup .close-popup:hover,
+#crowdPopup .close-popup:hover,
+#listPopup .close-popup:hover,
+#recommendPopup .close-popup:hover,
+#popularityPopup .close-popup:hover,
+#rankingPopup .close-popup:hover {
+    color: white;
+    background: rgba(74, 160, 255, 0.14);
+    border-color: rgba(101, 183, 255, 0.45);
+    transform: rotate(90deg);
+}
+
+
+/* Directory popup */
+
+#listPopup .popup-content {
+    text-align: left;
+}
+
+#listPopup .popup-buttons {
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+#listPopup .popup-btn {
+    min-width: 220px;
+}
+
+
+/* Recommendation / ranking final row */
+
+#recommendPopup .popup-row.popup-buttons,
+#rankingPopup .popup-row.popup-buttons {
+    justify-content: stretch;
+}
+
+#recommendPopup .popup-row.popup-buttons select,
+#rankingPopup .popup-row.popup-buttons select {
+    flex: 1;
+}
+
+#recommendPopup .popup-row.popup-buttons button,
+#rankingPopup .popup-row.popup-buttons button {
+    flex: 0 0 190px;
+}
+
+
+/* Popularity popup */
+
+#popularityPopup .popup-row {
+    margin-bottom: 0;
+}
+
+#popularityPopup .popup-row select {
+    flex: 1;
+}
+
+#popularityPopup .popup-row button {
+    flex: 0 0 190px;
+}
+
+
+/* Responsive popup layout */
+
+@media (max-width: 700px) {
+
+    #landmarkPopup .popup-content,
+    #crowdPopup .popup-content,
+    #listPopup .popup-content,
+    #recommendPopup .popup-content,
+    #popularityPopup .popup-content,
+    #rankingPopup .popup-content {
+        padding: 42px 25px 30px;
+    }
+
+    #landmarkPopup .popup-row,
+    #crowdPopup .popup-row,
+    #recommendPopup .popup-row,
+    #popularityPopup .popup-row,
+    #rankingPopup .popup-row {
+        flex-direction: column;
+    }
+
+    #recommendPopup .popup-row.popup-buttons button,
+    #rankingPopup .popup-row.popup-buttons button,
+    #popularityPopup .popup-row button {
+        flex: auto;
+    }
+}
+
+/* =========================================================
+   PROJECT TŌHOKU — LANDMARK EXPLORER RESULT SYSTEM
+   ========================================================= */
+
+
+/* =========================
+   RESULT OVERLAY
+   ========================= */
+
+#result-box,
+#crowdResult,
+#listResult,
+#optionsResult {
+    background: rgba(4, 12, 24, 0.84);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   INFO + CROWD RESULT CARD
+   ========================================================= */
+
+#result-box .popup-result,
+#crowdResult .popup-result {
+    width: 920px;
+    max-width: 88%;
+    min-height: 360px;
+
+    padding: 42px;
+
+    display: flex;
+    align-items: stretch;
+    gap: 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 93, 170, 0.18),
+            transparent 48%
+        ),
+        #081b35;
+
+    border: 1px solid rgba(114, 180, 255, 0.22);
+    border-radius: 28px;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(40, 128, 255, 0.08);
+
+    color: white;
+    position: relative;
+
+    animation: landmarkResultOpen 0.35s ease;
+}
+
+
+@keyframes landmarkResultOpen {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   RESULT IMAGE
+   ========================= */
+
+#result-box .popup-result-left,
+#crowdResult .popup-result-left {
+    flex: 0 0 350px;
+    margin: 0;
+}
+
+
+#result-box .popup-result-left img,
+#crowdResult .popup-result-left img {
+    width: 350px;
+    height: 100%;
+    min-height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(126, 193, 255, 0.2);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.38);
+
+    display: block;
+}
+
+
+/* =========================
+   RESULT DATA AREA
+   ========================= */
+
+#result-box .popup-result-right,
+#crowdResult .popup-result-right {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+/* Project label */
+
+#result-box .popup-result-right::before {
+    content: "PROJECT TŌHOKU · LANDMARK DATA";
+}
+
+#crowdResult .popup-result-right::before {
+    content: "PROJECT TŌHOKU · CROWD INTELLIGENCE";
+}
+
+#result-box .popup-result-right::before,
+#crowdResult .popup-result-right::before {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #65b7ff;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* Landmark title */
+
+#result-box .popup-result h3,
+#crowdResult .popup-result h3 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+}
+
+
+/* Data lines */
+
+/* =========================================================
+   FIX — OPTION 1 + 2 INLINE DATA ROWS
+   ========================================================= */
+
+#result-box .popup-result-right p,
+#crowdResult .popup-result-right p {
+    display: flex !important;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 10px 0;
+
+    line-height: 1.45;
+}
+
+#result-box .popup-result-right p strong,
+#crowdResult .popup-result-right p strong {
+    flex: 0 0 120px;
+}
+
+#result-box .popup-result-right p span,
+#crowdResult .popup-result-right p span {
+    flex: 1;
+
+    display: inline !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#result-box .popup-result p:last-child,
+#crowdResult .popup-result p:last-child {
+    border-bottom: none;
+}
+
+
+/* Labels */
+
+#result-box .popup-result strong,
+#crowdResult .popup-result strong {
+    color: #78bdff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+/* Values */
+
+#result-box .popup-result span,
+#crowdResult .popup-result span {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   EXPLORER CLOSE BUTTON
+   ========================================================= */
+
+#result-box .close-btn,
+#crowdResult .close-btn,
+#listResult .close-btn,
+#optionsResult .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.055);
+    color: #a9bfd8;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+#result-box .close-btn:hover,
+#crowdResult .close-btn:hover,
+#listResult .close-btn:hover,
+#optionsResult .close-btn:hover {
+    color: white;
+
+    background: rgba(74, 160, 255, 0.14);
+
+    border-color: rgba(101, 183, 255, 0.45);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   OPTIONS 3–6 RESULT CONTAINER
+   ========================================================= */
+
+#listResult .options-result,
+#optionsResult .options-result {
+    width: 960px;
+    max-width: 88%;
+
+    max-height: 82vh;
+
+    margin: 0;
+    padding: 45px 42px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 93, 170, 0.18),
+            transparent 42%
+        ),
+        #081b35;
+
+    border: 1px solid rgba(114, 180, 255, 0.22);
+    border-radius: 28px;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(40, 128, 255, 0.08);
+
+    overflow-y: auto;
+
+    animation: landmarkResultOpen 0.35s ease;
+}
+
+
+/* Explorer label */
+
+#listResult .options-result::before,
+#optionsResult .options-result::before {
+    content: "PROJECT TŌHOKU · LANDMARK EXPLORER";
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #65b7ff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* Result titles */
+
+#listResult .options-result h3,
+#optionsResult .options-result h3 {
+    margin: 0 0 32px;
+
+    color: white;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    text-align: left;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* =========================
+   RESULT LIST
+   ========================= */
+
+#listResult .landmark-list,
+#optionsResult .options-list {
+    width: 100%;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   LANDMARK DIRECTORY ITEMS
+   ========================= */
+
+#listResult .landmark-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 17px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(127, 190, 255, 0.12);
+
+    border-radius: 16px;
+
+    color: white;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+#listResult .landmark-item:hover {
+    transform: translateX(5px);
+
+    background: rgba(73, 153, 235, 0.09);
+
+    border-color: rgba(101, 183, 255, 0.32);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+
+#listResult .landmark-item-left img {
+    width: 115px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(130, 193, 255, 0.16);
+}
+
+
+#listResult .landmark-item-right h3 {
+    margin: 0 0 7px;
+
+    color: white;
+
+    font-size: 19px;
+
+    text-align: left;
+}
+
+
+#listResult .landmark-item-right p {
+    margin: 3px 0;
+
+    color: #b9cee3;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+#listResult .landmark-item-right strong {
+    color: #65b7ff;
+}
+
+
+/* =========================================================
+   OPTIONS 4–6 DATA CARDS
+   ========================================================= */
+
+#optionsResult .options-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(127, 190, 255, 0.12);
+
+    border-radius: 17px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+#optionsResult .options-item:hover {
+    transform: translateX(6px);
+
+    background: rgba(73, 153, 235, 0.09);
+
+    border-color: rgba(101, 183, 255, 0.32);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+#optionsResult .options-item-left {
+    flex: 0 0 145px;
+}
+
+
+#optionsResult .options-item-left img {
+    width: 145px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(130, 193, 255, 0.16);
+
+    display: block;
+}
+
+
+#optionsResult .options-item-right {
+    flex: 1;
+}
+
+
+#optionsResult .options-item-right h4 {
+    margin: 0 0 10px;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+#optionsResult .options-item-right p {
+    margin: 5px 0;
+
+    color: #b9cee3;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+#optionsResult .options-item-right strong {
+    color: #65b7ff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EXPLORER SCROLLBAR
+   ========================================================= */
+
+#listResult .options-result::-webkit-scrollbar,
+#optionsResult .options-result::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+#listResult .options-result::-webkit-scrollbar-track,
+#optionsResult .options-result::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+#listResult .options-result::-webkit-scrollbar-thumb,
+#optionsResult .options-result::-webkit-scrollbar-thumb {
+    background: rgba(101, 183, 255, 0.32);
+
+    border-radius: 20px;
+}
+
+
+#listResult .options-result::-webkit-scrollbar-thumb:hover,
+#optionsResult .options-result::-webkit-scrollbar-thumb:hover {
+    background: rgba(101, 183, 255, 0.52);
+}
+
+
+/* =========================================================
+   RESPONSIVE RESULTS
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    #result-box .popup-result,
+    #crowdResult .popup-result {
+        flex-direction: column;
+
+        padding: 30px;
+
+        max-height: 85vh;
+
+        overflow-y: auto;
+    }
+
+
+    #result-box .popup-result-left,
+    #crowdResult .popup-result-left {
+        flex: auto;
+    }
+
+
+    #result-box .popup-result-left img,
+    #crowdResult .popup-result-left img {
+        width: 100%;
+        height: 230px;
+        min-height: 230px;
+    }
+
+
+    #result-box .popup-result p,
+    #crowdResult .popup-result p {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+
+    #listResult .options-result,
+    #optionsResult .options-result {
+        padding: 38px 25px;
+    }
+
+
+    #optionsResult .options-item,
+    #listResult .landmark-item {
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   FIX — CENTER LANDMARK LIST / OPTIONS RESULTS
+   ========================================================= */
+
+#listResult,
+#optionsResult {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#listResult[style*="display: flex"],
+#optionsResult[style*="display: flex"] {
+    display: flex !important;
+}
+
+#listResult .options-result,
+#optionsResult .options-result {
+    margin: 0 auto;
+
+    max-height: 82vh;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   FIX — FIXED EXPLORER HEADER / SCROLLING CARDS ONLY
+   ========================================================= */
+
+#listResult .options-result,
+#optionsResult .options-result {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    max-height: 82vh;
+}
+
+
+/* Explorer label */
+
+#listResult .options-result::before,
+#optionsResult .options-result::before {
+    position: static;
+
+    flex-shrink: 0;
+
+    background: transparent;
+
+    padding: 0;
+
+    margin-bottom: 12px;
+}
+
+
+/* Title */
+
+#listResult .options-result h3,
+#optionsResult .options-result h3 {
+    position: static;
+
+    flex-shrink: 0;
+
+    background: transparent;
+
+    padding: 0;
+
+    margin: 0 0 25px;
+
+    z-index: auto;
+}
+
+
+/* Close button fixed inside result box */
+
+#listResult .close-btn,
+#optionsResult .close-btn {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    float: none;
+
+    margin: 0;
+
+    z-index: 100;
+}
+
+
+/* ONLY CARDS SCROLL */
+
+#listResult .landmark-list,
+#optionsResult .options-list {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding-right: 10px;
+}
+
+
+/* Card area scrollbar */
+
+#listResult .landmark-list::-webkit-scrollbar,
+#optionsResult .options-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+#listResult .landmark-list::-webkit-scrollbar-track,
+#optionsResult .options-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#listResult .landmark-list::-webkit-scrollbar-thumb,
+#optionsResult .options-list::-webkit-scrollbar-thumb {
+    background: rgba(101, 183, 255, 0.32);
+    border-radius: 20px;
+}
+
+#listResult .landmark-list::-webkit-scrollbar-thumb:hover,
+#optionsResult .options-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(101, 183, 255, 0.52);
+}
+
+
+#popularityPopup .popup-description {
+    margin: -18px 0 28px;
+
+    color: #9fb6cc;
+
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   FINAL — LANDMARK OPTION 1 + OPTION 2 RESULT MODALS
+   ========================================================= */
+
+#result-box,
+#crowdResult {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    max-width: none;
+
+    margin: 0;
+    padding: 30px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: rgba(4, 12, 24, 0.84);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 999999;
+}
+
+#result-box.show,
+#crowdResult.show,
+#result-box[style*="display: flex"],
+#crowdResult[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+/* =========================
+   RESULT CARD
+   ========================= */
+
+#result-box.popup-result,
+#crowdResult.popup-result,
+#result-box .popup-result,
+#crowdResult .popup-result {
+    width: 920px;
+    max-width: 88%;
+    height: auto;
+    min-height: 0;
+    max-height: 88vh;
+
+    margin: 0;
+    padding: 38px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 38px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 93, 170, 0.18),
+            transparent 48%
+        ),
+        #081b35;
+
+    border: 1px solid rgba(114, 180, 255, 0.22);
+    border-radius: 28px;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(40, 128, 255, 0.08);
+
+    color: white;
+}
+
+
+/* =========================
+   IMAGE
+   ========================= */
+
+#result-box .popup-result-left,
+#crowdResult .popup-result-left {
+    flex: 0 0 330px;
+
+    margin: 0;
+    padding: 0;
+
+    align-self: flex-start;
+}
+
+#result-box .popup-result-left img,
+#crowdResult .popup-result-left img {
+    width: 330px;
+    height: 330px;
+    min-height: 0;
+    max-height: 330px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+}
+
+
+/* =========================
+   DATA
+   ========================= */
+
+#result-box .popup-result-right,
+#crowdResult .popup-result-right {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+
+/* Compact data rows */
+
+#result-box .popup-result p,
+#crowdResult .popup-result p {
+    padding: 9px 0;
+
+    grid-template-columns: 135px 1fr;
+
+    gap: 12px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+#result-box::-webkit-scrollbar,
+#crowdResult::-webkit-scrollbar,
+#result-box .popup-result::-webkit-scrollbar,
+#crowdResult .popup-result::-webkit-scrollbar {
+    width: 7px;
+}
+
+#result-box .popup-result::-webkit-scrollbar-thumb,
+#crowdResult .popup-result::-webkit-scrollbar-thumb {
+    background: rgba(101, 183, 255, 0.32);
+    border-radius: 20px;
+}

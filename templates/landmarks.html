@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tōhoku | Landmarks</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landmarks.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/profile-component.css') }}">
+</head>
+
+<body class="landmark-page">
+
+    <!-- ================= NAVBAR ================= -->
+        <header class="topbar">
+
+        <div class="nav-left">
+            <a href="/" class="logo">
+                PROJECT TŌHOKU
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <!-- Dropdown for Landmarks -->
+            <div class="nav-dropdown">
+                <a href="/landmarks" class="nav-dropdown-toggle" data-i18n="landmark_nav_landmarks">Landmarks </a>
+                <div class="nav-dropdown-menu">
+                    <a href="#hirosaki" data-i18n="place_hirosaki">Hirosaki Park</a>
+                    <a href="#matsushima" data-i18n="place_matsushima">Matsushima Bay</a>
+                    <a href="#towada" data-i18n="place_lake_towada">Lake Towada</a>
+                    <a href="#oirase" data-i18n="place_oirase">Oirase Gorge</a>
+                    <a href="#yamadera" data-i18n="place_yamadera">Yamadera</a>
+                    <a href="#ginzan" data-i18n="place_ginzan">Ginzan Onsen</a>
+                    <a href="#kakunodate" data-i18n="place_kakunodate">Kakunodate</a>
+                    <a href="#dewasan" data-i18n="place_dewa">Dewa Sanzan</a>
+                    <a href="#nebuta" data-i18n="place_nebuta">Nebuta Museum</a>
+                    <a href="#shirakami" data-i18n="place_shirakami">Shirakami Sanchi</a>
+                    <a href="#hakkoda" data-i18n="place_hakkoda">Hakkoda Ropeway</a>
+                    <a href="#chusonji" data-i18n="place_chusonji">Chuson-ji</a>
+                    <a href="#naruko" data-i18n="place_naruko">Naruko Gorge</a>
+                    <a href="#osore" data-i18n="place_osore">Osore-zan</a>
+                </div>
+            </div>
+
+            <a href="#services-section" data-i18n="landmark_services_title">Landmark Services</a>
+        </nav>
+
+        <div class="nav-right">
+    {% include "profile_button.html" %}
+</div>
+
+    </header>
+
+    <!-- ================= 1. HIROSAKI PARK ================= -->
+    <section id="hirosaki">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_hirosaki">Hirosaki Park</h2>
+                <p data-i18n="landmark_hirosaki_description">
+                    Famous for cherry blossoms and the historic Hirosaki Castle,
+                    this park is one of the best spots in Aomori for spring scenery.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>Late April – Early May, October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/hirosaki park.jpg') }}" alt="Hirosaki Park">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_hirosaki">📍 Explore Hirosaki Park</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hirosaki+Park"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 2. MATSUSHIMA BAY ================= -->
+    <section id="matsushima">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_matsushima">Matsushima Bay</h2>
+                <p data-i18n="landmark_matsushima_description">
+                    One of Japan’s three most beautiful scenes, with hundreds of
+                    pine-covered islands spread across calm waters.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Miyagi</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>April – May, October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>45</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/matsushima_bay.jpg') }}" alt="Matsushima Bay">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_matsushima">📍 Explore Matsushima Bay</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Matsushima+Bay"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 3. LAKE TOWADA ================= -->
+    <section id="towada">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_lake_towada">Lake Towada</h2>
+                <p data-i18n="landmark_towada_description">
+                    A deep volcanic lake surrounded by forests and hiking trails,
+                    famous for its mirror-like surface and autumn colors.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori / Akita</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>October, Summer</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/lake_towada.jpg') }}" alt="Lake Towada">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_towada">📍 Explore Lake Towada</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lake+Towada"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 4. OIRASE GORGE ================= -->
+    <section id="oirase">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_oirase">Oirase Gorge</h2>
+                <p data-i18n="landmark_oirase_description">
+                    A stunning mountain stream with walking trails along the river,
+                    ideal for nature lovers and autumn photography.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>Late October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.7 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/oirase_george.jpg') }}" alt="Oirase Gorge">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_oirase">📍 Explore Oirase Gorge</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Oirase+Gorge"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 5. YAMADERA (Risshaku-ji Temple) ================= -->
+    <section id="yamadera">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2>Yamadera (Risshaku-ji Temple)</h2>
+                <p data-i18n="landmark_yamadera_description">
+                    A sacred mountain temple with steep stone steps, offering panoramic
+                    views of the surrounding valley and forests.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Yamagata</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>October, Summer</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>30</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.7 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/risshaku-ji.jpg') }}" alt="Yamadera">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_yamadera">📍 Explore Yamadera</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Yamadera+Risshaku-ji"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 6. GINZAN ONSEN ================= -->
+    <section id="ginzan">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_ginzan">Ginzan Onsen</h2>
+                <p data-i18n="landmark_ginzan_description">
+                    A picturesque hot spring town with traditional buildings, snowy streets,
+                    and relaxing ryokan hotels.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Yamagata</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>January – February</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/ginzan_onsen.jpg') }}" alt="Ginzan Onsen">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_ginzan">📍 Explore Ginzan Onsen</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ginzan+Onsen"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 7. KAKUNODATE SAMURAI DISTRICT ================= -->
+    <section id="kakunodate">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_kakunodate">Kakunodate Samurai District</h2>
+                <p data-i18n="landmark_kakunodate_description">
+                    A preserved samurai neighborhood with historic houses, sword exhibitions,
+                    and beautiful cherry trees.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Akita</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>Late April, October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.7 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/samurai_district.jpg') }}" alt="Kakunodate">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_kakunodate">📍 Explore Kakunodate Samurai District</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kakunodate+Samurai+District"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 8. DEWA SANZAN ================= -->
+    <section id="dewasan">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_dewa">Dewa Sanzan</h2>
+                <p data-i18n="landmark_dewa_description">
+                    Three sacred mountains with shrines and hiking trails, important for
+                    Shugendo mountain pilgrimage.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Yamagata</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>July – September</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.7 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/dewa_sanzan.jpg') }}" alt="Dewa Sanzan">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_dewa">📍 Explore Dewa Sanzan</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Dewa+Sanzan"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 9. AOMORI NEBUTA MUSEUM WA RASSE ================= -->
+    <section id="nebuta">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_nebuta">Aomori Nebuta Museum Wa Rasse</h2>
+                <p data-i18n="landmark_nebuta_description">
+                    A museum dedicated to the famous Nebuta floats, with giant displays
+                    and cultural exhibits year-round.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>Year-round</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.6 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/nebuta_museum.jpg') }}" alt="Nebuta Museum">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_nebuta">📍 Explore Nebuta Museum</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nebuta+Museum+Wa+Rasse"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 10. SHIRAKAMI SANCHI ================= -->
+    <section id="shirakami">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_shirakami">Shirakami Sanchi</h2>
+                <p data-i18n="landmark_shirakami_description">
+                    A UNESCO World Heritage natural area with ancient beech forests,
+                    hiking trails, and rich wildlife.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori / Akita</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>June - October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>10</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/shirakami_sanchi.jpg') }}" alt="Shirakami Sanchi">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_shirakami">📍 Explore Shirakami Sanchi</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Shirakami+Sanchi"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 11. HAKKODA ROPeway ================= -->
+    <section id="hakkoda">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_hakkoda">Hakkoda Ropeway</h2>
+                <p data-i18n="landmark_hakkoda_description">
+                    A mountain ropeway offering dramatic views of peaks and valleys,
+                    especially in winter and autumn.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>Winter, October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.7 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/hakkoda_ropeway.jpg') }}" alt="Hakkoda Ropeway">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_hakkoda">📍 Explore Hakkoda Ropeway</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hakkoda+Ropeway"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 12. CHUSON-JI TEMPLE ================= -->
+    <section id="chusonji">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_chusonji">Chuson-ji Temple</h2>
+                <p data-i18n="landmark_chusonji_description">
+                    An ancient Buddhist temple with historic halls, treasures, and
+                    beautiful garden scenery.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Iwate</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>May, October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/chuson-ji_temple.jpg') }}" alt="Chuson-ji Temple">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_chusonji">📍 Explore Chuson-ji Temple</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Chuson-ji+Temple"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 13. NARUKO GORGE ================= -->
+    <section id="naruko">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_naruko">Naruko Gorge</h2>
+                <p data-i18n="landmark_naruko_description">
+                    A scenic valley with rivers, cliffs, and famous autumn colors,
+                    plus nearby onsen towns.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Miyagi / Yamagata</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>Late October</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.8 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/naruko_gorge.jpg') }}" alt="Naruko Gorge">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_naruko">📍 Explore Naruko Gorge</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Naruko+Gorge"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= 14. OSORE-ZAN BODAI-JI TEMPLE ================= -->
+    <section id="osore">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="place_osore">Osore-zan Bodai-ji Temple</h2>
+                <p data-i18n="landmark_osore_description">
+                    A sacred temple in a forested area, known for its spiritual
+                    atmosphere and seasonal beauty.
+                </p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>
+                        <span>Aomori</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>
+                        <span>July - September</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_weekday_score">⛩ Weekday Score</strong>
+                        <span>20</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="landmark_label_rating">⭐ Rating</strong>
+                        <span>4.7 / 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/osorezan_bodai-ji.jpg') }}" alt="Osore-zan Bodai-ji">
+            </div>
+        </div>
+        <div class="maps-section">
+            <h2 data-i18n="landmark_maps_osore">📍 Explore Osore-zan Bodai-ji Temple</h2>
+            <p data-i18n="landmark_maps_description">View visitor photos, reviews, directions and nearby attractions on Google Maps.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Osore-zan+Bodai-ji"
+               target="_blank"
+               class="maps-btn" data-i18n="landmark_maps_button">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES SECTION (6 MENU CARDS) ================= -->
+    <section id="services-section" class="services-section">
+        <h2 class="services-title" data-i18n="landmark_services_title">Landmark Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card" onclick="openLandmarkPopup()">
+                <img src="{{ url_for('static', filename='images/landmark_service1.jpg') }}" alt="View Landmark Info">
+                <h3 data-i18n="landmark_service_info">⛩️ View Landmark Info</h3>
+            </div>
+
+            <div class="service-card" onclick="openCrowdPopup()">
+                <img src="{{ url_for('static', filename='images/landmark_service2.jpg') }}" alt="Landmark Predictor">
+                <h3 data-i18n="landmark_service_predictor">👥 Landmark Predictor</h3>
+            </div>
+
+            <div class="service-card" onclick="openListPopup()">
+                <img src="{{ url_for('static', filename='images/landmark_service3.jpg') }}" alt="List all Landmarks">
+                <h3 data-i18n="landmark_service_available">🗺️ Available Landmarks</h3>
+            </div>
+
+            <div class="service-card" onclick="openRecommendPopup()">
+                <img src="{{ url_for('static', filename='images/landmark_service4.jpg') }}" alt="Recommendations">
+                <h3 data-i18n="landmark_service_recommend">🗺️ Get Recommendation</h3>
+            </div>
+
+            <div class="service-card" onclick="openPopularityPopup()">
+                <img src="{{ url_for('static', filename='images/landmark_service5.jpg') }}" alt="Landmark Popularity">
+                <h3 data-i18n="landmark_service_popularity">Landmark Popularity</h3>
+            </div>
+
+            <div class="service-card" onclick="openRankingPopup()">
+                <img src="{{ url_for('static', filename='images/landmark_service6.jpg') }}" alt="Advanced Ranking">
+                <h3 data-i18n="landmark_service_ranking">🏆 Advanced Ranking</h3>
+            </div>
+
+        </div>
+    </section>
+
+        <!-- ================= POPUPS AND RESULT BOXES ================= -->
+
+    <!-- 1. View Landmark Info Popup -->
+    <div id="landmarkPopup" class="popup">
+        <div class="popup-content">
+            <h3 data-i18n="landmark_service_info">⛩️ View Landmark Info</h3>
+
+            <div class="popup-row">
+                <select id="landmarkSelect">
+                    <option value="hirosaki" data-i18n="place_hirosaki">Hirosaki Park</option>
+                    <option value="matsushima" data-i18n="place_matsushima">Matsushima Bay</option>
+                    <option value="towada" data-i18n="place_lake_towada">Lake Towada</option>
+                    <option value="oirase" data-i18n="place_oirase">Oirase Gorge</option>
+                    <option value="yamadera" data-i18n="place_yamadera">Yamadera</option>
+                    <option value="ginzan" data-i18n="place_ginzan">Ginzan Onsen</option>
+                    <option value="kakunodate" data-i18n="place_kakunodate">Kakunodate</option>
+                    <option value="dewasan" data-i18n="place_dewa">Dewa Sanzan</option>
+                    <option value="nebuta" data-i18n="place_nebuta">Nebuta Museum</option>
+                    <option value="shirakami" data-i18n="place_shirakami">Shirakami Sanchi</option>
+                    <option value="hakkoda" data-i18n="place_hakkoda">Hakkoda Ropeway</option>
+                    <option value="chusonji" data-i18n="place_chusonji">Chuson-ji</option>
+                    <option value="naruko" data-i18n="place_naruko">Naruko Gorge</option>
+                    <option value="osore" data-i18n="place_osore">Osore-zan</option>
+                </select>
+
+                <button onclick="viewLandmark()" data-i18n="landmark_button_view_info">View Information</button>
+            </div>
+
+            <button class="close-popup" onclick="closeLandmarkPopup()">✕</button>
+        </div>
+    </div>
+
+    <!-- Result Box for Landmark Info -->
+    <div id="result-box" class="popup">
+        <div class="popup-content popup-result popup-info">
+            <button class="close-btn" onclick="closeLandmarkResult()">✕</button>
+
+            <div class="popup-result-left">
+                <img id="landmarkImage" src="{{ url_for('static', filename='images/hirosaki_park.jpg') }}" alt="Landmark">
+            </div>
+
+            <div class="popup-result-right">
+                <h3 id="landmarkTitle"></h3>
+                <p><strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>: <span id="landmarkPrefecture"></span></p>
+                <p><strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>: <span id="landmarkBestTime"></span></p>
+                <p><strong data-i18n="landmark_label_fees">💰 Fees</strong>: <span id="landmarkFees"></span></p>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Landmark Predictor Popup -->
+    <div id="crowdPopup" class="popup">
+        <div class="popup-content">
+            <h3 data-i18n="landmark_service_predictor">👥 Landmark Predictor</h3>
+
+            <div class="popup-row">
+                <select id="crowdLandmark">
+                    <option value="hirosaki" data-i18n="place_hirosaki">Hirosaki Park</option>
+                    <option value="matsushima" data-i18n="place_matsushima">Matsushima Bay</option>
+                    <option value="towada" data-i18n="place_lake_towada">Lake Towada</option>
+                    <option value="oirase" data-i18n="place_oirase">Oirase Gorge</option>
+                    <option value="yamadera" data-i18n="place_yamadera">Yamadera</option>
+                    <option value="ginzan" data-i18n="place_ginzan">Ginzan Onsen</option>
+                    <option value="kakunodate" data-i18n="place_kakunodate">Kakunodate</option>
+                    <option value="dewasan" data-i18n="place_dewa">Dewa Sanzan</option>
+                    <option value="nebuta" data-i18n="place_nebuta">Nebuta Museum</option>
+                    <option value="shirakami" data-i18n="place_shirakami">Shirakami Sanchi</option>
+                    <option value="hakkoda" data-i18n="place_hakkoda">Hakkoda Ropeway</option>
+                    <option value="chusonji" data-i18n="place_chusonji">Chuson-ji</option>
+                    <option value="naruko" data-i18n="place_naruko">Naruko Gorge</option>
+                    <option value="osore" data-i18n="place_osore">Osore-zan</option>
+                </select>
+
+                <select id="crowdDay">
+                    <option value="weekday" data-i18n="landmark_option_weekday">Weekday</option>
+                    <option value="weekend" data-i18n="landmark_option_weekend">Weekend</option>
+                </select>
+            </div>
+
+            <div class="popup-row">
+                <select id="crowdWeather">
+                    <option value="sunny" data-i18n="landmark_option_sunny">Sunny</option>
+                    <option value="cloudy" data-i18n="landmark_option_cloudy">Cloudy</option>
+                    <option value="rainy" data-i18n="landmark_option_rainy">Rainy</option>
+                </select>
+
+                <button onclick="predictCrowd()" data-i18n="landmark_button_predict">Predict Crowd</button>
+            </div>
+
+            <button class="close-popup" onclick="closeCrowdPopup()">✕</button>
+        </div>
+    </div>
+
+    <!-- Result Box for Crowd Prediction -->
+    <div id="crowdResult" class="popup">
+        <div class="popup-content popup-result popup-info">
+            <button class="close-btn" onclick="closeCrowdResult()">✕</button>
+
+            <div class="popup-result-left">
+                <img id="crowdImage" src="{{ url_for('static', filename='images/hirosaki_park.jpg') }}" alt="Landmark">
+            </div>
+
+            <div class="popup-result-right">
+                <h3 id="crowdTitle"></h3>
+                <p><strong data-i18n="landmark_label_prefecture">📍 Prefecture</strong>: <span id="crowdPrefecture"></span></p>
+                <p><strong data-i18n="landmark_label_best_time">🗓 Best Time</strong>: <span id="crowdBestTime"></span></p>
+                <p><strong data-i18n="landmark_label_fees">💰 Fees</strong>: <span id="crowdFees"></span></p>
+                <p><strong data-i18n="landmark_label_crowd_status">👥 Crowd Status</strong>: <span id="crowdStatus"></span></p>
+                <p><strong data-i18n="landmark_label_score">📊 Score</strong>: <span id="crowdScore"></span></p>
+                <p><strong data-i18n="landmark_label_message">📝 Message</strong>: <span id="crowdMessage"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Available Landmarks Popup -->
+    <div id="listPopup" class="popup">
+        <div class="popup-content popup-list">
+            <h3 data-i18n="landmark_service_available">🗺️ Available Landmarks</h3>
+            <button class="close-popup" onclick="closeListPopup()">✕</button>
+
+            <div class="popup-buttons">
+                <button class="popup-btn" onclick="showLandmarkList()" data-i18n="landmark_button_show_landmarks">Show Landmarks</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Box for List -->
+    <div id="listResult" class="popup">
+        <div class="options-result">
+            <button class="close-btn" onclick="closeListResult()">✕</button>
+            <h3 id="listTitle"></h3>
+            <div class="landmark-list"></div>
+        </div>
+    </div>
+
+    <!-- 4. Get Recommendation Popup -->
+    <div id="recommendPopup" class="popup">
+        <div class="popup-content popup-list">
+            <h3 data-i18n="landmark_service_recommend">🗺️ Get Recommendation</h3>
+            <button class="close-popup" onclick="closeRecommendPopup()">✕</button>
+
+            <div class="popup-row">
+                <select id="recDay">
+                    <option value="weekday" data-i18n="landmark_option_weekday">Weekday</option>
+                    <option value="weekend" data-i18n="landmark_option_weekend">Weekend</option>
+                </select>
+
+                <select id="recWeather">
+                    <option value="sunny" data-i18n="landmark_option_sunny">Sunny</option>
+                    <option value="cloudy" data-i18n="landmark_option_cloudy">Cloudy</option>
+                    <option value="rainy" data-i18n="landmark_option_rainy">Rainy</option>
+                </select>
+            </div>
+
+            <div class="popup-row popup-buttons">
+                <select id="recOrder">
+                    <option value="quiet" data-i18n="landmark_option_quiet">Most Quiet First</option>
+                    <option value="popular" data-i18n="landmark_option_popular">Most Popular First</option>
+                </select>
+                <button class="popup-btn" onclick="getRecommendation()" data-i18n="landmark_button_recommend">Get Recommendation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Landmark Popularity Popup -->
+    <div id="popularityPopup" class="popup">
+        <div class="popup-content popup-list">
+            <h3 data-i18n="landmark_service_popularity">Landmark Popularity</h3>
+            <p class="popup-description" data-i18n="landmark_popularity_description">
+    Discover the top 3 most visited landmarks for your selected day.
+</p>
+            <button class="close-popup" onclick="closePopularityPopup()">✕</button>
+
+            <div class="popup-row popup-buttons">
+                <select id="popDay">
+                    <option value="weekday" data-i18n="landmark_option_weekday">Weekday</option>
+                    <option value="weekend" data-i18n="landmark_option_weekend">Weekend</option>
+                </select>
+                <button class="popup-btn" onclick="showPopularity()" data-i18n="landmark_button_popularity">Show Popularity</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Advanced Ranking Popup -->
+    <div id="rankingPopup" class="popup">
+        <div class="popup-content popup-list">
+            <h3 data-i18n="landmark_service_ranking">🏆 Advanced Ranking</h3>
+            <button class="close-popup" onclick="closeRankingPopup()">✕</button>
+
+            <div class="popup-row">
+                <select id="rankDay">
+                    <option value="weekday" data-i18n="landmark_option_weekday">Weekday</option>
+                    <option value="weekend" data-i18n="landmark_option_weekend">Weekend</option>
+                </select>
+
+                <select id="rankWeather">
+                    <option value="sunny" data-i18n="landmark_option_sunny">Sunny</option>
+                    <option value="cloudy" data-i18n="landmark_option_cloudy">Cloudy</option>
+                    <option value="rainy" data-i18n="landmark_option_rainy">Rainy</option>
+                </select>
+            </div>
+
+            <div class="popup-row popup-buttons">
+                <select id="rankOrder">
+                    <option value="quiet" data-i18n="landmark_option_quiet">Most Quiet First</option>
+                    <option value="popular" data-i18n="landmark_option_popular">Most Popular First</option>
+                </select>
+                <button class="popup-btn" onclick="showRanking()" data-i18n="landmark_button_ranking">Show Ranking</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Shared result box for options 3–6 -->
+<div id="optionsResult" class="popup" style="display:none;">
+  <div class="options-result">
+    <button class="close-btn" onclick="closeListResult()">✕</button>
+    <h3 id="optionsTitle"></h3>
+    <div class="options-list"></div>
+  </div>
+</div>
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+
+    <script src="{{ url_for('static', filename='jss/language.js') }}"></script>
+    <script src="{{ url_for('static', filename='jss/landmarks.js') }}"></script>
+    <script src="{{ url_for('static', filename='jss/profile_button.js') }}"></script>
+
+</body>
+</html>

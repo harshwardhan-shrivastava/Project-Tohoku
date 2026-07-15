@@ -1,0 +1,167 @@
+
+
+.tohoku-footer{
+
+    background:#f4f1eb;
+    color:#222;
+
+    padding:90px 80px 40px;
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:100px;
+
+}
+
+.footer-left{
+
+    width:65%;
+
+}
+
+.footer-left h1{
+
+    font-size:6.5rem;
+    font-family:Arial, sans-serif;
+
+    line-height:.95;
+
+    font-weight:500;
+
+    color:#222;
+
+    margin-bottom:35px;
+
+    letter-spacing:-3px;
+
+    max-width:700px;
+
+}
+
+.footer-left p{
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    color:#555;
+
+    max-width:650px;
+
+    margin-bottom:45px;
+
+}
+
+.footer-button{
+
+    text-decoration:none;
+
+    color:#222;
+
+    border-bottom:2px solid #222;
+
+    padding-bottom:6px;
+
+    font-size:1.1rem;
+
+    transition:.3s;
+
+}
+
+.footer-button:hover{
+
+    letter-spacing:1px;
+
+}
+
+.footer-right{
+
+    width:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    margin-top:15px;
+
+}
+
+.footer-right a{
+
+    color:#222;
+
+    text-decoration:none;
+
+    margin-bottom:18px;
+
+    font-size:1rem;
+
+}
+
+.footer-right a:hover{
+
+    color:#0c7a5c;
+
+}
+
+.creator{
+
+    margin-top:45px;
+
+}
+
+.creator span{
+
+    color:#666;
+
+    font-size:.9rem;
+
+}
+
+.creator h3{
+
+    margin-top:10px;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+}
+
+.footer-bottom{
+
+    margin-top:90px;
+
+    padding-top:25px;
+
+    border-top:1px solid #ccc;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#666;
+
+    font-size:.9rem;
+
+}
+
+.footer-bottom div{
+
+    display:flex;
+
+    gap:25px;
+
+}

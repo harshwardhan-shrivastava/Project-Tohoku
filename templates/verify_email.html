@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Verify Email | Project Tōhoku</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/verify-email.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="verification-page">
+
+        <section class="verification-card">
+
+            <p class="verification-label">
+                PROJECT TŌHOKU
+            </p>
+
+            <h1 data-i18n="verify_email_title">
+                Verify your email
+            </h1>
+
+            <p class="verification-message">
+
+                <span data-i18n="verification_code_sent">
+                    We sent a 6-digit verification code to
+                </span>
+
+                <strong>{{ email }}</strong>
+
+            </p>
+
+
+            <form
+                method="POST"
+                id="verificationForm"
+            >
+
+                <div class="code-inputs">
+
+                    <input type="text" maxlength="1" inputmode="numeric">
+                    <input type="text" maxlength="1" inputmode="numeric">
+                    <input type="text" maxlength="1" inputmode="numeric">
+                    <input type="text" maxlength="1" inputmode="numeric">
+                    <input type="text" maxlength="1" inputmode="numeric">
+                    <input type="text" maxlength="1" inputmode="numeric">
+
+                </div>
+
+
+                <input
+                    type="hidden"
+                    name="verification_code"
+                    id="verificationCode"
+                >
+
+
+                <p class="verification-timer">
+
+                    <span data-i18n="verification_expires">
+                        Code expires in
+                    </span>
+
+                    <span id="timer">
+                        5:00
+                    </span>
+
+                </p>
+
+
+                <div class="resend-code-area">
+
+                    <span data-i18n="verification_not_received">
+                        Didn't receive the code?
+                    </span>
+
+                    <button
+                        type="submit"
+                        form="resendCodeForm"
+                        class="resend-code-btn"
+                        data-i18n="verification_resend"
+                    >
+                        Resend code
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    data-i18n="verify_email_button"
+                >
+                    Verify Email
+                </button>
+
+            </form>
+
+
+            <form
+                id="resendCodeForm"
+                action="{{ url_for('resend_verification_code') }}"
+                method="POST"
+            ></form>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', filename='jss/language.js') }}"
+    ></script>
+
+
+    <script>
+
+        const inputs = document.querySelectorAll(
+            ".code-inputs input"
+        );
+
+        const form = document.getElementById(
+            "verificationForm"
+        );
+
+        const verificationCode = document.getElementById(
+            "verificationCode"
+        );
+
+
+        inputs.forEach((input, index) => {
+
+            input.addEventListener("input", () => {
+
+                input.value = input.value.replace(
+                    /[^0-9]/g,
+                    ""
+                );
+
+                if (
+                    input.value &&
+                    index < inputs.length - 1
+                ) {
+
+                    inputs[index + 1].focus();
+
+                }
+
+            });
+
+
+            input.addEventListener("keydown", (event) => {
+
+                if (
+                    event.key === "Backspace" &&
+                    !input.value &&
+                    index > 0
+                ) {
+
+                    inputs[index - 1].focus();
+
+                }
+
+            });
+
+        });
+
+
+        form.addEventListener("submit", (event) => {
+
+            const code = Array.from(inputs)
+                .map(input => input.value)
+                .join("");
+
+            if (code.length !== 6) {
+
+                event.preventDefault();
+
+                return;
+
+            }
+
+            verificationCode.value = code;
+
+        });
+
+
+        let remainingSeconds = 300;
+
+        const timer = document.getElementById("timer");
+
+
+        const countdown = setInterval(() => {
+
+            remainingSeconds--;
+
+            const minutes = Math.floor(
+                remainingSeconds / 60
+            );
+
+            const seconds = remainingSeconds % 60;
+
+            timer.textContent =
+                `${minutes}:${seconds
+                    .toString()
+                    .padStart(2, "0")}`;
+
+            if (remainingSeconds <= 0) {
+
+                clearInterval(countdown);
+
+                timer.textContent =
+                    translations[
+                        localStorage.getItem("selectedLanguage") || "en"
+                    ]?.verification_expired || "Expired";
+
+            }
+
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Tōhoku | Journey Archive</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/global.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/history.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="history-navbar">
+
+        <a href="/" class="history-logo">
+            PROJECT TŌHOKU
+        </a>
+
+        <div class="history-user">
+
+            <span>{{ username }}</span>
+
+            <img
+                src="{{ url_for('static', filename='images/avatars/' + avatar) }}"
+                alt="Profile Avatar">
+
+        </div>
+
+    </header>
+
+
+    <main class="history-page">
+
+
+        <!-- HERO -->
+
+        <section class="history-hero">
+
+            <p
+                class="history-eyebrow"
+                data-i18n="history_eyebrow">
+                PROJECT TŌHOKU · EXPLORER LOG
+            </p>
+
+            <h1 data-i18n="history_title">
+                Your Journey Archive
+            </h1>
+
+            <p
+                class="history-subtitle"
+                data-i18n="history_subtitle">
+                Every search leaves a trail through Tōhoku.
+            </p>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="history-stats">
+
+            <div class="history-stat">
+
+                <span>
+                    {{ total_count }}
+                </span>
+
+                <p data-i18n="history_explorations">
+                    Explorations
+                </p>
+
+            </div>
+
+
+            <div class="history-stat shrine-stat">
+
+                <span>
+                    {{ shrine_count }}
+                </span>
+
+                <p data-i18n="history_shrine">
+                    Shrine
+                </p>
+
+            </div>
+
+
+            <div class="history-stat landmark-stat">
+
+                <span>
+                    {{ landmark_count }}
+                </span>
+
+                <p data-i18n="history_landmark">
+                    Landmark
+                </p>
+
+            </div>
+
+
+            <div class="history-stat theater-stat">
+
+                <span>
+                    {{ theater_count }}
+                </span>
+
+                <p data-i18n="history_theater">
+                    Theater
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTERS -->
+
+        <section class="history-filters">
+
+            <button
+                class="history-filter active"
+                data-filter="all"
+                data-i18n="history_filter_all">
+                All
+            </button>
+
+            <button
+                class="history-filter"
+                data-filter="shrine"
+                data-i18n="history_filter_shrines">
+                Shrines
+            </button>
+
+            <button
+                class="history-filter"
+                data-filter="landmark"
+                data-i18n="history_filter_landmarks">
+                Landmarks
+            </button>
+
+            <button
+                class="history-filter"
+                data-filter="theater"
+                data-i18n="history_filter_theaters">
+                Theaters
+            </button>
+
+        </section>
+
+
+        <!-- HISTORY LIST -->
+
+        <section class="history-list">
+
+            {% if history %}
+
+
+                {% for item in history %}
+
+                <article
+                    class="history-card {{ item.category }}"
+                    data-category="{{ item.category }}">
+
+                    <div class="history-card-category">
+
+                        {% if item.category == "shrine" %}
+
+                            <span data-i18n="history_category_shrine">
+                                ⛩ SHRINE
+                            </span>
+
+
+                        {% elif item.category == "landmark" %}
+
+                            <span data-i18n="history_category_landmark">
+                                🗻 LANDMARK
+                            </span>
+
+
+                        {% elif item.category == "theater" %}
+
+                            <span data-i18n="history_category_theater">
+                                🎬 THEATER
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="history-card-content">
+
+                        <h2>
+                            {{ item.title }}
+                        </h2>
+
+
+                        <p
+                            class="history-service"
+                            data-history-service="{{ item.service }}">
+                            {{ item.service }}
+                        </p>
+
+
+                        <p
+                            class="history-details"
+                            data-history-details="{{ item.details }}">
+                            {{ item.details }}
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOCAL DATE AND TIME -->
+
+                    <div
+                        class="history-time"
+                        data-time="{{ item.created_at }}">
+
+                        <span class="history-date"></span>
+
+                        <span class="history-clock"></span>
+
+                    </div>
+
+                </article>
+
+                {% endfor %}
+
+
+            {% else %}
+
+                <div class="history-empty">
+
+                    <h2 data-i18n="history_empty_title">
+                        Your archive is waiting.
+                    </h2>
+
+                    <p data-i18n="history_empty_description">
+                        Explore shrines, landmarks and theaters
+                        to begin your journey through Tōhoku.
+                    </p>
+
+                    <a
+                        href="/"
+                        data-i18n="history_begin_exploring">
+                        Begin Exploring
+                    </a>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+    </main>
+
+
+    <!-- LANGUAGE -->
+
+    <script src="{{ url_for('static', filename='jss/language.js') }}"></script>
+
+
+    <script>
+
+        /* ================= LANGUAGE HELPERS ================= */
+
+        function getHistoryLanguage() {
+
+            return localStorage.getItem(
+                "tohokuLanguage"
+            ) || "en";
+
+        }
+
+
+        function getHistoryTranslation(
+            key,
+            fallback = ""
+        ) {
+
+            const language =
+                getHistoryLanguage();
+
+
+            if (
+                typeof translations !== "undefined" &&
+                translations[language] &&
+                translations[language][key] !== undefined
+            ) {
+
+                return translations[language][key];
+
+            }
+
+
+            return fallback;
+
+        }
+
+
+        function normalizeHistoryValue(value) {
+
+            return String(value || "")
+                .toLowerCase()
+                .trim()
+                .replace(/[^a-z0-9]+/g, "_")
+                .replace(/^_+|_+$/g, "");
+
+        }
+
+
+        /* ================= HISTORY FILTERS ================= */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".history-filter"
+            );
+
+
+        const historyCards =
+            document.querySelectorAll(
+                ".history-card"
+            );
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const filter =
+                        button.dataset.filter;
+
+
+                    filterButtons.forEach(btn =>
+
+                        btn.classList.remove(
+                            "active"
+                        )
+
+                    );
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    historyCards.forEach(card => {
+
+                        if (
+                            filter === "all" ||
+                            card.dataset.category === filter
+                        ) {
+
+                            card.style.display =
+                                "flex";
+
+                        }
+
+                        else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    });
+
+                }
+            );
+
+        });
+
+
+        /* ================= HISTORY CONTENT TRANSLATION ================= */
+
+        function translateHistoryContent() {
+
+            document
+                .querySelectorAll(
+                    ".history-service"
+                )
+                .forEach(service => {
+
+                    const originalValue =
+                        service.dataset.historyService;
+
+
+                    const key =
+                        "history_service_" +
+                        normalizeHistoryValue(
+                            originalValue
+                        );
+
+
+                    service.textContent =
+                        getHistoryTranslation(
+                            key,
+                            originalValue
+                        );
+
+                });
+
+
+            document
+                .querySelectorAll(
+                    ".history-details"
+                )
+                .forEach(details => {
+
+                    const originalValue =
+                        details.dataset.historyDetails;
+
+
+                    const key =
+                        "history_details_" +
+                        normalizeHistoryValue(
+                            originalValue
+                        );
+
+
+                    details.textContent =
+                        getHistoryTranslation(
+                            key,
+                            originalValue
+                        );
+
+                });
+
+        }
+
+
+        /* ================= LOCAL DATE AND TIME ================= */
+
+        function updateHistoryDateTime() {
+
+            const language =
+                getHistoryLanguage();
+
+
+            const locale =
+                language === "ja"
+                    ? "ja-JP"
+                    : "en-US";
+
+
+            document
+                .querySelectorAll(
+                    ".history-time"
+                )
+                .forEach(timeBox => {
+
+                    const utcTime =
+                        timeBox.dataset.time;
+
+
+                    if (!utcTime) {
+                        return;
+                    }
+
+
+                    const localDate =
+                        new Date(
+                            utcTime.replace(
+                                " ",
+                                "T"
+                            ) + "Z"
+                        );
+
+
+                    const dateText =
+                        localDate.toLocaleDateString(
+                            locale,
+                            {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric"
+                            }
+                        );
+
+
+                    const timeText =
+                        localDate.toLocaleTimeString(
+                            locale,
+                            {
+                                hour: "2-digit",
+                                minute: "2-digit"
+                            }
+                        );
+
+
+                    timeBox
+                        .querySelector(
+                            ".history-date"
+                        )
+                        .textContent =
+                            dateText;
+
+
+                    timeBox
+                        .querySelector(
+                            ".history-clock"
+                        )
+                        .textContent =
+                            timeText;
+
+                });
+
+        }
+
+
+        /* ================= INITIAL LOAD ================= */
+
+        translateHistoryContent();
+
+        updateHistoryDateTime();
+
+
+        /* ================= LANGUAGE CHANGE ================= */
+
+        document.addEventListener(
+            "tohokuLanguageChanged",
+            () => {
+
+                translateHistoryContent();
+
+                updateHistoryDateTime();
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

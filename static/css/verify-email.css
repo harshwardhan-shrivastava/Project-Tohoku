@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f4efe8;
+}
+
+.verification-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.verification-card {
+    width: 100%;
+    max-width: 620px;
+
+    background: #ffffff;
+
+    padding: 65px 55px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(22, 59, 52, 0.14);
+}
+
+.verification-label {
+    color: #b38a45;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.verification-card h1 {
+    color: #163b34;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.verification-message {
+    color: #66736f;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 38px;
+}
+
+.verification-message strong {
+    color: #163b34;
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.code-inputs input {
+    width: 62px;
+    height: 72px;
+
+    border: 2px solid #d9dfdc;
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #163b34;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.code-inputs input:focus {
+    border-color: #b38a45;
+
+    box-shadow:
+        0 0 0 4px rgba(179, 138, 69, 0.12);
+
+    transform: translateY(-2px);
+}
+
+.verification-timer {
+    color: #7b8582;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.verification-timer span {
+    color: #b38a45;
+
+    font-weight: 700;
+}
+
+.verification-card button {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #163b34;
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.verification-card button:hover {
+    background: #1f5046;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(22, 59, 52, 0.22);
+}
+
+@media (max-width: 650px) {
+
+    .verification-page {
+        padding: 20px;
+    }
+
+    .verification-card {
+        padding: 45px 22px;
+    }
+
+    .verification-card h1 {
+        font-size: 30px;
+    }
+
+    .code-inputs {
+        gap: 7px;
+    }
+
+    .code-inputs input {
+        width: 43px;
+        height: 58px;
+
+        font-size: 23px;
+
+        border-radius: 10px;
+    }
+
+}
+
+/* =========================================================
+   RESET PASSWORD FORM
+========================================================= */
+
+.verification-card .input-group {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.verification-card .input-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #b96b73;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.verification-card .input-group input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 18px;
+
+    border: 1px solid #e8b9be;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #163b34;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.verification-card .input-group input::placeholder {
+    color: #a79b9b;
+}
+
+.verification-card .input-group input:focus {
+    border-color: #cf7f88;
+
+    box-shadow: 0 0 0 3px rgba(207, 127, 136, 0.12);
+}
+
+.verification-card form .verification-button {
+    margin-top: 24px;
+}
+
+/* =========================================================
+   RESEND VERIFICATION CODE
+========================================================= */
+
+.resend-code-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    margin: 12px 0 22px;
+
+    font-size: 13px;
+    color: #8f7f7f;
+}
+
+.resend-code-btn {
+    width: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+
+    color: #c76f7a !important;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.resend-code-btn:hover {
+    color: #a84f5b !important;
+    transform: none !important;
+}

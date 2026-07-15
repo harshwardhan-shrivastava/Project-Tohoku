@@ -1,0 +1,1653 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+    
+    margin:0;
+    padding:0;
+    background:#143B35;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    
+    background: #143B35;
+    color: white;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.topbar {
+    width: 100%;
+    height: 100px;
+    background: #1F3130;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-left {
+    width: 25%;
+    padding-left: 60px;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}
+
+.nav-right {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+.profile-icon {
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: flex;
+    margin: 200px;
+    gap: 80px;
+    white-space: nowrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+/* ==========================================
+   SHRINE OVERVIEW
+========================================== */
+
+#overview {
+    width: 100%;
+    padding: 90px 0;
+    background: #143B35;
+}
+
+.overview-container {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.overview-text {
+    flex: 1;
+}
+
+.overview-text h2 {
+    font-size: 52px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.overview-text p {
+    color: #D8D8D8;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.overview-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.overview-image img {
+    width: 650px;
+    max-width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+}
+
+/* ==========================================
+   INDIVIDUAL SHRINE SECTIONS
+========================================== */
+
+#aoba {
+    background: #143B35;
+    padding: 90px 0;
+}
+
+#osaki {
+    background: #233A5A;
+    padding: 90px 0;
+}
+
+#kabushima {
+    background: #4A2E3A;
+    padding: 90px 0;
+}
+
+#towada {
+    background: #2E4A36;
+    padding: 90px 0;
+}
+
+/* ==========================================
+   INFO GRID
+========================================== */
+
+.info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-item {
+    background: #27403C;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.info-item strong {
+    display: block;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.info-item span {
+    color: white;
+}
+
+/* ==========================================
+   GOOGLE MAPS SECTION
+========================================== */
+
+.maps-section {
+    width: 900px;
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 50px;
+    background: #27403C;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.maps-section h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.maps-section p {
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.maps-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #143B35;
+    text-decoration: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.maps-btn:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   SERVICES
+========================================== */
+
+.services-section {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 45px;
+}
+
+.services-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.service-card {
+    background: #143D7A;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h3 {
+    text-align: center;
+    padding: 25px;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* ==========================================
+   RESULT BOX (single result: options 1 & 2)
+========================================== */
+
+.result-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 950px;
+    max-width: 92%;
+    margin: 50px auto;
+    padding: 25px;
+    background: #203A43;
+    border-radius: 28px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.result-box.hidden {
+    display: none;
+}
+
+.result-box.show {
+    display: flex;
+}
+
+.result-left {
+    flex: 0 0 280px;
+}
+
+.result-left img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.result-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-right h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.result-right p {
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: 19px;
+    color: #F2F2F2;
+}
+
+.result-right strong {
+    color: #FFD54A;
+}
+
+/* ==========================================
+   LIST-STYLE RESULTS (options 3–7)
+========================================== */
+
+.list-result {
+    position: relative;
+    width: 1000px;
+    max-width: 95%;
+    margin: 45px auto;
+    background: #203A43;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.list-result.hidden {
+    display: none;
+}
+
+.list-result.show {
+    display: block;
+}
+
+.list-result .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.list-result #listTitle {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.list-result .shrine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 10px;
+}
+
+/* Shrine card */
+.shrine-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    background: #F4F4F4;
+    color: #111;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.shrine-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.shrine-item-left {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.shrine-item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.shrine-item-right {
+    flex: 1;
+}
+
+.shrine-item-right h3,
+.shrine-item-right h4 {
+    margin: 0 0 6px 0;
+    color: #111;
+    font-size: 18px;
+}
+
+.shrine-item-right p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.shrine-item-right p strong {
+    color: #143B35;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999999;
+}
+
+.popup[style*="display: flex"] {
+    display: flex !important;
+}
+
+.popup-content {
+    width: 420px;
+    background: white;
+    color: #222;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.popup-content h2 {
+    margin-bottom: 22px;
+    font-size: 28px;
+}
+
+.popup-content select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.popup-buttons button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #F6C000;
+    transition: 0.3s;
+}
+
+.popup-buttons button:hover {
+    background: #FFD84D;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #D9534F;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background: #B52B27;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+#eventBudget {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#eventBudget:focus {
+    border-color: #FFD700;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button {
+    font-family: inherit;
+}
+
+button:hover {
+    transition: 0.3s;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+    .overview-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .result-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-left {
+        flex: none;
+    }
+
+    .result-right {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        gap: 25px;
+        font-size: 18px;
+    }
+
+    .overview-text h2 {
+        font-size: 40px;
+    }
+
+    .service-card img {
+        height: 260px;
+    }
+
+    .result-left img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* ================= OPTIONS 3–7 RESULT CONTAINER ================= */
+
+.options-result {
+    position: relative;
+    width: 1000px;
+    max-width: 95%;
+    margin: 45px auto;
+    background: #172A2D;         /* darker than #203A43 */
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.options-result .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.options-result #optionsTitle {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.options-result .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 10px;
+}
+
+/* Shrine card */
+.options-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    background: #27403C;          /* darker than #F4F4F4 */
+    color: #F2F2F2;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.options-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.options-item-left {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.options-item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.options-item-right {
+    flex: 1;
+}
+
+.options-item-right h3,
+.options-item-right h4 {
+    margin: 0 0 6px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.options-item-right p {
+    margin: 5px 0;
+    color: #D8D8D8;
+    font-size: 14px;
+}
+
+.options-item-right p strong {
+    color: #FFD700;
+}
+
+/* =========================================================
+   PROJECT TŌHOKU — SAKURA SHRINE INTERFACE
+   POPUPS + RESULT SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   SHRINE POPUP OVERLAY
+   ========================================================= */
+
+.shrine-page .popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(18, 5, 12, 0.82);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 999999;
+}
+
+
+.shrine-page .popup[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+/* =========================================================
+   SHRINE POPUP CARD
+   ========================================================= */
+
+.shrine-page .popup-content {
+    width: 540px;
+    max-width: 92%;
+
+    padding: 38px;
+
+    position: relative;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(219, 91, 145, 0.16),
+            transparent 48%
+        ),
+        #2a0d1c;
+
+    border: 1px solid rgba(255, 145, 190, 0.28);
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.62),
+        0 0 42px rgba(229, 91, 151, 0.09);
+
+    animation: shrinePopupOpen 0.32s ease;
+}
+
+
+@keyframes shrinePopupOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Project label */
+
+.shrine-page .popup-content::before {
+    content: "PROJECT TŌHOKU · SHRINE SERVICES";
+
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #ff8fbd;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* Popup title */
+
+.shrine-page .popup-content h2 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   SHRINE POPUP SELECTS + INPUT
+   ========================================================= */
+
+.shrine-page .popup-content select,
+.shrine-page .popup-content input,
+.shrine-page #eventBudget,
+.shrine-page #eventType {
+    width: 100%;
+
+    min-height: 42px;
+
+    margin: 0 0 14px;
+    padding: 0 16px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 170, 205, 0.2);
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.shrine-page .popup-content select:focus,
+.shrine-page .popup-content input:focus,
+.shrine-page #eventBudget:focus {
+    border-color: rgba(255, 143, 189, 0.7);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 0 0 3px rgba(255, 111, 170, 0.08);
+}
+
+
+.shrine-page .popup-content select option {
+    background: #2a0d1c;
+    color: white;
+}
+
+
+/* Remove old BR spacing */
+
+.shrine-page .popup-content br {
+    display: none;
+}
+
+
+/* =========================================================
+   POPUP TEXT
+   ========================================================= */
+
+.shrine-page .popup-content p {
+    color: #dcb7c8;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* Event Planner old inline description */
+
+.shrine-page #eventPlannerPopup .popup-content > div:not(.popup-buttons) {
+    color: #dcb7c8 !important;
+
+    font-size: 12px !important;
+    line-height: 1.8;
+
+    margin-bottom: 18px !important;
+}
+
+
+/* =========================================================
+   POPUP BUTTONS
+   ========================================================= */
+
+.shrine-page .popup-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+.shrine-page .popup-buttons button {
+    min-height: 42px;
+
+    padding: 0 22px;
+
+    border: 1px solid rgba(255, 167, 204, 0.35);
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #d94f8a,
+        #b9326b
+    );
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.shrine-page .popup-buttons button:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #ec6aa2,
+        #ce3e7c
+    );
+
+    box-shadow: 0 10px 25px rgba(217, 79, 138, 0.25);
+}
+
+
+/* Cancel button */
+
+.shrine-page .popup-buttons button:last-child {
+    background: rgba(255, 255, 255, 0.045);
+
+    color: #d9afc2;
+
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+.shrine-page .popup-buttons button:last-child:hover {
+    color: white;
+
+    background: rgba(255, 143, 189, 0.11);
+
+    border-color: rgba(255, 143, 189, 0.35);
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   SINGLE RESULTS — SHRINE INFO + CROWD
+   ========================================================= */
+
+.shrine-page #result-box,
+.shrine-page #crowdResult {
+    width: 920px;
+    max-width: 88%;
+
+    min-height: 360px;
+
+    margin: 50px auto;
+    padding: 42px;
+
+    display: none;
+    align-items: stretch;
+
+    gap: 38px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(219, 91, 145, 0.18),
+            transparent 48%
+        ),
+        #2a0d1c;
+
+    border: 1px solid rgba(255, 145, 190, 0.25);
+    border-radius: 28px;
+
+    color: white;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.55),
+        0 0 40px rgba(229, 91, 151, 0.08);
+
+    animation: shrineResultOpen 0.35s ease;
+}
+
+
+.shrine-page #result-box[style*="display: flex"],
+.shrine-page #crowdResult[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+@keyframes shrineResultOpen {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   RESULT IMAGE
+   ========================================================= */
+
+.shrine-page .result-left {
+    flex: 0 0 350px;
+}
+
+
+.shrine-page .result-left img {
+    width: 350px;
+    height: 100%;
+
+    min-height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 154, 197, 0.2);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
+
+    display: block;
+}
+
+
+/* =========================================================
+   RESULT DATA
+   ========================================================= */
+
+.shrine-page .result-right {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+.shrine-page #result-box .result-right::before {
+    content: "PROJECT TŌHOKU · SHRINE DATA";
+}
+
+
+.shrine-page #crowdResult .result-right::before {
+    content: "PROJECT TŌHOKU · CROWD INTELLIGENCE";
+}
+
+
+.shrine-page .result-right::before {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ff8fbd;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.shrine-page .result-right h2 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+}
+
+
+.shrine-page .result-right p {
+    margin: 0;
+    padding: 11px 0;
+
+    display: grid;
+
+    grid-template-columns: 170px 1fr;
+
+    align-items: start;
+
+    gap: 15px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+
+    color: #ead4df;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.shrine-page .result-right p:last-child {
+    border-bottom: none;
+}
+
+
+.shrine-page .result-right strong {
+    color: #ff8fbd;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+
+.shrine-page .result-right span {
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Remove BR layout from results */
+
+.shrine-page .result-right p br {
+    display: none;
+}
+
+
+/* =========================================================
+   RESULT CLOSE BUTTON
+   ========================================================= */
+
+.shrine-page .result-box .close-btn,
+.shrine-page #optionsResult .close-btn {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #d8aabe;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.shrine-page .result-box .close-btn:hover,
+.shrine-page #optionsResult .close-btn:hover {
+    color: white;
+
+    background: rgba(255, 111, 170, 0.14);
+
+    border-color: rgba(255, 143, 189, 0.45);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   OPTIONS 3–7 — SHRINE EXPLORER
+   ========================================================= */
+
+.shrine-page #optionsResult {
+    width: 960px;
+    max-width: 88%;
+
+    max-height: 82vh;
+
+    margin: 45px auto;
+    padding: 45px 42px;
+
+    position: relative;
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(219, 91, 145, 0.18),
+            transparent 42%
+        ),
+        #2a0d1c;
+
+    border: 1px solid rgba(255, 145, 190, 0.25);
+    border-radius: 28px;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.58),
+        0 0 40px rgba(229, 91, 151, 0.08);
+
+    animation: shrineResultOpen 0.35s ease;
+}
+
+
+.shrine-page #optionsResult[style*="display: block"],
+.shrine-page #optionsResult[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+/* Explorer label */
+
+.shrine-page #optionsResult::before {
+    content: "PROJECT TŌHOKU · SHRINE EXPLORER";
+
+    display: block;
+
+    flex-shrink: 0;
+
+    margin-bottom: 12px;
+
+    color: #ff8fbd;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* Explorer title */
+
+.shrine-page #optionsTitle {
+    flex-shrink: 0;
+
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    text-align: left;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* ONLY CARDS SCROLL */
+
+.shrine-page #optionsResult .options-list {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 0 10px 0 0;
+}
+
+
+/* =========================================================
+   SHRINE EXPLORER CARDS
+   ========================================================= */
+
+.shrine-page #optionsResult .options-item {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+    padding: 18px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 157, 200, 0.14);
+    border-radius: 17px;
+
+    color: white;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.shrine-page #optionsResult .options-item:hover {
+    transform: translateX(6px);
+
+    background: rgba(224, 83, 145, 0.09);
+
+    border-color: rgba(255, 143, 189, 0.36);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+.shrine-page #optionsResult .options-item-left {
+    width: 145px;
+    height: 115px;
+
+    flex: 0 0 145px;
+}
+
+
+.shrine-page #optionsResult .options-item-left img {
+    width: 145px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(255, 157, 200, 0.18);
+
+    display: block;
+}
+
+
+.shrine-page #optionsResult .options-item-right {
+    flex: 1;
+}
+
+
+.shrine-page #optionsResult .options-item-right h3,
+.shrine-page #optionsResult .options-item-right h4 {
+    margin: 0 0 10px;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.shrine-page #optionsResult .options-item-right p {
+    margin: 5px 0;
+
+    color: #dcbfcd;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+.shrine-page #optionsResult .options-item-right strong {
+    color: #ff8fbd;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SAKURA SCROLLBAR
+   ========================================================= */
+
+.shrine-page #optionsResult .options-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+.shrine-page #optionsResult .options-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.shrine-page #optionsResult .options-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 143, 189, 0.32);
+
+    border-radius: 20px;
+}
+
+
+.shrine-page #optionsResult .options-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 143, 189, 0.55);
+}
+
+
+/* =========================================================
+   RESPONSIVE SHRINE RESULTS
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .shrine-page .popup-content {
+        padding: 30px;
+    }
+
+
+    .shrine-page #result-box,
+    .shrine-page #crowdResult {
+        flex-direction: column;
+
+        padding: 30px;
+
+        max-height: 85vh;
+
+        overflow-y: auto;
+    }
+
+
+    .shrine-page .result-left {
+        flex: auto;
+    }
+
+
+    .shrine-page .result-left img {
+        width: 100%;
+        height: 230px;
+
+        min-height: 230px;
+    }
+
+
+    .shrine-page .result-right p {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+
+    .shrine-page #optionsResult {
+        padding: 38px 25px;
+    }
+
+
+    .shrine-page #optionsResult .options-item {
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   FIX — SHOW SHRINE SINGLE RESULTS
+   ========================================================= */
+
+.shrine-page #result-box.show,
+.shrine-page #crowdResult.show {
+    display: flex !important;
+}
+
+/* =========================================================
+   SHRINE RESULTS — MODAL PRESENTATION
+   OPTIONS 1–7
+========================================================= */
+
+
+/* =========================
+   RESULT BACKDROP
+========================= */
+
+.shrine-page #result-box,
+.shrine-page #crowdResult,
+.shrine-page #optionsResult {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 999999;
+
+    margin: 0;
+
+    max-height: 82vh;
+
+    overflow-y: auto;
+}
+
+
+/* Dark blurred page behind result */
+
+.shrine-page::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(12, 5, 9, 0.76);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 999998;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+    pointer-events: none;
+}
+
+
+/* Show backdrop when result is open */
+
+.shrine-page:has(#result-box.show)::after,
+.shrine-page:has(#crowdResult[style*="display: flex"])::after,
+.shrine-page:has(#optionsResult[style*="display: block"])::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Keep results above backdrop */
+
+.shrine-page #result-box,
+.shrine-page #crowdResult,
+.shrine-page #optionsResult {
+    position: fixed;
+    z-index: 999999;
+}
+
+
+/* =========================
+   OPTION 1 + 2
+========================= */
+
+.shrine-page #result-box.show,
+.shrine-page #crowdResult[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+/* =========================
+   OPTIONS 3–7
+========================= */
+
+.shrine-page #optionsResult[style*="display: block"] {
+    display: block !important;
+}
+
+
+/* =========================
+   RESULT SCROLLBAR
+========================= */
+
+.shrine-page #result-box::-webkit-scrollbar,
+.shrine-page #crowdResult::-webkit-scrollbar,
+.shrine-page #optionsResult::-webkit-scrollbar {
+    width: 6px;
+}
+
+.shrine-page #result-box::-webkit-scrollbar-track,
+.shrine-page #crowdResult::-webkit-scrollbar-track,
+.shrine-page #optionsResult::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.shrine-page #result-box::-webkit-scrollbar-thumb,
+.shrine-page #crowdResult::-webkit-scrollbar-thumb,
+.shrine-page #optionsResult::-webkit-scrollbar-thumb {
+    background: rgba(255, 153, 184, 0.45);
+
+    border-radius: 20px;
+}
+
+/* =========================================================
+   FIX — RESULT POSITION FLASH / SLIDE GLITCH
+========================================================= */
+
+.shrine-page #result-box,
+.shrine-page #crowdResult,
+.shrine-page #optionsResult {
+    transition: none !important;
+    animation: none !important;
+}
+
+.shrine-page #result-box.show,
+.shrine-page #crowdResult[style*="display: flex"],
+.shrine-page #optionsResult[style*="display: block"] {
+    top: 50% !important;
+    left: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+}

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tohoku | Theater Services</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theater.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/profile-component.css') }}">
+</head>
+
+<body class="landmark-page">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="topbar">
+        <div class="nav-left">
+            <a href="/" class="logo">
+                PROJECT TŌHOKU
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <!-- Dropdown for Theaters -->
+            <div class="nav-dropdown">
+                <a href="/theater-services" class="nav-dropdown-toggle" data-i18n="theater_nav_theaters">Theaters</a>
+                <div class="nav-dropdown-menu">
+                    <a href="#toho-sendai" data-i18n="theater_name_toho_sendai">Toho Cinemas Sendai</a>
+                    <a href="#forum-morioka" data-i18n="theater_name_forum_morioka">Forum Morioka</a>
+                    <a href="#movix-sendai" data-i18n="theater_name_movix_sendai">Movix Sendai</a>
+                    <a href="#warner-hirosaki" data-i18n="theater_name_warner_hirosaki">Warner Mycal Cinemas Hirosaki</a>
+                    <a href="#forum-yamagata" data-i18n="theater_name_forum_yamagata">Forum Yamagata</a>
+                    <a href="#forum-sendai" data-i18n="theater_name_forum_sendai">Forum Sendai</a>
+                    <a href="#toho-akita" data-i18n="theater_name_toho_akita">Toho Cinemas Akita</a>
+                    <a href="#109-tomiya" data-i18n="theater_name_109_tomiya">109 Cinemas Tomiya</a>
+                </div>
+            </div>
+
+            <!-- Theater Services link to scroll to services section -->
+            <a href="#services-section" data-i18n="theater_nav_services">Theater Services</a>
+        </nav>
+
+        <div class="nav-right">
+    {% include "profile_button.html" %}
+</div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_hero_title">Theater Services</h2>
+                <p>
+                    Explore movie theaters across Tohoku, check theater details,
+                    and find out which ones have IMAX screens.
+                </p>
+            </div>
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater.jpg') }}" alt="Theaters">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INDIVIDUAL THEATER SECTIONS ================= -->
+
+    <!-- Toho Cinemas Sendai -->
+    <section id="toho-sendai" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_toho_sendai">Toho Cinemas Sendai</h2>
+                <p data-i18n="theater_toho_sendai_description">
+                    Toho Cinemas Sendai is a premier multiplex cinema located in Sendai Parco,
+                    offering a wide range of Japanese and international films with premium
+                    viewing experiences including IMAX.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_toho_sendai_prefecture">Miyagi Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_toho_sendai_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_toho_sendai_station">Sendai Station (JR East, Sendai Subway)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_toho_sendai_landmark">Sendai Parco shopping complex and the AER Building observation deck</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_toho_sendai_imax">Yes</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_toho_sendai_access">Located in Sendai Parco 2 (26F), directly connected to the station via underground walkways and concourses (approx. 2-5 min walk)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater1.jpg') }}" alt="Toho Cinemas Sendai">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_toho_sendai_explore">📍 Explore Toho Cinemas Sendai</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Toho+Cinemas+Sendai"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Forum Morioka -->
+    <section id="forum-morioka" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_forum_morioka">Forum Morioka</h2>
+                <p data-i18n="theater_forum_morioka_description">
+                    Forum Morioka is a modern multiplex cinema in Morioka, featuring a variety
+                    of current releases in a comfortable setting with excellent accessibility from
+                    Morioka Station.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_forum_morioka_prefecture">Iwate Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_forum_morioka_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_forum_morioka_station">Morioka Station (JR East)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_forum_morioka_landmark">Malios Observatory and Morioka Castle Ruins Park</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_forum_morioka_imax">No</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_forum_morioka_access">Located in the MOSS Building (5F), approx. 5-7 minutes walk from the station's West Exit</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater2.png') }}" alt="Forum Morioka">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_forum_morioka_explore">📍 Explore Forum Morioka</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Forum+Morioka"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Movix Sendai -->
+    <section id="movix-sendai" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_movix_sendai">Movix Sendai</h2>
+                <p data-i18n="theater_movix_sendai_description">
+                    Movix Sendai is a popular cinema complex near Nagamachi-Minami, offering a
+                    relaxed movie experience with a wide selection of films and convenient access
+                    to The Mall Sendai Nagamachi.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_movix_sendai_prefecture">Miyagi Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_movix_sendai_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_movix_sendai_station">Nagamachi-Minami Station (Sendai Subway Namboku Line)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_movix_sendai_landmark">The Mall Sendai Nagamachi</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_movix_sendai_imax">No</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_movix_sendai_access">3-5 minutes walk from the station.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater3.jpg') }}" alt="Movix Sendai">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_movix_sendai_explore">📍 Explore Movix Sendai</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Movix+Sendai"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Warner Mycal Cinemas Hirosaki -->
+    <section id="warner-hirosaki" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_warner_hirosaki">Warner Mycal Cinemas Hirosaki</h2>
+                <p data-i18n="theater_warner_hirosaki_description">
+                    Warner Mycal Cinemas Hirosaki is a family-friendly multiplex located within
+                    the Saty Hirosaki shopping center, close to the historic Hirosaki Castle.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_warner_hirosaki_prefecture">Aomori Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_warner_hirosaki_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_warner_hirosaki_station">Hirosaki Station (JR East, Konan Railway)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_warner_hirosaki_landmark">Hirosaki Castle</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_warner_hirosaki_imax">No</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_warner_hirosaki_access">Located in the Saty Hirosaki shopping center (approx. 10-15 min walk or short bus ride from the station)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater4.jpg') }}" alt="Warner Mycal Cinemas Hirosaki">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_warner_hirosaki_explore">📍 Explore Warner Mycal Cinemas Hirosaki</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Warner+Mycal+Cinemas+Hirosaki"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Forum Yamagata -->
+    <section id="forum-yamagata" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_forum_yamagata">Forum Yamagata</h2>
+                <p data-i18n="theater_forum_yamagata_description">
+                    Forum Yamagata is a cozy cinema complex in Yamagata City, offering a variety
+                    of films in a convenient location near the station and local cultural sites.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_forum_yamagata_prefecture">Yamagata Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_forum_yamagata_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_forum_yamagata_station">Yamagata Station (JR East, Yamagata Shinkansen)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_forum_yamagata_landmark">SKajo Park (Yamagata Castle ruins)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_forum_yamagata_imax">No</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_forum_yamagata_access">Located in the S-Pal Yamagata or nearby commercial building (approx. 2-5 min walk from the East/West exit)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater5.jpg') }}" alt="Forum Yamagata">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_forum_yamagata_explore">📍 Explore Forum Yamagata</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Forum+Yamagata"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Forum Sendai -->
+    <section id="forum-sendai" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_forum_sendai">Forum Sendai</h2>
+                <p data-i18n="theater_forum_sendai_description">
+                    Forum Sendai is an art-house oriented cinema near Sendai Station, known for
+                    showcasing independent, foreign, and classic films alongside mainstream releases.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_forum_sendai_prefecture">Miyagi Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_forum_sendai_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_forum_sendai_station">Sendai Station (JR East, Sendai Subway)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_forum_sendai_landmark">chibancho Arcade and Sendai Mediatheque</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_forum_sendai_imax">No</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_forum_sendai_access">Located in the Forum Sendai building (approx. 5-8 min walk from the West Exit)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater6.jpg') }}" alt="Forum Sendai">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_forum_sendai_explore">📍 Explore Forum Sendai</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Forum+Sendai"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Toho Cinemas Akita -->
+    <section id="toho-akita" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_toho_akita">Toho Cinemas Akita</h2>
+                <p data-i18n="theater_toho_akita_description">
+                    Toho Cinemas Akita is a major multiplex in Akita City, featuring a wide
+                    selection of films and often including IMAX screens for blockbuster releases.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_toho_akita_prefecture">Akita Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_toho_akita_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_toho_akita_station">Akita Station (JR East, Akita Shinkansen)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_toho_akita_landmark">Akita Port or Senshu Park</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_toho_akita_imax">Yes</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_toho_akita_access">Located in Cubiz Park or a nearby commercial complex (approx. 5-10 min walk)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater7.jpg') }}" alt="Toho Cinemas Akita">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_toho_akita_explore">📍 Explore Toho Cinemas Akita</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Toho+Cinemas+Akita"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 109 Cinemas Tomiya -->
+    <section id="109-tomiya" class="theater-section-page">
+        <div class="overview-container">
+            <div class="overview-text">
+                <h2 data-i18n="theater_name_109_tomiya">109 Cinemas Tomiya</h2>
+                <p data-i18n="theater_109_tomiya_description">
+                    109 Cinemas Tomiya is a modern cinema complex within AEON MALL Tomiya,
+                    offering a premium movie experience with IMAX screens and easy access via
+                    bus from nearby stations.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>
+                        <span data-i18n="theater_109_tomiya_prefecture">Miyagi Prefecture</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_ratings">⭐ Ratings</strong>
+                        <span data-i18n="theater_109_tomiya_ratings">4.6</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>
+                        <span data-i18n="theater_109_tomiya_station">Tomiya Station or Izumi-Chuo Station (bus access recommended)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>
+                        <span data-i18n="theater_109_tomiya_landmark">AEON MALL Tomiya</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_imax">🎥 IMAX</strong>
+                        <span data-i18n="theater_109_tomiya_imax">Yes</span>
+                    </div>
+                    <div class="info-item">
+                        <strong data-i18n="theater_label_access">🚶 Access</strong>
+                        <span data-i18n="theater_109_tomiya_access">Located in AEON MALL Tomiya. Best accessed by bus from Izumi-Chuo Station (approx. 10-15 min bus ride) or a longer walk from Tomiya Station</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-image">
+                <img src="{{ url_for('static', filename='images/theater8.jpg') }}" alt="109 Cinemas Tomiya">
+            </div>
+        </div>
+
+        <div class="maps-section">
+            <h2 data-i18n="theater_109_tomiya_explore">📍 Explore 109 Cinemas Tomiya</h2>
+            <p>
+                View visitor photos, reviews, directions and nearby attractions on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=109+Cinemas+Tomiya"
+               target="_blank"
+               class="maps-btn">
+                <span data-i18n="theater_open_maps">Open in Google Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES SECTION (2 MENU CARDS) ================= -->
+    <section id="services-section" class="services-section">
+        <h2 class="services-title" data-i18n="theater_services_title">Theater Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card" onclick="openTheaterInfoPopup()">
+                <img src="{{ url_for('static', filename='images/theater_service1.png') }}" alt="View Theater Info">
+                <h3 data-i18n="theater_service_info">🍿 View Theater Info</h3>
+            </div>
+
+            <div class="service-card" onclick="openImaxPopup()">
+                <img src="{{ url_for('static', filename='images/theater_service2.png') }}" alt="IMAX or Not">
+                <h3 data-i18n="theater_service_imax">🎬 IMAX or Not</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= POPUPS AND RESULT BOXES ================= -->
+
+    <!-- 1. View Theater Info Popup -->
+    <div id="theaterInfoPopup" class="popup">
+        <div class="popup-content">
+            <h3 data-i18n="theater_service_info">🍿 View Theater Info</h3>
+
+            <div class="popup-row">
+                <select id="theaterSelect">
+                    <option value="toho-sendai" data-i18n="theater_name_toho_sendai">Toho Cinemas Sendai</option>
+                    <option value="forum-morioka" data-i18n="theater_name_forum_morioka">Forum Morioka</option>
+                    <option value="movix-sendai" data-i18n="theater_name_movix_sendai">Movix Sendai</option>
+                    <option value="warner-hirosaki" data-i18n="theater_name_warner_hirosaki">Warner Mycal Cinemas Hirosaki</option>
+                    <option value="forum-yamagata" data-i18n="theater_name_forum_yamagata">Forum Yamagata</option>
+                    <option value="forum-sendai" data-i18n="theater_name_forum_sendai">Forum Sendai</option>
+                    <option value="toho-akita" data-i18n="theater_name_toho_akita">Toho Cinemas Akita</option>
+                    <option value="109-tomiya" data-i18n="theater_name_109_tomiya">109 Cinemas Tomiya</option>
+                </select>
+
+                <button onclick="viewTheaterInfo()" data-i18n="theater_view_information">View Information</button>
+            </div>
+
+            <button class="close-popup" onclick="closeTheaterInfoPopup()">✕</button>
+        </div>
+    </div>
+
+    <!-- Result Box for Theater Info -->
+    <div id="theaterInfoResult" class="result-box" style="display:none;">
+    <button class="close-btn" onclick="closeTheaterInfoResult()">✕</button>
+
+    <div class="result-left">
+        <img id="theaterInfoImage" src="{{ url_for('static', filename='images/theater1.jpg') }}" alt="Theater">
+    </div>
+
+    <div class="result-right">
+        <h2 id="theaterInfoTitle"></h2>
+        <p><strong data-i18n="theater_label_prefecture">📍 Prefecture</strong>: <span id="theaterInfoPrefecture"></span></p>
+        <p><strong data-i18n="theater_label_ratings">⭐ Ratings</strong>: <span id="theaterInfoRatings"></span></p>
+        <p><strong data-i18n="theater_label_nearest_station">🚉 Nearest Station</strong>: <span id="theaterInfoStation"></span></p>
+        <p><strong data-i18n="theater_label_nearest_landmark">🏞 Nearest Landmark</strong>: <span id="theaterInfoLandmark"></span></p>
+        <p><strong data-i18n="theater_label_imax">🎥 IMAX</strong>: <span id="theaterInfoImax"></span></p>
+        <p><strong data-i18n="theater_label_access">🚶 Access</strong>: <span id="theaterInfoAccess"></span></p>
+    </div>
+</div>
+
+    <!-- 2. IMAX or Not Popup -->
+    <div id="imaxPopup" class="popup">
+        <div class="popup-content popup-list">
+            <h3 data-i18n="theater_service_imax">🎬 IMAX or Not</h3>
+
+            <button class="popup-btn" onclick="showImaxTheaters()" data-i18n="theater_show_imax">Show IMAX Theaters</button>
+
+            <button class="close-popup" onclick="closeImaxPopup()">✕</button>
+        </div>
+    </div>
+
+    <!-- Result Box for IMAX Theaters -->
+    <div id="imaxResult" class="options-result" style="display:none;">
+    <button class="close-btn" onclick="closeImaxResult()">✕</button>
+
+    <h3 id="imaxTitle"></h3>
+    <div class="options-list" id="imaxTheatersList"></div>
+</div>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+
+    <!-- Script -->
+    <script src="{{ url_for('static', filename='jss/language.js') }}"></script>
+    <script src="{{ url_for('static', filename='jss/theaters.js') }}"></script>
+    <script src="{{ url_for('static', filename='jss/profile_button.js') }}"></script>
+
+</body>
+</html>

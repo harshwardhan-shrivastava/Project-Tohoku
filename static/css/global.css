@@ -1,0 +1,94 @@
+/* =========================
+   GENERAL
+========================= */
+
+body{
+
+    margin:0;
+
+    font-family:Arial, sans-serif;
+
+    background:#f4f4f4;
+
+    scroll-behavior:smooth;
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+
+    font-size:26px;
+
+    font-weight:600;
+
+    color:#f5f0f0;
+
+    text-decoration:none;
+
+    letter-spacing:.5px;
+
+    text-shadow:none;
+    
+    transition:.3s;
+}
+
+.logo:hover{
+
+    color:#FFD700;
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* =========================
+   PROFILE ICON
+========================= */
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-link{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+}
+
+.profile{
+
+    width:44px;
+    height:44px;
+
+    object-fit:contain;
+
+    cursor:pointer;
+
+    transition:0.25s ease;
+}
+
+.profile:hover{
+
+    transform:scale(1.12);
+
+    filter:drop-shadow(0 0 6px rgba(255,215,0,.8));
+}
+/* global.css */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px; /* Optional: adds breathing room on edges */
+}   

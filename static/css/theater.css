@@ -1,0 +1,1591 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #143B35;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.topbar {
+    width: 100%;
+    height: 100px;
+    background: #1F3130;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-left {
+    width: 25%;
+    padding-left: 60px;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}
+
+.nav-right {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+.profile-icon {
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+/* ==========================================
+   HERO / OVERVIEW
+========================================== */
+
+#hero {
+    width: 100%;
+    padding: 90px 0;
+    background: #143B35;
+}
+
+.overview-container {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.overview-text {
+    flex: 1;
+}
+
+.overview-text h2 {
+    font-size: 52px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.overview-text p {
+    color: #D8D8D8;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.overview-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.overview-image img {
+    width: 650px;
+    max-width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+}
+
+/* ==========================================
+   INDIVIDUAL THEATER SECTIONS (8 different backgrounds)
+========================================== */
+
+.theater-section-page {
+    padding: 90px 0;
+}
+
+#toho-sendai {
+    background: #143B35;
+}
+
+#forum-morioka {
+    background: #233A5A;
+}
+
+#movix-sendai {
+    background: #4A2E3A;
+}
+
+#warner-hirosaki {
+    background: #2E4A36;
+}
+
+#forum-yamagata {
+    background: #3A2F4A;
+}
+
+#forum-sendai {
+    background: #1F3A3F;
+}
+
+#toho-akita {
+    background: #3A4A2F;
+}
+
+#109-tomiya {
+    background: #2F3A4A;
+}
+
+/* ==========================================
+   INFO GRID
+========================================== */
+
+.info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-item {
+    background: #27403C;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.info-item strong {
+    display: block;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.info-item span {
+    color: white;
+}
+
+/* ==========================================
+   GOOGLE MAPS SECTION (exactly like shrine)
+========================================== */
+
+.maps-section {
+    width: 900px;
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 50px;
+    background: #27403C;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.maps-section h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.maps-section p {
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.maps-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #143B35;
+    text-decoration: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.maps-btn:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   SERVICES
+========================================== */
+
+.services-section {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 45px;
+}
+
+.services-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.service-card {
+    background: #143D7A;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h3 {
+    text-align: center;
+    padding: 25px;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* ==========================================
+   RESULT BOX (single result: theater info)
+========================================== */
+
+.popup-result {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 950px;
+    max-width: 92%;
+    margin: 50px auto;
+    padding: 25px;
+    background: #203A43;
+    border-radius: 28px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.popup-result-info {
+    background: #203A43;
+}
+
+.popup-result .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.popup-result-left {
+    flex: 0 0 280px;
+}
+
+.popup-result-left img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.popup-result-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-result-right h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.popup-result-right p {
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: 19px;
+    color: #F2F2F2;
+}
+
+.popup-result-right p strong {
+    color: #FFD54A;
+}
+
+/* ==========================================
+   LIST-STYLE RESULTS (IMAX list)
+========================================== */
+
+.popup-list {
+    position: relative;
+    width: 1000px;
+    max-width: 95%;
+    margin: 45px auto;
+    background: #203A43;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.popup-list .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.popup-list #imaxTitle {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: white;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999999;
+}
+
+.popup[style*="display: flex"] {
+    display: flex !important;
+}
+
+.popup-content {
+    width: 420px;
+    background: white;
+    color: #222;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.popup-content h2,
+.popup-content h3 {
+    margin-bottom: 22px;
+    font-size: 28px;
+}
+
+.popup-content select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.popup-buttons button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #F6C000;
+    transition: 0.3s;
+}
+
+.popup-buttons button:hover {
+    background: #FFD84D;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #D9534F;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background: #B52B27;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #D9534F;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-popup:hover {
+    background: #B52B27;
+}
+
+/* ==========================================
+   OPTIONS LIST (IMAX list items)
+========================================== */
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 10px;
+}
+
+.options-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    background: #27403C;
+    color: #F2F2F2;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.options-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.options-item-left {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.options-item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.options-item-right {
+    flex: 1;
+}
+
+.options-item-right h3,
+.options-item-right h4 {
+    margin: 0 0 6px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.options-item-right p {
+    margin: 5px 0;
+    color: #D8D8D8;
+    font-size: 14px;
+}
+
+.options-item-right p strong {
+    color: #FFD700;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+    .overview-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .popup-result {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup-result-left {
+        flex: none;
+    }
+
+    .popup-result-right {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        gap: 25px;
+        font-size: 18px;
+    }
+
+    .overview-text h2 {
+        font-size: 40px;
+    }
+
+    .service-card img {
+        height: 260px;
+    }
+
+    .popup-result-left img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Hide dropdown menu by default */
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1F3130;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 10px 0;
+    min-width: 220px;
+    z-index: 1001;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-dropdown-menu a:hover {
+    background: #FFD700;
+    color: #143B35;
+}
+
+/* Show dropdown menu when hovering .nav-dropdown */
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+/* Make navbar a flex container so absolute dropdown works */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    position: relative;
+}
+
+/* ==========================================
+   RESULT BOX FOR OPTION 1 (theater info)
+========================================== */
+
+.result-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 950px;
+    max-width: 92%;
+    margin: 50px auto;
+    padding: 25px;
+    background: #203A43;
+    border-radius: 28px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.result-box.hidden {
+    display: none;
+}
+
+.result-box.show {
+    display: flex;
+}
+
+.result-left {
+    flex: 0 0 280px;
+}
+
+.result-left img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.result-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-right h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.result-right p {
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: 19px;
+    color: #F2F2F2;
+}
+
+.result-right strong {
+    color: #FFD54A;
+}
+
+
+/* ==========================================
+   RESULT BOX FOR OPTION 2 (IMAX list)
+========================================== */
+
+.options-result {
+    position: relative;
+    width: 1000px;
+    max-width: 95%;
+    margin: 45px auto;
+    background: #172A2D;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.options-result .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.options-result #imaxTitle {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 10px;
+}
+
+.options-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    background: #27403C;
+    color: #F2F2F2;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.options-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.options-item-left {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.options-item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.options-item-right {
+    flex: 1;
+}
+
+.options-item-right h3,
+.options-item-right h4 {
+    margin: 0 0 6px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.options-item-right p {
+    margin: 5px 0;
+    color: #D8D8D8;
+    font-size: 14px;
+}
+
+.options-item-right p strong {
+    color: #FFD700;
+}
+
+/* =========================================================
+   PROJECT TŌHOKU — THEATER SERVICE UI
+   Japanese Cinema / Crimson Theme
+========================================================= */
+
+:root {
+    --theater-bg: #160D14;
+    --theater-panel: #2A101A;
+    --theater-card: #351620;
+
+    --theater-border: rgba(229, 72, 77, 0.42);
+    --theater-border-soft: rgba(255, 255, 255, 0.10);
+
+    --theater-red: #E5484D;
+    --theater-red-light: #FF6B70;
+
+    --theater-text: #FFFFFF;
+    --theater-muted: #CDBFC4;
+}
+
+
+/* =========================================================
+   POPUP OVERLAY
+========================================================= */
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: rgba(5, 3, 5, 0.78);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+
+    z-index: 999999;
+}
+
+.popup[style*="display: flex"] {
+    display: flex !important;
+}
+
+
+/* =========================================================
+   POPUP CARD
+========================================================= */
+
+.popup-content {
+    position: relative;
+
+    width: 540px;
+    max-width: 92%;
+
+    padding: 36px 37px 32px;
+
+    background: var(--theater-panel);
+    color: var(--theater-text);
+
+    border: 1px solid var(--theater-border);
+    border-radius: 19px;
+
+    text-align: left;
+
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.55),
+        0 0 40px rgba(229, 72, 77, 0.08);
+}
+
+
+/* Small Project Tōhoku label */
+
+.popup-content::before {
+    content: "PROJECT TŌHOKU · THEATER SERVICES";
+
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: var(--theater-red-light);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* Popup title */
+
+.popup-content h2,
+.popup-content h3 {
+    margin: 0 0 24px;
+
+    color: var(--theater-text);
+
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   POPUP ROW
+========================================================= */
+
+.popup-row {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.popup-content select {
+    flex: 1;
+
+    width: auto;
+    min-width: 0;
+
+    height: 42px;
+
+    margin: 0;
+    padding: 0 16px;
+
+    background: var(--theater-card);
+    color: var(--theater-text);
+
+    border: 1px solid var(--theater-border-soft);
+    border-radius: 9px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.popup-content select:focus {
+    border-color: var(--theater-red);
+}
+
+.popup-content select option {
+    background: var(--theater-panel);
+    color: white;
+}
+
+
+/* =========================================================
+   POPUP BUTTONS
+========================================================= */
+
+.popup-row button,
+.popup-btn {
+    min-height: 42px;
+
+    padding: 0 25px;
+
+    background: var(--theater-red);
+    color: white;
+
+    border: 1px solid var(--theater-red-light);
+    border-radius: 9px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.popup-row button:hover,
+.popup-btn:hover {
+    background: var(--theater-red-light);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(229, 72, 77, 0.28);
+}
+
+
+/* IMAX popup button */
+
+.popup-content.popup-list .popup-btn {
+    display: block;
+
+    width: fit-content;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-popup,
+.close-btn {
+    position: absolute;
+
+    top: 17px;
+    right: 17px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--theater-muted);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.close-popup:hover,
+.close-btn:hover {
+    background: var(--theater-red);
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   RESULT BOX — THEATER INFO
+========================================================= */
+
+.result-box {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 999999;
+
+    width: 720px;
+    max-width: 92%;
+    max-height: 78vh;
+
+    margin: 0;
+    padding: 32px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 28px;
+
+    overflow-y: auto;
+
+    background: var(--theater-panel);
+
+    border: 1px solid var(--theater-border);
+    border-radius: 20px;
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.62),
+        0 0 45px rgba(229, 72, 77, 0.08);
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--theater-red) transparent;
+}
+
+.result-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.result-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.result-box::-webkit-scrollbar-thumb {
+    background: var(--theater-red);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   RESULT IMAGE
+========================================================= */
+
+.result-left {
+    flex: 0 0 250px;
+}
+
+.result-left img {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    display: block;
+
+    border: 1px solid var(--theater-border);
+}
+
+
+/* =========================================================
+   RESULT INFORMATION
+========================================================= */
+
+.result-right {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.result-right::before {
+    content: "PROJECT TŌHOKU · THEATER DIRECTORY";
+
+    margin-bottom: 10px;
+
+    color: var(--theater-red-light);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.result-right h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.result-right p {
+    display: grid;
+
+    grid-template-columns: 135px 14px minmax(0, 1fr);
+
+    margin: 0;
+    padding: 10px 0;
+
+    color: var(--theater-text);
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* Generate visual colon */
+
+.result-right p::before {
+    content: "";
+
+    display: none;
+}
+
+.result-right strong {
+    color: var(--theater-red-light);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.result-right strong::after {
+    content: ":";
+    position: absolute;
+    margin-left: 12px;
+    color: white;
+}
+
+.result-right span {
+    grid-column: 3;
+
+    color: white;
+
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   IMAX RESULT
+========================================================= */
+
+.options-result {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 999999;
+
+    width: 720px;
+    max-width: 92%;
+    max-height: 78vh;
+
+    margin: 0;
+    padding: 30px 31px;
+
+    overflow-y: auto;
+
+    background: var(--theater-panel);
+
+    border: 1px solid var(--theater-border);
+    border-radius: 20px;
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.62),
+        0 0 45px rgba(229, 72, 77, 0.08);
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--theater-red) transparent;
+}
+
+.options-result::-webkit-scrollbar {
+    width: 5px;
+}
+
+.options-result::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.options-result::-webkit-scrollbar-thumb {
+    background: var(--theater-red);
+    border-radius: 10px;
+}
+
+
+/* IMAX header */
+
+.options-result::before {
+    content: "PROJECT TŌHOKU · PREMIUM CINEMA";
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--theater-red-light);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.options-result #imaxTitle {
+    margin: 0 0 24px;
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   IMAX LIST
+========================================================= */
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+
+    padding: 0;
+}
+
+.options-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 14px;
+
+    background: var(--theater-card);
+    color: white;
+
+    border: 1px solid rgba(229, 72, 77, 0.25);
+    border-radius: 13px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.options-item:hover {
+    transform: translateY(-2px);
+
+    background: #411A26;
+
+    border-color: var(--theater-red);
+}
+
+.options-item-left {
+    width: 105px;
+    height: 85px;
+
+    flex-shrink: 0;
+}
+
+.options-item-left img {
+    width: 105px;
+    height: 85px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    display: block;
+}
+
+.options-item-right {
+    flex: 1;
+}
+
+.options-item-right h3,
+.options-item-right h4 {
+    margin: 0 0 7px;
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.options-item-right p {
+    margin: 4px 0;
+
+    color: var(--theater-muted);
+
+    font-size: 12px;
+}
+
+.options-item-right p strong {
+    color: var(--theater-red-light);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .popup-row {
+        flex-direction: column;
+    }
+
+    .popup-content select,
+    .popup-row button {
+        width: 100%;
+    }
+
+    .result-box {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .result-left {
+        flex: none;
+    }
+
+    .result-left img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .result-right {
+        width: 100%;
+    }
+
+    .result-right p {
+        grid-template-columns: 120px 14px minmax(0, 1fr);
+    }
+}
+
+/* =========================================================
+   THEATER OPTION 2 — FINAL IMAX RESULT LAYOUT
+========================================================= */
+
+#imaxResult.options-result {
+    width: 900px;
+    max-width: 92%;
+    max-height: 78vh;
+
+    padding: 30px 32px;
+
+    
+
+    overflow-y: auto;
+}
+
+
+/* PROJECT TŌHOKU LABEL */
+
+#imaxResult.options-result::before {
+    display: block;
+
+    margin: 0 0 8px;
+
+    font-size: 9px;
+    letter-spacing: 1.3px;
+}
+
+
+/* TITLE AT THE TOP */
+
+#imaxResult #imaxTitle {
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    padding-bottom: 20px;
+
+    font-size: 28px;
+    line-height: 1.2;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+/* RESULTS GO BELOW HEADER */
+
+#imaxResult .options-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 0;
+}
+
+
+/* INDIVIDUAL THEATER CARD */
+
+#imaxResult .options-item {
+    width: 100%;
+
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+    padding: 18px;
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+#imaxResult .options-item-left {
+    width: 180px;
+    height: 115px;
+
+    flex: 0 0 180px;
+}
+
+#imaxResult .options-item-left img {
+    width: 180px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* INFORMATION AREA */
+
+#imaxResult .options-item-right {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* FIX #1 / #2 / #3 TITLE */
+
+#imaxResult .options-item-right h3,
+#imaxResult .options-item-right h4 {
+    position: static !important;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 9px !important;
+
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 1.3;
+
+    color: white;
+}
+
+
+/* RESULT INFORMATION */
+
+#imaxResult .options-item-right p {
+    display: block;
+
+    margin: 4px 0;
+    padding: 0;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    border: none;
+}
+
+#imaxResult .options-item-right p strong {
+    display: inline;
+
+    font-size: 12px;
+
+    text-transform: none;
+}
+
+
+/* CLOSE BUTTON ALWAYS VISIBLE */
+
+#imaxResult .close-btn {
+    position: sticky;
+
+    top: 0;
+
+    float: right;
+
+    z-index: 20;
+}
+
+/* OPTION 2 — DISPLAY FIX */
+
+#imaxResult {
+    display: none;
+}
+
+#imaxResult[style*="display: flex"] {
+    display: block !important;
+}

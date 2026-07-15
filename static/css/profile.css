@@ -1,0 +1,875 @@
+/* =========================================================
+   PROJECT TOHOKU - PROFILE PAGE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #183632;
+    color: #ffffff;
+}
+
+.profile-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   PROFILE BACKGROUND
+========================================================= */
+
+.profile-background {
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 15, 13, 0.05) 0%,
+            rgba(5, 15, 13, 0.12) 48%,
+            rgba(5, 15, 13, 0.45) 100%
+        ),
+        url("../images/bigprofile1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   PROFILE PANEL
+========================================================= */
+
+.profile-edit-panel {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px;
+
+    background: transparent;
+
+    z-index: 1;
+}
+
+.profile-form-container {
+   width: 1200px;
+    max-width: 95%;
+
+    padding: 45px 55px;
+
+    background: rgba(116, 63, 88, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.profile-small-heading {
+    margin-bottom: 12px;
+
+    color: #f5d90a;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.profile-heading h2 {
+    margin-bottom: 12px;
+
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.profile-heading > p:last-child {
+    margin-bottom: 32px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   AVATAR PREVIEW
+========================================================= */
+
+.profile-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.profile-form-label {
+    margin-bottom: 18px;
+
+    text-align: center;
+}
+
+.profile-avatar-picker-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 0;
+}
+
+.profile-selected-avatar-box {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 3px solid #f5d90a;
+
+    background: #213f3a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-selected-avatar-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.profile-choose-avatar-btn {
+    padding: 14px 24px;
+
+    border: 1px solid #f5d90a;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #f5d90a;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.profile-choose-avatar-btn:hover {
+    background: #f5d90a;
+    color: #87566D;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SELECTED AVATAR FRAMING
+========================================================= */
+
+#profileSelectedAvatarPreview.profile-selected-1 {
+    transform: scale(1);
+}
+
+#profileSelectedAvatarPreview.profile-selected-2 {
+    transform: scale(3.6) translateY(26.8%) translateX(2.25%);
+}
+
+#profileSelectedAvatarPreview.profile-selected-3 {
+    transform: scale(4.5) translateY(27%);
+}
+
+#profileSelectedAvatarPreview.profile-selected-4 {
+    transform: scale(4) translateY(27%) translateX(-24%);
+}
+
+#profileSelectedAvatarPreview.profile-selected-5 {
+    transform: scale(4) translateY(27%);
+}
+
+#profileSelectedAvatarPreview.profile-selected-6 {
+    transform: scale(4.8) translateY(27.60%);
+}
+
+#profileSelectedAvatarPreview.profile-selected-7 {
+    transform: scale(4.8) translateY(27.70%);
+}
+
+#profileSelectedAvatarPreview.profile-selected-8 {
+    transform: scale(4.8) translateY(27.70%);
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.profile-edit-form {
+    width: 100%;
+}
+
+.profile-input-group {
+    margin-bottom: 18px;
+}
+
+.profile-input-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-input-group input {
+    width: 100%;
+    height: 53px;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(30, 20, 27, 0.25);
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profile-input-group input:focus {
+    border-color: #f5d90a;
+
+    box-shadow:
+        0 0 0 3px rgba(245, 217, 10, 0.1);
+}
+
+
+/* =========================================================
+   NEW AVATAR CATEGORY FRAMING
+========================================================= */
+
+/* GYARU */
+
+#profileSelectedAvatarPreview[class*="profile-selected-gyaru"] {
+    transform: scale(3.6) translateY(26%);
+}
+
+
+/* STREET STYLE */
+
+#profileSelectedAvatarPreview[class*="profile-selected-chibi"] {
+    transform: scale(1.15);
+}
+
+
+/* FANTASY */
+
+#profileSelectedAvatarPreview[class*="profile-selected-fantasy"] {
+    transform: scale(4) translateY(25%);
+}
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.profile-save-btn {
+    width: 100%;
+    height: 55px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f5d90a;
+    color: #173530;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profile-save-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(245, 217, 10, 0.25);
+}
+
+.profile-back-link {
+    display: block;
+
+    margin-top: 25px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.profile-back-link:hover {
+    color: #f5d90a;
+}
+
+
+/* =========================================================
+   CRUNCHYROLL STYLE AVATAR SELECTOR
+========================================================= */
+
+.profile-avatar-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 9999;
+}
+
+.profile-avatar-popup.active {
+    display: flex;
+}
+
+
+/* MAIN MODAL */
+
+.profile-avatar-popup-content {
+    width: 900px;
+    max-width: 94%;
+
+    height: 700px;
+    max-height: 88vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #252525;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.65);
+}
+
+
+/* HEADER */
+
+.profile-avatar-popup-header {
+    position: relative;
+
+    flex-shrink: 0;
+
+    padding: 32px 55px 28px;
+
+    background: #303030;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-avatar-popup-header h2 {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-avatar-popup-header p {
+    color: #a8a8a8;
+
+    font-size: 15px;
+}
+
+.profile-close-avatar-popup {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    border: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+
+/* SCROLLING AVATAR AREA */
+
+.profile-avatar-scroll {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 32px 55px 50px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(255, 255, 255, 0.55)
+        transparent;
+}
+
+.profile-avatar-scroll::-webkit-scrollbar {
+    width: 7px;
+}
+
+.profile-avatar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.profile-avatar-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+
+    border-radius: 20px;
+}
+
+
+/* CATEGORY */
+
+.profile-avatar-category {
+    margin-bottom: 42px;
+}
+
+.profile-avatar-category:last-child {
+    margin-bottom: 0;
+}
+
+.profile-avatar-category h3 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+/* AVATAR ROW */
+
+.profile-avatar-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(5, 110px);
+
+    justify-content: space-between;
+
+    gap: 30px 22px;
+}
+
+
+/* AVATAR */
+
+.profile-avatar-option {
+    position: relative;
+
+    width: 110px;
+    height: 110px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.profile-avatar-option img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    border: 3px solid transparent;
+
+    transform: scale(3.6) translateY(26%);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.25s ease;
+}
+
+
+/* CHIBI AVATAR PICKER FIX */
+
+.profile-avatar-option[data-avatar^="chibi"] img {
+    transform: none;
+}
+
+.profile-avatar-option[data-avatar^="chibi"]:hover img {
+    transform: none;
+}
+
+/* CURRENT AVATAR */
+
+.profile-avatar-option.current-avatar img {
+    border-color: #f5d90a;
+}
+
+.profile-avatar-option.current-avatar {
+    box-shadow:
+        0 0 0 4px rgba(245, 217, 10, 0.15),
+        0 0 25px rgba(245, 217, 10, 0.3);
+}
+
+
+/* HOVER */
+
+.profile-avatar-option:hover {
+    transform: scale(1.08);
+}
+
+.profile-avatar-option:hover img {
+    transform: scale(1);
+}
+
+/* =========================================================
+   AVATAR CONFIRMATION
+========================================================= */
+
+.profile-avatar-confirm-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(5, 15, 13, 0.9);
+
+    z-index: 10000;
+}
+
+.profile-avatar-confirm-popup.active {
+    display: flex;
+}
+
+.profile-avatar-confirm-box {
+    width: 420px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #183632;
+
+    border: 1px solid #47605b;
+    border-radius: 18px;
+}
+
+.profile-avatar-confirm-box h3 {
+    margin-bottom: 12px;
+
+    font-size: 25px;
+}
+
+.profile-avatar-confirm-box p {
+    margin-bottom: 25px;
+
+    color: #aebfbb;
+}
+
+.profile-confirm-avatar-preview {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 30px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 3px solid #f5d90a;
+}
+
+.profile-confirm-avatar-preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.profile-avatar-confirm-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.profile-avatar-confirm-buttons button {
+    flex: 1;
+
+    height: 48px;
+
+    border-radius: 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.profile-confirm-avatar-btn {
+    border: none;
+
+    background: #f5d90a;
+    color: #183632;
+}
+
+.profile-cancel-avatar-btn {
+    border: 1px solid #47605b;
+
+    background: transparent;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .profile-page {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-visual {
+        min-height: 500px;
+    }
+
+    .profile-edit-panel {
+        min-height: auto;
+
+        padding: 70px 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .profile-visual-content,
+    .profile-brand {
+        left: 25px;
+    }
+
+    .profile-avatar-gallery {
+        grid-template-columns: repeat(2, 130px);
+    }
+
+    .profile-heading h2 {
+        font-size: 34px;
+    }
+
+}
+
+/* =====================================================
+   CHIBI AVATARS — STATIC, SLIGHTLY ZOOMED
+===================================================== */
+
+.profile-avatar-option[data-avatar^="chibi"] img,
+.profile-avatar-option[data-avatar^="chibi"]:hover img,
+.profile-avatar-option[data-avatar^="chibi"].current-avatar img,
+.profile-avatar-option[data-avatar^="chibi"].current-avatar:hover img {
+    transform: scale(1.5) !important;
+}
+
+#profileSelectedAvatarPreview[src*="chibi"] {
+    transform: scale(1.5) !important;
+}
+
+
+/* =====================================================
+   FANTASY AVATARS — INDIVIDUAL FRAMING
+===================================================== */
+
+.profile-avatar-option[data-avatar="fantasy1.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy2.png"] img {
+    transform: scale(4) translateY(27%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy3.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy4.png"] img {
+    transform: scale(4) translateY(20%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy5.png"] img {
+   transform: scale(4) translateY(27%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy6.png"] img {
+    transform: scale(4) translateY(20%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy7.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+.profile-avatar-option[data-avatar="fantasy8.png"] img {
+    transform: scale(4) translateY(25%) !important;
+}
+
+/* =====================================================
+   FANTASY AVATARS — FULL BODY ON HOVER
+===================================================== */
+
+.profile-avatar-option[data-avatar^="fantasy"]:hover img,
+.profile-avatar-option[data-avatar^="fantasy"].current-avatar:hover img {
+    transform: scale(1) translateY(0%) !important;
+}
+
+
+/* =====================================================
+   PROFILE PICTURE PFP — STATIC LIKE CHIBI
+===================================================== */
+
+.profile-avatar-option[data-avatar^="profile"] img,
+.profile-avatar-option[data-avatar^="profile"]:hover img,
+.profile-avatar-option[data-avatar^="profile"].current-avatar img,
+.profile-avatar-option[data-avatar^="profile"].current-avatar:hover img {
+    transform: scale(1.5) !important;
+}
+
+#profileSelectedAvatarPreview[src*="profile"] {
+    transform: scale(1.5) !important;
+}
+
+#profileSelectedAvatarPreview.profile-selected-4,
+.profile-confirm-avatar-preview img[src*="profile4"] {
+    transform: scale(1.5) translateX(-2%) !important;
+}
+
+/* PROFILE PICTURE PFP — SAME NATURAL SIZE EVERYWHERE */
+
+.profile-avatar-option[data-avatar^="profile"] img,
+.profile-avatar-option[data-avatar^="profile"]:hover img,
+.profile-avatar-option[data-avatar^="profile"].current-avatar img,
+.profile-avatar-option[data-avatar^="profile"].current-avatar:hover img,
+#profileSelectedAvatarPreview[src*="profile"],
+.profile-confirm-avatar-preview img[src*="profile"] {
+    transform: scale(1) !important;
+}
+/* PROFILE 2 + 3 — EXTRA ZOOM */
+
+.profile-avatar-option[data-avatar="profile2.png"] img,
+.profile-avatar-option[data-avatar="profile3.png"] img,
+#profileSelectedAvatarPreview[src*="profile2"],
+#profileSelectedAvatarPreview[src*="profile3"],
+.profile-confirm-avatar-preview img[src*="profile2"],
+.profile-confirm-avatar-preview img[src*="profile3"] {
+    transform: scale(1.5) !important;
+}
+
+/* PROFILE 2 + 3 — STATIC, NO ZOOM HOVER */
+
+.profile-avatar-option[data-avatar="profile2.png"]:hover img,
+.profile-avatar-option[data-avatar="profile3.png"]:hover img,
+.profile-avatar-option[data-avatar="profile2.png"].current-avatar:hover img,
+.profile-avatar-option[data-avatar="profile3.png"].current-avatar:hover img {
+    transform: scale(1.5) !important;
+}
+
+/* =====================================================
+   PROFILE 6–8 — STATIC 1.5 EVERYWHERE
+===================================================== */
+
+.profile-avatar-option[data-avatar="profile6.png"] img,
+.profile-avatar-option[data-avatar="profile7.png"] img,
+.profile-avatar-option[data-avatar="profile8.png"] img,
+
+.profile-avatar-option[data-avatar="profile6.png"]:hover img,
+.profile-avatar-option[data-avatar="profile7.png"]:hover img,
+.profile-avatar-option[data-avatar="profile8.png"]:hover img,
+
+.profile-avatar-option[data-avatar="profile6.png"].current-avatar img,
+.profile-avatar-option[data-avatar="profile7.png"].current-avatar img,
+.profile-avatar-option[data-avatar="profile8.png"].current-avatar img,
+
+.profile-avatar-option[data-avatar="profile6.png"].current-avatar:hover img,
+.profile-avatar-option[data-avatar="profile7.png"].current-avatar:hover img,
+.profile-avatar-option[data-avatar="profile8.png"].current-avatar:hover img,
+
+#profileSelectedAvatarPreview[src*="profile6"],
+#profileSelectedAvatarPreview[src*="profile7"],
+#profileSelectedAvatarPreview[src*="profile8"],
+
+.profile-confirm-avatar-preview img[src*="profile6"],
+.profile-confirm-avatar-preview img[src*="profile7"],
+.profile-confirm-avatar-preview img[src*="profile8"] {
+    transform: scale(1.5) !important;
+}
+

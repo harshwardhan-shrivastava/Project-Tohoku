@@ -1,0 +1,1289 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+    
+    margin:0;
+    padding:0;
+    background:#143B35;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* =========================
+   HERO
+========================= */
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section{
+
+    position:relative;
+
+    width:100%;
+
+    height:700px;
+}
+
+/* BLUE BACKGROUND */
+
+.hero-bg{
+
+    width:100%;
+
+    height:427px;
+
+    background:#1F3130;
+}
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-btn{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    width:220px;
+    height:58px;
+
+    margin-top:25px;
+
+    background:#FFD700;
+    color:#1F3130;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:22px;
+    font-weight:700;
+
+    transition:.35s;
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#FFE55C;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+.hero-btn:active{
+
+    transform:scale(.95);
+
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+
+    position:absolute;
+
+    width:1164px;
+
+    height:655px;
+
+    left:50%;
+
+    top:20px;
+
+    transform:translateX(-50%);
+
+    border-radius:90px;
+
+    overflow:hidden;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.35),
+        rgba(0,0,0,.35)),
+        url("../images/home1.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+/* =========================
+   GENERAL
+========================= */
+
+
+/* TEXT */
+
+.hero-overlay{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+}
+
+.hero-overlay h1{
+
+    font-size:58px;
+
+    margin-bottom:35px;
+}
+
+.hero-overlay p{
+
+    font-size:32px;
+
+    margin-bottom:40px;
+}
+
+.hero-overlay h2{
+
+    margin-top:45px;
+
+    font-size:42px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.home-navbar{
+
+    width:100%;
+    height:130px;
+
+    background: #1F3130;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 55px;
+
+    box-sizing:border-box;
+
+    background:#1F3130;
+    border-left:1px solid rgba(255,255,255,0.15);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+
+/* LEFT SIDE */
+
+.nav-left{
+
+    display:flex;
+    align-items:center;
+    color:white;
+    white-space: nowrap;
+    gap:190px;
+
+    flex:1;
+}
+
+/* MENU */
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+
+    gap:205px;
+}
+
+/* MENU LINKS */
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    
+    white-space: nowrap;
+
+    transition:.25s;
+}
+
+.nav-links a:hover{
+
+    color:#FFD700;
+
+    transform:translateY(-2px);
+}
+
+/* RIGHT SIDE */
+
+.nav-right{
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:40px;
+    flex:1;
+    margin-right:70px;
+}
+
+/* GOLD LINE */
+
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome{
+    margin-top:40px;
+    color:white;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+.welcome p{
+    margin-top:0;
+    font-size:30px;
+    line-height:1.6;
+    max-width:650px;
+    margin:0;
+}
+.welcome-section{
+
+    width:100%;
+
+    margin:0;
+
+    padding:70px 0;
+
+    background:#143B35;
+
+    color:white;
+
+    text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+
+
+.welcome-section h2{
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+}
+
+/* =========================
+   HOMEPAGE CARDS
+========================= */
+
+/* =========================
+   HOMEPAGE CARDS
+========================= */
+
+.cards{
+
+    width:1164px;
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,556px);
+
+    justify-content:space-between;
+
+    row-gap:55px;
+}
+
+.card{
+
+    width:556px;
+
+    height:313px;
+
+    border-radius:90px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    animation:cardReveal .8s forwards;
+    transition:.35s;
+
+    background:black;
+}
+
+.card:hover{
+
+    transform:scale(1.03);
+}
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+.card h2{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:35px;
+
+    color:white;
+
+    font-size:50px;
+
+    font-weight:300;
+
+    margin:0;
+    white-space: nowrap;
+    z-index:2;
+
+    text-shadow:2px 2px 6px black;
+}
+.card p{
+
+    display:none;
+}
+
+.card p{
+    padding:15px;
+    color:black;
+    text-shadow:none;
+}
+
+.card-link{
+    display:block;
+    width:100%;
+    text-decoration:none;
+    color:inherit;
+}
+
+.card{
+
+    position:relative;
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.25);
+}
+@keyframes cardReveal{
+
+    from{
+        opacity:0;
+        transform:translateY(70px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   PROFILE LINK
+========================= */
+
+.profile-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile{
+    width: 100px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    gap:10px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Hover Effects */
+
+.profile-link:hover{
+    background: rgba(255,255,255,0.12);
+}
+
+.profile:hover{
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features{
+
+    width:100%;
+
+    background:#143B35;
+
+    padding:100px 0;
+   
+
+    margin-top:80px;
+
+}
+
+.feature{
+
+    width:1200px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    justify-content:space-between;
+   
+
+    align-items:center;
+
+    gap:80px;
+
+    padding:60px 0;
+
+    background:transparent;
+}
+
+/* TEXT */
+
+.feature-text{
+
+    flex:1;
+
+}
+
+.feature-text h2{
+
+    color:white;
+
+    font-size:52px;
+
+}
+
+.feature-text p{
+
+    color:#D7D7D7;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+}
+
+.feature-text li{
+
+    color:white;
+
+    font-size:20px;
+
+}
+/* BUTTON */
+
+.feature-btn{
+
+    background:#F2F2F2;
+
+    color:#1F3130;
+
+    border-radius:4px;
+    text-decoration:none;
+    margin-left:20px;
+    padding:16px 38px;
+
+    font-weight:700;
+}
+
+.feature-btn:hover{
+
+    background:#ffea57;
+
+    transform:translateY(-3px);
+
+}
+
+/* IMAGE */
+
+.feature-image{
+
+    flex:1;
+
+}
+
+.feature-image img{
+
+    width:680px;
+
+    height:450px;
+
+    border-radius:98px;
+
+    object-fit:cover;
+}
+
+/* =========================
+   SHRINE OPTIONS
+========================= */
+
+.shrine-options{
+
+    width:1200px;
+
+    margin:70px auto 120px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.shrine-option{
+
+    background:#27403C;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.shrine-option:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.shrine-option img{
+
+    width:100%;
+
+    height:390px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.option-bottom{
+
+    padding:22px 25px 18px;
+
+    background:#27403C;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+.option-bottom h3{
+
+    color:white;
+
+    font-size:32px;
+
+    line-height:1.25;
+
+    margin-bottom:24px;
+
+    font-weight:300;
+
+}
+
+.option-bottom a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.option-bottom a:hover{
+
+    color:#FFD700;
+
+}
+
+/* =========================
+   SHRINE CARD BUTTON
+========================= */
+
+
+.explore-card-btn{
+
+    display:inline-block;
+
+    margin-top:18px;
+    padding:10px 24px;
+
+    background:#E3E3E3;
+    color:#163B34 !important;
+
+    text-decoration:none;
+    text-transform:uppercase;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    border:none;
+
+    transition:.3s ease;
+}
+
+.explore-card-btn:hover{
+
+    background:#FFD700;
+    color:#163B34;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(255,215,0,.35);
+}
+
+.explore-card-btn{
+    width:auto;
+    min-width:140px;
+    text-align:center;
+}
+
+.explore-card-btn:active{
+
+    transform:scale(.96);
+
+}
+
+.hidden-landmarks{
+    display:none;
+}
+
+.view-more{
+
+    width:100%;
+
+    text-align:center;
+
+    margin:50px 0;
+}
+
+.view-more button{
+
+    display:inline-block;
+
+    width:180px;
+    height:50px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#D4A017;
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.view-more button:hover{
+
+    background:#B8860B;
+
+}
+
+
+
+.landmark-container{
+    width:90%;
+    margin:60px auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.landmark-card{
+
+    background:#34424A;
+    border-radius:25px;
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.landmark-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.landmark-card img{
+
+    width:450px;
+
+    height:250px;
+
+    margin-top:20px;
+
+    object-fit:cover;
+
+    border-radius:120px;
+
+}
+
+.landmark-card h2{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:26px;
+
+    margin-top:10px;
+}
+
+.landmark-card{
+
+    width:500px;
+
+    height:400px;
+
+    background:#243530;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.landmark-card button{
+
+    width:140px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#F7C948;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.landmark-card button:hover{
+
+    transform:scale(1.05);
+
+}
+
+.landmark-card a {
+    display: inline-block;
+
+    margin-top: 5px;
+    margin-bottom: 18px;
+    padding: 12px 28px;
+
+    background: #ECECEC;
+    color: #17342F;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    border: 2px solid #ECECEC;
+
+    transition: all .3s ease;
+}
+
+.landmark-card a:hover {
+    background: #FFD700;
+    border-color: #FFD700;
+    color: #17342F;
+
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(255,215,0,.35);
+}
+
+.landmark-card a:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+@media(max-width:1100px){
+
+.landmark-container{
+
+    width:90%;
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,380px);
+
+    justify-content:center;
+
+    gap:45px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.landmark-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.landmark-section{
+
+    background:#3A1F45;
+
+    padding:80px 0;
+
+}
+
+.hidden-landmarks{
+
+    display:none;
+
+}
+
+
+/* ==========================================
+   THEATER SECTION
+========================================== */
+
+.theater-section{
+
+    background: #2b3138;   /* use the same color as the hero */
+    padding: 120px 0;
+}
+
+/* Hero uses the existing .feature class */
+/* No .theater-feature CSS needed */
+
+/* ==========================================
+   THEATER CONTAINER
+========================================== */
+
+.theater-container{
+
+    width:90%;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+    justify-items:center;
+}
+
+/* ==========================================
+   THEATER CARD
+========================================== */
+
+.theater-card{
+
+    width:500px;
+
+    height:450px;
+
+    background:#22352F;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+}
+
+.theater-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.theater-card img{
+
+    width:450px;
+
+    height:250px;
+
+    margin-top:20px;
+
+    object-fit:cover;
+
+    border-radius:120px;
+
+    transition:.4s ease;
+}
+
+.theater-card:hover img{
+
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.theater-card h2{
+
+    color:white;
+    text-align:center;
+
+    font-size:26px;
+
+    margin-top:5px;
+    margin-bottom:15px;
+
+    min-height:70px;   /* Reserve space for 2 lines */
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.theater-card a{
+
+    display:inline-block;
+
+    margin-top:1px;
+    margin-bottom:18px;
+
+    padding:12px 28px;
+
+    background:#ECECEC;
+    color:#17342F;
+
+    text-decoration:none;
+    text-transform:uppercase;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    border:2px solid #ECECEC;
+
+    transition:all .3s ease;
+}
+
+.theater-card a:hover{
+
+    background:#FFD700;
+    border-color:#FFD700;
+    color:#17342F;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(255,215,0,.35);
+}
+
+.theater-card a:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+/* ==========================================
+   VIEW MORE
+========================================== */
+
+.theater-view-more{
+
+    width:100%;
+
+    text-align:center;
+
+    margin:50px 0;
+}
+
+.theater-view-more button{
+
+    width:180px;
+
+    height:50px;
+
+    background:#D4A017;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.theater-view-more button:hover{
+
+    background:#E6B325;
+
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   HIDDEN THEATERS
+========================================== */
+
+.hidden-theaters{
+
+    display:none;
+}
+
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* ===========================
+   OVERVIEW
+=========================== */
+
+#overview{
+
+    padding:100px 80px;
+
+    background:white;
+
+}
+
+.overview-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.overview-text{
+
+    flex:1;
+
+}
+
+.overview-text h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+    color:#0B4A6F;
+
+}
+
+.overview-text p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:40px;
+
+}
+
+.info-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.info-item{
+
+    background:#F6F6F6;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.info-item strong{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#0B4A6F;
+
+}
+
+.info-item span{
+
+    color:#555;
+
+}
+
+.overview-image{
+
+    flex:1;
+
+}
+
+.overview-image img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+}

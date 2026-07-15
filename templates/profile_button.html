@@ -1,0 +1,607 @@
+{% if session.get("user_id") %}
+
+<div class="profile-component">
+
+    <!-- PROFILE AVATAR BUTTON -->
+
+    <button
+        class="profile-link logged-in-profile"
+        id="profileMenuButton"
+        type="button"
+    >
+
+        <div class="navbar-avatar-box">
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='images/avatars/' ~ session.get('avatar')
+                ) }}"
+                class="navbar-user-avatar avatar-{{ session.get('avatar') | replace('profile', '') | replace('.png', '') }}"
+                alt="Explorer Avatar"
+            >
+
+        </div>
+
+    </button>
+
+
+    <!-- PROFILE PANEL -->
+
+    <div
+        class="profile-panel"
+        id="profilePanel"
+    >
+
+        <!-- PROFILE HEADER -->
+
+        <div class="profile-panel-header">
+
+            <div class="panel-avatar-box">
+
+                <img
+                    src="{{ url_for(
+                        'static',
+                        filename='images/avatars/' ~ session.get('avatar')
+                    ) }}"
+                    class="panel-user-avatar avatar-{{ session.get('avatar') | replace('profile', '') | replace('.png', '') }}"
+                    alt="Explorer Avatar"
+                >
+
+            </div>
+
+
+            <div class="profile-user-info">
+
+                <span
+                    class="profile-welcome"
+                    data-i18n="profile_welcome"
+                >
+                    WELCOME BACK
+                </span>
+
+                <h3>
+                    {{ session.get("username") }}
+                </h3>
+
+                <p data-i18n="tohoku_explorer">
+                    Tohoku Explorer
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE MENU -->
+
+        <div class="profile-panel-menu">
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="{{ url_for('profile', next=request.path) }}"
+                class="profile-menu-item"
+            >
+
+                <span class="menu-icon">
+                    👤
+                </span>
+
+                <div>
+
+                    <strong data-i18n="menu_profile">
+                        Profile
+                    </strong>
+
+                    <small data-i18n="menu_profile_description">
+                        View your explorer profile
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <!-- HISTORY -->
+
+            <a
+                href="{{ url_for('history') }}"
+                class="profile-menu-item"
+            >
+
+                <span class="menu-icon">
+                    ↺
+                </span>
+
+                <div>
+
+                    <strong data-i18n="menu_history">
+                        History
+                    </strong>
+
+                    <small data-i18n="menu_history_description">
+                        View your exploration history
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <!-- LANGUAGE -->
+
+            <button
+                type="button"
+                class="profile-menu-item language-menu-item"
+                id="openLanguagePopup"
+            >
+
+                <span class="menu-icon">
+                    🌐
+                </span>
+
+                <div class="language-menu-content">
+
+                    <strong data-i18n="menu_language">
+                        Language
+                    </strong>
+
+                    <small data-i18n="menu_language_description">
+                        Choose your preferred language
+                    </small>
+
+                </div>
+
+            </button>
+
+        </div>
+
+
+        <!-- PROFILE FOOTER -->
+
+        <div class="profile-panel-footer">
+
+            <a
+                href="{{ url_for('logout') }}"
+                class="logout-menu-item"
+            >
+
+                <span>
+                    ⇥
+                </span>
+
+                <span data-i18n="menu_logout">
+                    Log Out
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- LANGUAGE POPUP -->
+
+    <div
+        class="language-popup"
+        id="languagePopup"
+    >
+
+        <!-- LANGUAGE POPUP HEADER -->
+
+        <div class="language-popup-header">
+
+            <span>
+                PROJECT TŌHOKU
+            </span>
+
+            <button
+                type="button"
+                id="closeLanguagePopup"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- LANGUAGE POPUP TITLE -->
+
+        <h3>
+            SELECT LANGUAGE
+        </h3>
+
+
+        <!-- LANGUAGE OPTIONS -->
+
+        <div class="language-popup-options">
+
+
+            <!-- ENGLISH -->
+
+            <button
+                type="button"
+                class="language-popup-option"
+                data-language="en"
+                onclick="setLanguage('en')"
+            >
+
+                <span class="language-popup-icon">
+                    🌐
+                </span>
+
+                <div>
+
+                    <strong>
+                        English
+                    </strong>
+
+                    <small>
+                        Continue in English
+                    </small>
+
+                </div>
+
+            </button>
+
+
+            <!-- JAPANESE -->
+
+            <button
+                type="button"
+                class="language-popup-option"
+                data-language="ja"
+                onclick="setLanguage('ja')"
+            >
+
+                <span class="language-popup-icon">
+                    🗾
+                </span>
+
+                <div>
+
+                    <strong>
+                        日本語
+                    </strong>
+
+                    <small>
+                        日本語で続ける
+                    </small>
+
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% else %}
+
+
+<!-- =========================================
+     GUEST PROFILE
+========================================= -->
+
+<div class="profile-component guest-component">
+
+
+    <!-- GUEST MESSAGE -->
+
+    <div
+        class="guest-profile-message"
+        id="guestProfileMessage"
+    >
+
+        <span class="guest-message-label">
+            PROJECT TŌHOKU
+        </span>
+
+        <strong data-i18n="guest_unlock">
+            Unlock a better experience
+        </strong>
+
+        <p data-i18n="guest_message">
+            Register or log in to save your journey
+            and view your exploration history.
+        </p>
+
+        <div class="guest-message-arrow"></div>
+
+    </div>
+
+
+    <!-- GUEST PROFILE BUTTON -->
+
+    <button
+        class="profile-link guest-profile"
+        id="guestProfileButton"
+        type="button"
+    >
+
+        <img
+            src="{{ url_for(
+                'static',
+                filename='images/profile.png'
+            ) }}"
+            alt="Profile"
+            class="profile-icon guest-profile-icon"
+        >
+
+    </button>
+
+
+    <!-- GUEST PANEL -->
+
+    <div
+        class="profile-panel guest-profile-panel"
+        id="profilePanel"
+    >
+
+        <!-- GUEST HEADER -->
+
+        <div class="guest-panel-content">
+
+            <span class="profile-welcome">
+                PROJECT TŌHOKU
+            </span>
+
+            <h3 data-i18n="guest_start_journey">
+                Start your journey
+            </h3>
+
+            <p data-i18n="guest_login_message">
+                Log in for a better experience and keep
+                your Tōhoku exploration connected.
+            </p>
+
+            <a
+                href="{{ url_for('register') }}"
+                class="guest-login-btn"
+            >
+                LOG IN / SIGN UP
+            </a>
+
+        </div>
+
+
+        <!-- GUEST MENU -->
+
+        <div class="profile-panel-menu">
+
+
+            <!-- PROFILE / AVATAR LOCKED -->
+
+            <button
+                type="button"
+                class="profile-menu-item"
+                id="guestAvatarMenu"
+            >
+
+                <span class="menu-icon">
+                    👤
+                </span>
+
+                <div>
+
+                    <strong data-i18n="menu_profile">
+                        Profile & Avatar
+                    </strong>
+
+                    <small data-i18n="guest_avatar_description">
+                        Log in to create your explorer profile
+                    </small>
+
+                </div>
+
+            </button>
+
+
+            <!-- LANGUAGE -->
+
+            <button
+                type="button"
+                class="profile-menu-item language-menu-item"
+                id="openLanguagePopup"
+            >
+
+                <span class="menu-icon">
+                    🌐
+                </span>
+
+                <div class="language-menu-content">
+
+                    <strong data-i18n="menu_language">
+                        Language
+                    </strong>
+
+                    <small data-i18n="menu_language_description">
+                        Choose your preferred language
+                    </small>
+
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- AVATAR LOGIN POPUP -->
+
+    <div
+        class="guest-avatar-popup"
+        id="guestAvatarPopup"
+    >
+
+        <div class="guest-avatar-popup-card">
+
+            <button
+                type="button"
+                class="guest-avatar-popup-close"
+                id="closeGuestAvatarPopup"
+            >
+                ×
+            </button>
+
+            <span class="profile-welcome">
+                PROJECT TŌHOKU
+            </span>
+
+            <h3 data-i18n="guest_avatar_title">
+                Create your explorer
+            </h3>
+
+            <p data-i18n="guest_avatar_message">
+                Log in to choose an avatar and create
+                your Tōhoku explorer profile.
+            </p>
+
+            <a
+                href="{{ url_for('register') }}"
+                class="guest-login-btn"
+                data-i18n="guest_avatar_login"
+            >
+                LOG IN / SIGN UP
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- LANGUAGE POPUP -->
+
+    <div
+        class="language-popup"
+        id="languagePopup"
+    >
+
+        <div class="language-popup-header">
+
+            <span>
+                PROJECT TŌHOKU
+            </span>
+
+            <button
+                type="button"
+                id="closeLanguagePopup"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <h3>
+            SELECT LANGUAGE
+        </h3>
+
+
+        <div class="language-popup-options">
+
+
+            <button
+                type="button"
+                class="language-popup-option"
+                data-language="en"
+                onclick="setLanguage('en')"
+            >
+
+                <span class="language-popup-icon">
+                    🌐
+                </span>
+
+                <div>
+
+                    <strong>
+                        English
+                    </strong>
+
+                    <small>
+                        Continue in English
+                    </small>
+
+                </div>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="language-popup-option"
+                data-language="ja"
+                onclick="setLanguage('ja')"
+            >
+
+                <span class="language-popup-icon">
+                    🗾
+                </span>
+
+                <div>
+
+                    <strong>
+                        日本語
+                    </strong>
+
+                    <small>
+                        日本語で続ける
+                    </small>
+
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endif %}
+
+
+<!-- =========================================
+     PROFILE UPDATE TOAST
+========================================= -->
+
+{% if session.pop("profile_updated", False) %}
+
+<div
+    class="profile-update-toast"
+    id="profileUpdateToast"
+>
+
+    <span data-i18n="profile_updated">
+        Profile has been updated.
+    </span>
+
+    <button
+        type="button"
+        id="closeProfileUpdateToast"
+    >
+        ×
+    </button>
+
+</div>
+
+{% endif %}
+
+
+<!-- =========================================
+     PROFILE OVERLAY
+========================================= -->
+
+<div
+    class="profile-panel-overlay"
+    id="profilePanelOverlay"
+>
+</div>

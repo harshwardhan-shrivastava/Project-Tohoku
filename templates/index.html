@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Tōhoku</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/profile-component.css') }}">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="home-navbar">
+
+    <div class="nav-left">
+
+        <a href="{{ url_for('home') }}" class="logo">
+            🏯 PROJECT TŌHOKU
+        </a>
+
+        <nav class="nav-links">
+
+           
+
+            <a href="#shrines" data-i18n="nav_shrines">SHRINES</a>
+
+            <a href="#landmarks" data-i18n="nav_landmarks">LANDMARKS</a>
+
+            <a href="#theater" data-i18n="nav_theater">THEATER</a>
+
+            
+        </nav>
+
+    </div>
+
+    <div class="nav-right">
+    {% include "profile_button.html" %}
+</div>
+
+</div>
+
+</header>
+
+<div class="gold-line"></div>
+
+<section class="hero-section">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-image">
+
+        <div class="hero-overlay">
+
+            <h1 data-i18n="hero_title">Discover the Beauty of Tōhoku</h1>
+
+            <p data-i18n="hero_subtitle">Explore Shrines • Landmarks • Theater • Culture</p>
+
+            <!-- Hero Button -->
+            <a href="#" class="hero-btn" id="startBtn">
+                <span data-i18n="start_exploring">Start Exploring</span>
+            </a>
+
+            <h2 data-i18n="explore_northern_japan">Explore Northern Japan</h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     WELCOME
+========================= -->
+
+<section class="welcome-section">
+
+    <h2>
+        <span data-i18n="welcome_travelers">Welcome, Travelers!</span>
+    </h2>
+    
+        
+</section>
+
+<!-- =========================
+     SHRINES
+========================= -->
+<section id="shrines" class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-text">
+
+            <h2 data-i18n="explore_shrines">⛩ Explore Shrines</h2>
+
+            <p>
+                <span data-i18n="shrines_description">Discover the spiritual heart of Tōhoku through
+                centuries-old shrines, traditional festivals,
+                peaceful forests and Project Tōhoku's intelligent
+                crowd prediction system to help you choose the
+                perfect time to visit.</span>
+            </p>
+
+        </div>
+
+        <div class="feature-image">
+
+            <img src="{{ url_for('static', filename='images/shrine1.jpg') }}"
+                 alt="Shrines">
+
+        </div>
+
+    </div>
+
+    <!-- SHRINE CARDS -->
+
+    <div class="shrine-options" id="cards">
+
+        <!-- CARD 1 -->
+
+        <div class="shrine-option">
+
+            <img src="{{ url_for('static', filename='images/shrine1.jpg') }}"
+                 alt="Aoba Shrine">
+
+            <div class="option-bottom">
+
+                <h3 data-i18n="place_aoba">Aoba Shrine</h3>
+
+                <a href="{{ url_for('shrines') }}#aoba" class="explore-card-btn">
+    <span data-i18n="explore">EXPLORE</span>
+</a>
+    
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="shrine-option">
+
+            <img src="{{ url_for('static', filename='images/shrine2.jpg') }}"
+                 alt="Osaki Shrine">
+
+            <div class="option-bottom">
+
+                <h3 data-i18n="place_osaki">Osaki Hachimangu</h3>
+
+                <a href="{{ url_for('shrines') }}#osaki" class="explore-card-btn">
+    <span data-i18n="explore">EXPLORE</span>
+</a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="shrine-option">
+
+            <img src="{{ url_for('static', filename='images/shrine3.jpg') }}"
+                 alt="Kabushima Shrine">
+
+            <div class="option-bottom">
+
+                <h3 data-i18n="place_kabushima">Kabushima Shrine</h3>
+
+                <a href="{{ url_for('shrines') }}#kabushima" class="explore-card-btn">
+    <span data-i18n="explore">EXPLORE</span>
+</a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="shrine-option">
+
+            <img src="{{ url_for('static', filename='images/shrine4.jpg') }}"
+                 alt="Towada Shrine">
+
+            <div class="option-bottom">
+
+                <h3 data-i18n="place_towada">Towada Shrine</h3>
+
+                <a href="{{ url_for('shrines') }}#towada" class="explore-card-btn">
+    <span data-i18n="explore">EXPLORE</span>
+</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="landmarks" class="landmark-section">
+
+    <!-- LANDMARK HERO -->
+
+    <section class="feature">
+
+        <div class="feature-text">
+
+            <h2 data-i18n="explore_landmarks">🏞 Explore Landmarks</h2>
+
+            <p>
+                <span data-i18n="landmarks_description">Discover the breathtaking landscapes of Tōhoku, from tranquil lakes
+                and majestic mountains to historic castles and hidden natural gems.
+                Explore Japan's most beautiful landmarks while Project Tōhoku helps
+                you plan unforgettable journeys with intelligent travel insights.</span>
+            </p>
+
+        </div>
+
+        <div class="feature-image">
+
+            <img src="{{ url_for('static', filename='images/landmark.jpg') }}"
+                 alt="Landmarks">
+
+        </div>
+
+    </section>
+
+    <!-- FIRST 3 CARDS -->
+
+    <div class="landmark-container">
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/hirosaki park.jpg') }}" alt="">
+    <h2 data-i18n="place_hirosaki">Hirosaki Park</h2>
+    <a href="{{ url_for('landmarks_page') }}#hirosaki" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/matsushima_bay.jpg') }}" alt="">
+    <h2 data-i18n="place_matsushima">Matsushima Bay</h2>
+    <a href="{{ url_for('landmarks_page') }}#matsushima" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/lake_towada.jpg') }}" alt="">
+    <h2 data-i18n="place_lake_towada">Lake Towada</h2>
+    <a href="{{ url_for('landmarks_page') }}#towada" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+</div>
+
+    <!-- VIEW MORE -->
+
+    <div class="view-more">
+
+        <button id="toggleBtn" data-i18n="view_more">View More</button>
+
+    </div>
+
+    <!-- HIDDEN LANDMARKS -->
+
+    <div class="landmark-container hidden-landmarks" id="moreLandmarks">
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/oirase_george.jpg') }}" alt="">
+    <h2 data-i18n="place_oirase">Oirase Gorge</h2>
+    <a href="{{ url_for('landmarks_page') }}#oirase" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/risshaku-ji.jpg') }}" alt="">
+    <h2 data-i18n="place_yamadera">Yamadera</h2>
+    <a href="{{ url_for('landmarks_page') }}#yamadera" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/ginzan_onsen.jpg') }}" alt="">
+    <h2 data-i18n="place_ginzan">Ginzan Onsen</h2>
+    <a href="{{ url_for('landmarks_page') }}#ginzan" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/samurai_district.jpg') }}" alt="">
+    <h2 data-i18n="place_kakunodate">Kakunodate Samurai District</h2>
+    <a href="{{ url_for('landmarks_page') }}#kakunodate" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/dewa_sanzan.jpg') }}" alt="">
+    <h2 data-i18n="place_dewa">Dewa Sanzan</h2>
+    <a href="{{ url_for('landmarks_page') }}#dewa" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/nebuta_museum.jpg') }}" alt="">
+    <h2 data-i18n="place_nebuta">Nebuta Museum WA RASSE</h2>
+    <a href="{{ url_for('landmarks_page') }}#nebuta" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/shirakami_sanchi.jpg') }}" alt="">
+    <h2 data-i18n="place_shirakami">Shirakami Sanchi</h2>
+    <a href="{{ url_for('landmarks_page') }}#shirakami" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/hakkoda_ropeway.jpg') }}" alt="">
+    <h2 data-i18n="place_hakkoda">Hakkoda Ropeway</h2>
+    <a href="{{ url_for('landmarks_page') }}#hakkoda" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/chuson-ji_temple.jpg') }}" alt="">
+    <h2 data-i18n="place_chusonji">Chuson-ji Temple</h2>
+    <a href="{{ url_for('landmarks_page') }}#chusonji" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/naruko_gorge.jpg') }}" alt="">
+    <h2 data-i18n="place_naruko">Naruko Gorge</h2>
+    <a href="{{ url_for('landmarks_page') }}#naruko" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+
+  <div class="landmark-card">
+    <img src="{{ url_for('static', filename='images/osorezan_bodai-ji.jpg') }}" alt="">
+    <h2 data-i18n="place_osore">Osorezan Bodaiji Temple</h2>
+    <a href="{{ url_for('landmarks_page') }}#osore" class="landmark-find-out-btn">
+      <span data-i18n="find_out_more">Find Out More</span>
+    </a>
+  </div>
+</div>
+
+</section>
+
+<section id="theater" class="theater-section">
+
+    <!-- THEATER HERO -->
+    <section class="feature">
+
+        <div class="feature-text">
+            <h2 data-i18n="explore_theaters">🎭 Explore Theaters</h2>
+            <p>
+                <span data-i18n="theaters_description">Experience the rich performing arts of Tōhoku through historic
+                theaters, concert halls, cultural venues and modern entertainment
+                spaces across Northern Japan.</span>
+            </p>
+        </div>
+
+        <div class="feature-image">
+            <img src="{{ url_for('static', filename='images/theater.jpg') }}">
+        </div>
+
+    </section>
+
+    <!-- FIRST 3 CARDS -->
+    <div class="theater-container">
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater1.jpg') }}" alt="Toho Cinemas Sendai">
+            <h2 data-i18n="place_toho_sendai">Toho Cinemas Sendai</h2>
+            <a href="{{ url_for('theater_services') }}#toho-sendai" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater2.png') }}" alt="Forum Morioka">
+            <h2 data-i18n="place_forum_morioka">Forum Morioka</h2>
+            <a href="{{ url_for('theater_services') }}#forum-morioka" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater3.jpg') }}" alt="Movix Sendai">
+            <h2 data-i18n="place_movix_sendai">Movix Sendai</h2>
+            <a href="{{ url_for('theater_services') }}#movix-sendai" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+    </div>
+
+    <!-- VIEW MORE -->
+    <div class="theater-view-more">
+        <button id="theaterToggleBtn" data-i18n="view_more">View More</button>
+    </div>
+
+    <!-- HIDDEN CARDS -->
+    <div class="theater-container hidden-theaters" id="moreTheaters">
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater4.jpg') }}" alt="Warner Mycal Cinemas Hirosaki">
+            <h2 data-i18n="place_warner_hirosaki">Warner Mycal Cinemas Hirosaki</h2>
+            <a href="{{ url_for('theater_services') }}#warner-hirosaki" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater5.jpg') }}" alt="Forum Yamagata">
+            <h2 data-i18n="place_forum_yamagata">Forum Yamagata</h2>
+            <a href="{{ url_for('theater_services') }}#forum-yamagata" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater6.jpg') }}" alt="Forum Sendai">
+            <h2 data-i18n="place_forum_sendai">Forum Sendai</h2>
+            <a href="{{ url_for('theater_services') }}#forum-sendai" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater7.jpg') }}" alt="Toho Cinemas Akita">
+            <h2 data-i18n="place_toho_akita">Toho Cinemas Akita</h2>
+            <a href="{{ url_for('theater_services') }}#toho-akita" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+        <div class="theater-card">
+            <img src="{{ url_for('static', filename='images/theater8.jpg') }}" alt="109 Cinemas Tomiya">
+            <h2 data-i18n="place_109_tomiya">109 Cinemas Tomiya</h2>
+            <a href="{{ url_for('theater_services') }}#109-tomiya" class="theater-find-out-btn">
+    <span data-i18n="find_out_more">Find Out More</span>
+</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div class="footer">
+    {% include 'footer.html' %}
+</div>
+
+<!-- JavaScript -->
+<script src="{{ url_for('static', filename='jss/language.js') }}"></script>
+<script src="{{ url_for('static', filename='jss/script.js') }}"></script>
+<script src="{{ url_for('static', filename='jss/profile_button.js') }}"></script>
+
+</body>
+</html>
