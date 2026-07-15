@@ -52,7 +52,11 @@ Project Tōhoku
 Explore Northern Japan.
 """)
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+    with smtplib.SMTP_SSL(
+        "smtp.gmail.com",
+        465,
+        timeout=10
+    ) as smtp:
 
         smtp.login(
             GMAIL_ADDRESS,
@@ -60,7 +64,6 @@ Explore Northern Japan.
         )
 
         smtp.send_message(message)
-
 
 # ==========================================================
 # DATABASE
