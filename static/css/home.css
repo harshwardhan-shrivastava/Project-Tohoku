@@ -1325,3 +1325,22 @@ body {
     width: 100%;
     max-width: 680px;
 }
+
+/* LANDMARK + THEATER LIVE WIDTH FIX */
+
+.landmark-container,
+.theater-container {
+    width: min(1200px, 90%);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.landmark-card,
+.theater-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+.landmark-card img,
+.theater-card img {
+    width: 90%;
+}
