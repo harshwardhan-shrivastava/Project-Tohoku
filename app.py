@@ -18,7 +18,9 @@ from theater_logic import view_theater_info, imax_or_not
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY")
-app.permanent_session_lifetime = timedelta(days=365)
+
+if not app.secret_key:
+    raise RuntimeError("SECRET_KEY is not configured")
 
 
 
