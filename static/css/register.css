@@ -135,7 +135,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 55px 70px;
+    padding: 35px 70px;
 
     background: #183632;
 }
@@ -166,7 +166,7 @@ body {
     color: #aebfbb;
     line-height: 1.6;
 
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 
@@ -175,7 +175,7 @@ body {
 ========================================================= */
 
 .avatar-section {
-    margin-bottom: 27px;
+    margin-bottom: 16px;
 }
 
 .form-label {
@@ -267,7 +267,7 @@ border-radius: 50%;
 }
 
 .input-group {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 .input-group label {
@@ -354,7 +354,7 @@ border-radius: 50%;
 ========================================================= */
 
 .login-link {
-    margin-top: 25px;
+    margin-top: 16px;
 
     text-align: center;
 
